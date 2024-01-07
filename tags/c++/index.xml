@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>C&#43;&#43; on 天远博客</title>
+        <link>https://www.yprnet.cc/tags/c&#43;&#43;/</link>
+        <description>Recent content in C&#43;&#43; on 天远博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
+        <lastBuildDate>Sun, 07 Jan 2024 13:00:21 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/tags/c++/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>boost库编译</title>
+        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-boost-%E7%BC%96%E8%AF%91/</link>
+        <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-boost-%E7%BC%96%E8%AF%91/</guid>
+        <description>&lt;h2 id=&#34;编译-gcc1320-x64-2023-12-29&#34;&gt;编译-GCC13.2.0-x64-2023-12-29&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;编译器版本&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;MinGW-w64版本：x86_64-13.2.0-release-posix-seh-ucrt-rt_v11-rev1.7z&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;gcc version 13.2.0 (x86_64-posix-seh-rev1, Built by MinGW-Builds project)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;gcc.exe (x86_64-posix-seh-rev1, Built by MinGW-Builds project) 13.2.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;D:\MinGW-w64-ucrt\bin\g++.exe&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;生成&amp;quot;D:\Code\boost_1_84_0\b2.exe&amp;quot;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;cd&lt;/span&gt; D:\Code\boost_1_84_0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bootstrap gcc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编译&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;b2 -j16 --build-dir=.\TYbuild --build-type=complete --prefix=.\gcc1320_x64 link=static,shared threading=single,multi runtime-link=static,shared address-model=64 toolset=gcc variant=debug,release install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;备注&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-jN：同时使用N个子线程编译，根据机器需要选取不同的线程数目&lt;/li&gt;
+&lt;li&gt;&amp;ndash;build-dir：编译生成的中间文件的路径。默认为X:\boost_X_XX_X\boost\bin.v2，等编译完成后删除&lt;/li&gt;
+&lt;li&gt;&amp;ndash;build-type=&lt;type&gt; 编译类型，可选minimal（最小）、complete（完整），默认minimal。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;with-&lt;library&gt;    加入此参数，代表只编译的库。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;without-&lt;library&gt; 加入此参数，代表忽略编译的库。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;without/&amp;ndash;with：选择不编译/编译哪些库。因为python、mpi等库我都用不着，所以排除之。还有wave、graph、math、regex、test、program_options、serialization、signals这几个库编出的静态lib都非常大，所以不需要的也可以without。这可以根据各人需要进行选择，默认是全部编译。但是需要注意，如果选择编译python的话，是需要python语言支持的，可以到python官方主页下载安装。查看boost包含库的命令是bjam &amp;ndash;show-libraries。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;layout=versioned&lt;/li&gt;
+&lt;li&gt;link：生成动态链接库/静态链接库。生成动态链接库需使用shared方式，生成静态链接库需使用static方式。一般boost库可能都是以static方式编译，因为最终发布程序带着boost的dll感觉会比较累赘。&lt;/li&gt;
+&lt;li&gt;threading：单/多线程编译。一般都写多线程程序，当然要指定multi方式了；如果需要编写单线程程序，那么还需要编译单线程库，可以使用single方式。&lt;/li&gt;
+&lt;li&gt;stage/install：stage表示只生成库（dll和lib），install还会生成包含头文件的include目录。推荐使用stage，因为install生成的这个include目录实际就是boost安装包解压缩后的boost目录（X:\boost_X_XX_X\boost，只比include目录多几个非hpp文件，都很小），所以可以直接使用，而且不同的IDE都可以使用同一套头文件，这样既节省编译时间，也节省硬盘空间。&lt;/li&gt;
+&lt;li&gt;runtime-link：动态/静态链接C/C++运行时库。同样有shared和static两种方式，这样runtime-link和link一共可以产生4种组合方式，各人可以根据自己的需要选择编译。&lt;/li&gt;
+&lt;li&gt;toolset：指定编译器，可选的如borland、gcc、msvc（VC6）、msvc-10.0（VS2010）、msvc-12.0（VS2013）、msvc-14.0（VS2015）等。&lt;/li&gt;
+&lt;li&gt;stagedir/&amp;ndash;prefix：stage时使用stagedir，install时使用prefix，表示编译生成文件的路径。推荐给不同的IDE指定不同的目录，如VS2015对应的是
+X:\boost_X_XX_X\vc10,如果使用了install参数，那么还将生成头文件目录，vc10对应的就是X:\boost_X_XX_X\boost\bin\vc10\include\boost_X_XX_X\boost&lt;/li&gt;
+&lt;li&gt;variant：编译debug/release版本。一般都是程序的debug版本对应库的debug版本，所以两个都编译。那么如果需要生成dll，可以使用link=shared方式生成。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;编译-gcc1320-x64-2023-12-29-1&#34;&gt;编译-GCC13.2.0-x64-2023-12-29&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;编译器版本&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MinGW-w64版本：x86_64-13.2.0-release-win32-seh-ucrt-rt_v11-rev1.7z&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;生成&amp;quot;D:\Code\boost_1_83_0\b2.exe&amp;quot;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;cd&lt;/span&gt; D:\Code\boost_1_83_0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bootstrap gcc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编译&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;b2 -j16 --build-dir=.\tmp --build-type=complete threading=multi link=shared address-model=64 toolset=gcc stage
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;备注&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“stage”表示生成的Boost库文件会存储于“D:\Code\boost_1_83_0\stage\lib”文件夹。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;库命名规则可参考库命名举例xlsx&#34;&gt;库命名规则：可参考：库命名举例.xlsx&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;.a                  静态链接库link=static&lt;/p&gt;
+&lt;p&gt;.dll、.dll.a    动态链接库link=shared&lt;/p&gt;
+&lt;p&gt;在大多数unix平台上：.so是共享库。.a是静态库
+在 Windows上：.dll表示共享库，.lib是静态或导入库。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;s       静态链接C/C++运行时库runtime-link=static&lt;/p&gt;
+&lt;p&gt;无s   动态链接C/C++运行时库runtime-link=shared&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;无d   variant=release版本&lt;/p&gt;
+&lt;p&gt;d       variant=debug版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mt     多线程threading=multi&lt;/p&gt;
+&lt;p&gt;无mt 单线程threading=single&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;g：使用标准库和运行时支撑库的调试版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;y：使用 Python的特殊调试构建&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;p：使用 STLPort标准库而不是编译器提供的默认库&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;n：使用 STLPort已被弃用的&amp;quot;native iostreams&amp;quot;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>GCC本地化-Linux</title>
+        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc-%E6%9C%AC%E5%9C%B0%E5%8C%96-linux/</link>
+        <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc-%E6%9C%AC%E5%9C%B0%E5%8C%96-linux/</guid>
+        <description>&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;../Kawaii-gcc/README-zh.md&#34; &gt;Kawaii-gcc本地&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Bill-Haku/kawaii-gcc/blob/main/README-zh.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Kawaii-gcc网站&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://wiki.archlinux.org/title/Localization/Simplified_Chinese&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ArchLinux设置简体中文&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;linux环境&#34;&gt;Linux环境&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;安装中文 (如果没有安装)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install language-pack-zh-hans language-pack-zh-hans-base
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装 &lt;code&gt;gcc&lt;/code&gt; ,  &lt;code&gt;gettext&lt;/code&gt; 和 &lt;code&gt;g++&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install gcc gettext g++
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装 &lt;code&gt;gcc locales&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;通过以下命令检查你的&lt;code&gt;gcc&lt;/code&gt;版本号&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcc -v
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;我这里是12.3.0.所以我的主版本号是12，安装&lt;code&gt;gcc-12-locales&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install gcc-12-locales
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;找到你的语言文件的路径。默认会在 &lt;code&gt;/usr/share/locale/zh_CN/LC_MESSAGES/gcc.mo&lt;/code&gt;. 不过你也有可能找不到该文件或者找到名为&lt;code&gt;gcc-12.mo&lt;/code&gt;的文件。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你在上个步骤找到了相关文件，请直接使用原本的名字。&lt;/li&gt;
+&lt;li&gt;如果没有，首先使用 &lt;code&gt;gcc-&amp;lt;主版本号&amp;gt;.mo&lt;/code&gt; 。如果发现不起作用，将其重命名为 &lt;code&gt;gcc.mo&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改环境变量以将终端语言改为中文：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Add the following lines&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LANG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;zh_CN.UTF-8&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LANGUAGE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;zh_CN.UTF-8&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Save it in Vim&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;实测archlinux&#34;&gt;实测ArchLinux&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;已经是中文版&lt;/li&gt;
+&lt;li&gt;已安装gcc gettext g++&lt;/li&gt;
+&lt;li&gt;gcc版本为13&lt;/li&gt;
+&lt;li&gt;没有gcc-13-locales、但有/usr/share/locale/zh_CN/LC_MESSAGES/gcc.mo&lt;/li&gt;
+&lt;li&gt;只要按上述将终端语言改为中文即可&lt;/li&gt;
+&lt;li&gt;将gcc.mo替换为kawaii-gcc中的prebuilt/gcc-zh.mo(需重命名为gcc.mo)可成功&lt;/li&gt;
+&lt;li&gt;将gcc.mo替换为mingw64\share\locale\zh_CN\LC_MESSAGES\gcc.mo可成功&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;实测ubuntu-2204&#34;&gt;实测Ubuntu 22.04&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;已经是中文版&lt;/li&gt;
+&lt;li&gt;已安装gcc gettext g++ gcc-11-locales&lt;/li&gt;
+&lt;li&gt;gcc版本为11&lt;/li&gt;
+&lt;li&gt;将/usr/share/locale-langpack/zh_CN/LC_MESSAGES/gcc.mo复制到/usr/share/locale/zh_CN/LC_MESSAGES/，并改名为gcc-11.mo&lt;/li&gt;
+&lt;li&gt;按上述将终端语言改为中文即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;备注&#34;&gt;备注：&lt;/h2&gt;
+&lt;p&gt;无论是ArchLinux和Ubuntu，我确保设置了&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/etc/locale.gen&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;zh_CN.UTF-8 UTF-8
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;/etc/locale.conf&lt;/code&gt; (经验证在Ubuntu 22.04上不需要也可以)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;LANG=zh_CN.UTF-8
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这两个文件我放在&amp;quot;\192.168.96.2\ypr-pc\软件\Linux\ArchLinux\locale配置文件.rar&amp;quot;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Kawaii-gcc 让GCC变得可爱</title>
+        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc-kawaii-gcc/</link>
+        <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc-kawaii-gcc/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;https://img.shields.io/github/stars/Bill-Haku/kawaii-gcc&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GitHub Repo stars&#34;
+	
+	
+&gt; &lt;img src=&#34;https://img.shields.io/github/contributors/Bill-Haku/kawaii-gcc&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GitHub contributors&#34;
+	
+	
+&gt; &lt;img src=&#34;https://img.shields.io/github/license/Bill-Haku/kawaii-gcc&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GitHub License&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;让你的GCC编译器变得可爱！&lt;/p&gt;
+&lt;p&gt;本项目通过修改GCC的输出信息的本地化文件的方式让GCC变得可爱。&lt;/p&gt;
+&lt;p&gt;欢迎贡献更多有趣的内容。&lt;/p&gt;
+&lt;h2 id=&#34;依赖&#34;&gt;依赖&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;GNU GCC&lt;/li&gt;
+&lt;li&gt;GNU Gettext&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;如何使用&#34;&gt;如何使用？&lt;/h2&gt;
+&lt;h3 id=&#34;linux-以ubuntu为例&#34;&gt;Linux (以Ubuntu为例)&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1gC4y1P7t3/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;中文版使用教程视频-Bilibili&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1Wg4y1X74a/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;日语版使用教程视频-Bilibili&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/ASWBU8HhvY0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;日语版使用教程视频-YouTube&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;安装中文 (如果没有安装)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install language-pack-zh-hans language-pack-zh-hans-base
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装 &lt;code&gt;gcc&lt;/code&gt; ,  &lt;code&gt;gettext&lt;/code&gt; 和 &lt;code&gt;g++&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install gcc gettext g++
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装 &lt;code&gt;gcc locales&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;通过以下命令检查你的&lt;code&gt;gcc&lt;/code&gt;版本号&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcc -v
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;我这里是12.3.0.所以我的主版本号是12，安装&lt;code&gt;gcc-12-locales&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install gcc-12-locales
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;找到你的语言文件的路径。默认会在 &lt;code&gt;/usr/share/locale/zh_CN/LC_MESSAGES/gcc.mo&lt;/code&gt;. 不过你也有可能找不到该文件或者找到名为&lt;code&gt;gcc-12.mo&lt;/code&gt;的文件。如果已有相关文件，备份之。 (eg. &lt;code&gt;sudo mv gcc-12.mo gcc-12.mo.bak&lt;/code&gt;) 如果没有相关文件，无需担心，什么都不需要做。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过以下命令下载仓库中的&lt;code&gt;mo&lt;/code&gt; 文件然后将其复制到刚才的路径去。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; sudo wget https://github.com/Bill-Haku/kawaii-gcc/raw/main/prebuilt/gcc-zh.mo -O /usr/share/locale/zh_CN/LC_MESSAGES/gcc-12.mo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;您也可以自行重新编译该二进制文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make merge-zh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;msgfmt gcc-zh.po -o gcc.mo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo cp gcc.mo /usr/share/locale/zh_CN/LC_MESSAGES/gcc-12.mo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;或&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;关于文件名：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你在上个步骤找到了相关文件，请直接使用原本的名字。&lt;/li&gt;
+&lt;li&gt;如果没有，首先使用 &lt;code&gt;gcc-&amp;lt;主版本号&amp;gt;.mo&lt;/code&gt; 。如果发现不起作用，将其重命名为 &lt;code&gt;gcc.mo&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改环境变量以将终端语言改为中文：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Add the following lines&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LANG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;zh_CN.UTF-8&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LANGUAGE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;zh_CN.UTF-8&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Save it in Vim&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;现在你的GCC已经变得可爱了。&lt;/p&gt;
+&lt;p&gt;你可以使用附带的 &lt;code&gt;test.cc&lt;/code&gt; 来试试效果。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcc test.cc -Wall
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# -Wall 表示让GCC输出所有警告信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;安装 &lt;a class=&#34;link&#34; href=&#34;https://www.cygwin.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cygwin&lt;/a&gt;。&lt;br&gt;
+步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;下载并运行 &lt;a class=&#34;link&#34; href=&#34;https://www.cygwin.com/setup-x86_64.exe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;setup-x86_64.exe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;在 &lt;code&gt;选择下载源&lt;/code&gt; (&lt;code&gt;Choose A Download Source&lt;/code&gt;) 步骤时选择 &lt;code&gt;从互联网安装&lt;/code&gt; (&lt;code&gt;Install from Internet&lt;/code&gt;)&lt;br&gt;
+&lt;img src=&#34;https://www.yprnet.cc/img/install_from_internet.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;install_from_internet.png&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;在 &lt;code&gt;选择软件包&lt;/code&gt; (&lt;code&gt;Select Packages&lt;/code&gt;) 步骤时, 将&lt;code&gt;查看&lt;/code&gt; (&lt;code&gt;View&lt;/code&gt;) 设为 &lt;code&gt;类别&lt;/code&gt; (&lt;code&gt;Category&lt;/code&gt;) 并依次搜索 (Search) 并选择 ALL/Devel 下的 &lt;code&gt;gcc-core&lt;/code&gt;，&lt;code&gt;gcc-g++&lt;/code&gt; 和 &lt;code&gt;gettext&lt;/code&gt; 的版本
+&lt;img src=&#34;https://www.yprnet.cc/img/select_packages.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;select_packages.png&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;假设你的 Cygwin 安装目录 (注意不是软件包下载目录) 为 &lt;code&gt;&amp;lt;DIR&amp;gt;&lt;/code&gt; (默认应该是 &lt;code&gt;C:\cygwin&lt;/code&gt;), 将目录 &lt;code&gt;&amp;lt;DIR&amp;gt;\bin&lt;/code&gt; 目录添加到环境变量 &lt;code&gt;Path&lt;/code&gt; 中 (如果 &lt;code&gt;Path&lt;/code&gt; 中已经有 mingw 了, 请删除或者移到&lt;code&gt;&amp;lt;DIR&amp;gt;\bin&lt;/code&gt;的下方), 并额外增加一条环境变量 &lt;code&gt;LANG&lt;/code&gt;, 设置为 &lt;code&gt;zh_CN.UTF-8&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将本仓库的 &lt;code&gt;prebuilt&lt;/code&gt; 目录下的 &lt;code&gt;gcc-zh.mo&lt;/code&gt; 放到 &lt;code&gt;&amp;lt;DIR&amp;gt;\usr\share\locale\zh_CN\LC_MESSAGES&lt;/code&gt; 目录下, 并将其重命名为 &lt;code&gt;gcc.mo&lt;/code&gt; (建议先将原来的gcc.mo备份)&lt;br&gt;
+&lt;img src=&#34;https://www.yprnet.cc/img/change_gcc_mo.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;change_gcc_mo.png&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;macos&#34;&gt;macOS&lt;/h3&gt;
+&lt;p&gt;暂未实现。欢迎贡献。&lt;/p&gt;
+&lt;h2 id=&#34;如何修改贡献&#34;&gt;如何修改/贡献&lt;/h2&gt;
+&lt;p&gt;前往&lt;code&gt;./src&lt;/code&gt;目录，使用文本编辑器打开并编辑&lt;code&gt;zh-kawaii.po&lt;/code&gt;。可以修改已有的内容，也可以根据原始简体中文本地化文件增加新内容。编辑完成后运行&lt;code&gt;make&lt;/code&gt;指令合并文件，并将其编译成&lt;code&gt;mo&lt;/code&gt;文件后拷贝到指定的地方。&lt;/p&gt;
+&lt;h4 id=&#34;关于src目录下的文件&#34;&gt;关于&lt;code&gt;src&lt;/code&gt;目录下的文件&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;zh_CN.po&lt;/code&gt;: GNU提供的原始简体中文版本地化文件。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;zh_kawaii.po&lt;/code&gt;: 本项目已修改的本地化内容。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;如果您愿意参与贡献本项目&#34;&gt;如果您愿意参与贡献本项目&lt;/h4&gt;
+&lt;p&gt;请在PR时将您修改完成的编译好的&lt;code&gt;mo&lt;/code&gt;文件放在&lt;code&gt;../prebuilt&lt;/code&gt;目录下，以更新预编译好的本地化二进制文件。&lt;/p&gt;
+&lt;h2 id=&#34;star-history&#34;&gt;Star History&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://api.star-history.com/svg?repos=Bill-Haku/kawaii-gcc&amp;amp;type=Date&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Star History Chart&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;特别鸣谢&#34;&gt;特别鸣谢&lt;/h2&gt;
+&lt;p&gt;本项目的灵感来自&lt;a class=&#34;link&#34; href=&#34;https://github.com/Mosklia/gcc-hentai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;gcc-hentai&lt;/code&gt;&lt;/a&gt;项目。为了将其推广到日语区，我创建了本仓库、制作了日语版并修改完善了使用说明的诸多细节，最后制作了完全日语的宣传视频发布在YouTube，不料却在Bilibili获得了关注。十分感谢原作者的分享和开源精神。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

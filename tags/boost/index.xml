@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>boost on 天远博客</title>
+        <link>https://www.yprnet.cc/tags/boost/</link>
+        <description>Recent content in boost on 天远博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
+        <lastBuildDate>Sun, 07 Jan 2024 13:00:21 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/tags/boost/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>boost库编译</title>
+        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-boost-%E7%BC%96%E8%AF%91/</link>
+        <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-boost-%E7%BC%96%E8%AF%91/</guid>
+        <description>&lt;h2 id=&#34;编译-gcc1320-x64-2023-12-29&#34;&gt;编译-GCC13.2.0-x64-2023-12-29&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;编译器版本&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;MinGW-w64版本：x86_64-13.2.0-release-posix-seh-ucrt-rt_v11-rev1.7z&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;gcc version 13.2.0 (x86_64-posix-seh-rev1, Built by MinGW-Builds project)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;gcc.exe (x86_64-posix-seh-rev1, Built by MinGW-Builds project) 13.2.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;D:\MinGW-w64-ucrt\bin\g++.exe&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;生成&amp;quot;D:\Code\boost_1_84_0\b2.exe&amp;quot;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;cd&lt;/span&gt; D:\Code\boost_1_84_0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bootstrap gcc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编译&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;b2 -j16 --build-dir=.\TYbuild --build-type=complete --prefix=.\gcc1320_x64 link=static,shared threading=single,multi runtime-link=static,shared address-model=64 toolset=gcc variant=debug,release install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;备注&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-jN：同时使用N个子线程编译，根据机器需要选取不同的线程数目&lt;/li&gt;
+&lt;li&gt;&amp;ndash;build-dir：编译生成的中间文件的路径。默认为X:\boost_X_XX_X\boost\bin.v2，等编译完成后删除&lt;/li&gt;
+&lt;li&gt;&amp;ndash;build-type=&lt;type&gt; 编译类型，可选minimal（最小）、complete（完整），默认minimal。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;with-&lt;library&gt;    加入此参数，代表只编译的库。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;without-&lt;library&gt; 加入此参数，代表忽略编译的库。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;without/&amp;ndash;with：选择不编译/编译哪些库。因为python、mpi等库我都用不着，所以排除之。还有wave、graph、math、regex、test、program_options、serialization、signals这几个库编出的静态lib都非常大，所以不需要的也可以without。这可以根据各人需要进行选择，默认是全部编译。但是需要注意，如果选择编译python的话，是需要python语言支持的，可以到python官方主页下载安装。查看boost包含库的命令是bjam &amp;ndash;show-libraries。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;layout=versioned&lt;/li&gt;
+&lt;li&gt;link：生成动态链接库/静态链接库。生成动态链接库需使用shared方式，生成静态链接库需使用static方式。一般boost库可能都是以static方式编译，因为最终发布程序带着boost的dll感觉会比较累赘。&lt;/li&gt;
+&lt;li&gt;threading：单/多线程编译。一般都写多线程程序，当然要指定multi方式了；如果需要编写单线程程序，那么还需要编译单线程库，可以使用single方式。&lt;/li&gt;
+&lt;li&gt;stage/install：stage表示只生成库（dll和lib），install还会生成包含头文件的include目录。推荐使用stage，因为install生成的这个include目录实际就是boost安装包解压缩后的boost目录（X:\boost_X_XX_X\boost，只比include目录多几个非hpp文件，都很小），所以可以直接使用，而且不同的IDE都可以使用同一套头文件，这样既节省编译时间，也节省硬盘空间。&lt;/li&gt;
+&lt;li&gt;runtime-link：动态/静态链接C/C++运行时库。同样有shared和static两种方式，这样runtime-link和link一共可以产生4种组合方式，各人可以根据自己的需要选择编译。&lt;/li&gt;
+&lt;li&gt;toolset：指定编译器，可选的如borland、gcc、msvc（VC6）、msvc-10.0（VS2010）、msvc-12.0（VS2013）、msvc-14.0（VS2015）等。&lt;/li&gt;
+&lt;li&gt;stagedir/&amp;ndash;prefix：stage时使用stagedir，install时使用prefix，表示编译生成文件的路径。推荐给不同的IDE指定不同的目录，如VS2015对应的是
+X:\boost_X_XX_X\vc10,如果使用了install参数，那么还将生成头文件目录，vc10对应的就是X:\boost_X_XX_X\boost\bin\vc10\include\boost_X_XX_X\boost&lt;/li&gt;
+&lt;li&gt;variant：编译debug/release版本。一般都是程序的debug版本对应库的debug版本，所以两个都编译。那么如果需要生成dll，可以使用link=shared方式生成。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;编译-gcc1320-x64-2023-12-29-1&#34;&gt;编译-GCC13.2.0-x64-2023-12-29&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;编译器版本&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MinGW-w64版本：x86_64-13.2.0-release-win32-seh-ucrt-rt_v11-rev1.7z&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;生成&amp;quot;D:\Code\boost_1_83_0\b2.exe&amp;quot;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;cd&lt;/span&gt; D:\Code\boost_1_83_0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bootstrap gcc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编译&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;b2 -j16 --build-dir=.\tmp --build-type=complete threading=multi link=shared address-model=64 toolset=gcc stage
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;备注&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“stage”表示生成的Boost库文件会存储于“D:\Code\boost_1_83_0\stage\lib”文件夹。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;库命名规则可参考库命名举例xlsx&#34;&gt;库命名规则：可参考：库命名举例.xlsx&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;.a                  静态链接库link=static&lt;/p&gt;
+&lt;p&gt;.dll、.dll.a    动态链接库link=shared&lt;/p&gt;
+&lt;p&gt;在大多数unix平台上：.so是共享库。.a是静态库
+在 Windows上：.dll表示共享库，.lib是静态或导入库。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;s       静态链接C/C++运行时库runtime-link=static&lt;/p&gt;
+&lt;p&gt;无s   动态链接C/C++运行时库runtime-link=shared&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;无d   variant=release版本&lt;/p&gt;
+&lt;p&gt;d       variant=debug版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mt     多线程threading=multi&lt;/p&gt;
+&lt;p&gt;无mt 单线程threading=single&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;g：使用标准库和运行时支撑库的调试版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;y：使用 Python的特殊调试构建&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;p：使用 STLPort标准库而不是编译器提供的默认库&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;n：使用 STLPort已被弃用的&amp;quot;native iostreams&amp;quot;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

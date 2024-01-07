@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>软件 on 天远博客</title>
+        <link>https://www.yprnet.cc/tags/%E8%BD%AF%E4%BB%B6/</link>
+        <description>Recent content in 软件 on 天远博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
+        <lastBuildDate>Sun, 07 Jan 2024 13:00:21 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/tags/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Markdown</title>
+        <link>https://www.yprnet.cc/p/%E8%BD%AF%E4%BB%B6/%E7%AC%94%E8%AE%B0-markdown/</link>
+        <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/p/%E8%BD%AF%E4%BB%B6/%E7%AC%94%E8%AE%B0-markdown/</guid>
+        <description>&lt;h1 id=&#34;教程&#34;&gt;教程&lt;/h1&gt;
+&lt;p&gt;菜鸟教程：https://www.runoob.com/markdown/md-tutorial.html&lt;/p&gt;
+&lt;h1 id=&#34;软件&#34;&gt;软件&lt;/h1&gt;
+&lt;h2 id=&#34;visual-studio-code&#34;&gt;Visual Studio Code&lt;/h2&gt;
+&lt;p&gt;Visual Studio Code 是众所周知的神器，是微软推出一款轻量级的文本编辑工具，类似于 Sublime，它已经默认集成 Markdown 文档编辑插件，原生就支持高亮 Markdown 的语法，但想要实时预览还需要选择 Markdown: Open Preview to the Side 命令实现，相关教程请点击此处&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/shawWey/p/8931697.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.cnblogs.com/shawWey/p/8931697.html&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;typora&#34;&gt;Typora&lt;/h2&gt;
+&lt;p&gt;官网：https://typora.io/&lt;/p&gt;
+&lt;p&gt;中文官网：https://typoraio.cn/&lt;/p&gt;
+&lt;p&gt;果核剥壳：https://www.ghxi.com/typora.html&lt;/p&gt;
+&lt;h2 id=&#34;marktext&#34;&gt;MarkText&lt;/h2&gt;
+&lt;p&gt;官网：https://marktext.app/&lt;/p&gt;
+&lt;p&gt;GitHub：https://github.com/marktext/marktext&lt;/p&gt;
+&lt;p&gt;GitHub中文包：https://github.com/chinayangxiaowei/marktext-chinese-language-pack&lt;/p&gt;
+&lt;p&gt;中文说明书：https://zhuanlan.zhihu.com/p/438852089&lt;/p&gt;
+&lt;p&gt;相关介绍：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/348367255&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://zhuanlan.zhihu.com/p/348367255&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;notable&#34;&gt;notable&lt;/h2&gt;
+&lt;p&gt;GitHub：https://github.com/notable/notable&lt;/p&gt;
+&lt;h2 id=&#34;hbuilderx&#34;&gt;HBuilderX&lt;/h2&gt;
+&lt;p&gt;官网：https://dcloud.io/hbuilderx.html&lt;/p&gt;
+&lt;h2 id=&#34;milkdown&#34;&gt;Milkdown&lt;/h2&gt;
+&lt;p&gt;官网：https://milkdown.dev/&lt;/p&gt;
+&lt;p&gt;GitHub：https://github.com/Milkdown/milkdown&lt;/p&gt;
+&lt;p&gt;果核剥壳：https://www.ghxi.com/wx20211206.html&lt;/p&gt;
+&lt;p&gt;VS Code 插件：https://marketplace.visualstudio.com/items?itemName=mirone.milkdown&lt;/p&gt;
+&lt;p&gt;在线体验：https://milkdown.dev/#/online-demo&lt;/p&gt;
+&lt;p&gt;相关介绍：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://juejin.cn/post/7131641368283185182&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://juejin.cn/post/7131641368283185182&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;stackedit网页版&#34;&gt;StackEdit(网页版)&lt;/h2&gt;
+&lt;p&gt;官网：https://stackedit.cn/app&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

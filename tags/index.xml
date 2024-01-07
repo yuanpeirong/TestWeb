@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on 天远博客</title>
+        <link>https://www.yprnet.cc/tags/</link>
+        <description>Recent content in Tags on 天远博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
+        <lastBuildDate>Sun, 07 Jan 2024 13:00:21 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>boost</title>
+        <link>https://www.yprnet.cc/tags/boost/</link>
+        <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/tags/boost/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>C&#43;&#43;</title>
+        <link>https://www.yprnet.cc/tags/c&#43;&#43;/</link>
+        <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/tags/c&#43;&#43;/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>gcc</title>
+        <link>https://www.yprnet.cc/tags/gcc/</link>
+        <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/tags/gcc/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Kawaii-gcc</title>
+        <link>https://www.yprnet.cc/tags/kawaii-gcc/</link>
+        <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/tags/kawaii-gcc/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Linux</title>
+        <link>https://www.yprnet.cc/tags/linux/</link>
+        <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/tags/linux/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Markdown</title>
+        <link>https://www.yprnet.cc/tags/markdown/</link>
+        <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/tags/markdown/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>笔记</title>
+        <link>https://www.yprnet.cc/tags/%E7%AC%94%E8%AE%B0/</link>
+        <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/tags/%E7%AC%94%E8%AE%B0/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>编程</title>
+        <link>https://www.yprnet.cc/tags/%E7%BC%96%E7%A8%8B/</link>
+        <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/tags/%E7%BC%96%E7%A8%8B/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>编译</title>
+        <link>https://www.yprnet.cc/tags/%E7%BC%96%E8%AF%91/</link>
+        <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/tags/%E7%BC%96%E8%AF%91/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>软件</title>
+        <link>https://www.yprnet.cc/tags/%E8%BD%AF%E4%BB%B6/</link>
+        <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/tags/%E8%BD%AF%E4%BB%B6/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

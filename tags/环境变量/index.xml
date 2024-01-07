@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>环境变量 on 天远博客</title>
+        <link>https://www.yprnet.cc/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</link>
+        <description>Recent content in 环境变量 on 天远博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
+        <lastBuildDate>Sun, 07 Jan 2024 13:00:21 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>GCC环境变量</title>
+        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</link>
+        <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</guid>
+        <description>&lt;h1 id=&#34;本文还未整理完&#34;&gt;本文还未整理完&lt;/h1&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/zblue78/article/details/1499717&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GCC 环境变量&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/zengkefu/p/5618034.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GCC相关的环境变量 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/panfeng412/archive/2011/10/20/library_path-and-ld_library_path.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LIBRARY_PATH和LD_LIBRARY_PATH环境变量的区别&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有大量的环境变量可供设置以影响 GCC 编译程序的方式。利用这些变量的控制也可使用合适的命令行选项。&lt;/p&gt;
+&lt;p&gt;一些环境变量设置在目录名列表中。这些名字和 PATH 环境变量使用的格式相同。特殊字符 PATH_SEPARATOR （安装编译程序的时候定义）用在目录名之间。在 UNIX 系统中，分隔符是冒号，而 Windows 系统中为分号。&lt;/p&gt;
+&lt;h2 id=&#34;c_include_path&#34;&gt;C_INCLUDE_PATH&lt;/h2&gt;
+&lt;p&gt;编译 C 程序时使用该环境变量。该环境变量指定一个或多个目录名列表，查找头文件，就好像在命令行中指定 -isystem 选项一样。会首先查找 -isystem 指定的所有目录。&lt;/p&gt;
+&lt;p&gt;也见 CPATH 、 CPLUS_INCLUDE_PATH 和 OBJC_INCLUDE_PATH 。&lt;/p&gt;
+&lt;h2 id=&#34;compiler_path&#34;&gt;COMPILER_PATH&lt;/h2&gt;
+&lt;p&gt;该环境变量指定一个或多个目录名列表，如果没有指定 GCC_EXEC_PREFIX 定位子程序，编译程序会在此查找它的子程序。&lt;/p&gt;
+&lt;p&gt;也见 LIBRARY_PATH 、 GCC_EXEC_PREFIX 和 -B 命令行选项。&lt;/p&gt;
+&lt;h2 id=&#34;cpath&#34;&gt;CPATH&lt;/h2&gt;
+&lt;p&gt;编译 C 、 C++ 和 Objective-C 程序时使用该环境变量。该环境变量指定一个或多个目录名列表，查找头文件，就好像在命令行中指定 -l 选项一样。会首先查找 -l 指定的所有目录。&lt;/p&gt;
+&lt;p&gt;也见 C_INCLUDE_PATH 、 CPLUS_INCLUDE_PATH 和 OBJC_INCLUDE_PATH 。&lt;/p&gt;
+&lt;h2 id=&#34;cplus_include_path&#34;&gt;CPLUS_INCLUDE_PATH&lt;/h2&gt;
+&lt;p&gt;编译 C++ 程序时使用该环境变量。该环境变量指定一个或多个目录名列表，查找头文件，就好像在命令行中指定 -isystem 选项一样。会首先查找 -isystem 指定的所有目录。&lt;/p&gt;
+&lt;p&gt;也见 CPATH 、 C_INCLUDE_PATH 和 OBJC_INCLUDE_PATH 。&lt;/p&gt;
+&lt;h2 id=&#34;dependencies_output&#34;&gt;DEPENDENCIES_OUTPUT&lt;/h2&gt;
+&lt;p&gt;为文件名设置该环境变量会让预处理程序将基于依赖关系的 makefile 规则写入文件。不会包括系统头文件名字。&lt;/p&gt;
+&lt;p&gt;如果环境变量设置为单名，被看作是文件名字，而依赖关系规则的名字来自源文件名字。如果定义中有两个名字，则第二个名字是用作依赖关系规则的目标名。&lt;/p&gt;
+&lt;p&gt;设置该环境变量的结果和使用命令行选项 -MM 、 -MF 和 -MT 的组合是一样的。也见 SUNPRO_DEPENDENCIES 。&lt;/p&gt;
+&lt;h2 id=&#34;gcc_exec_prefix&#34;&gt;GCC_EXEC_PREFIX&lt;/h2&gt;
+&lt;p&gt;如 果定义了该环境变量，它会作为编译程序执行的所有子程序名字的前缀。例如，如果将变量设置为 testver 而不是查找 as ，汇编器首先会在名字 testveras 下查找。如果在此没有找到，编译程序会继续根据它的普通名进行查找。可在前缀名中使用斜线指出路径名。&lt;/p&gt;
+&lt;p&gt;GCC_EXEC_PREFIX 的默认设置为 prefix /lib/gcc-lib/ ，这里的 prefix 是安装编译程序时 configure 脚本指定的名字。该前缀也用于定位标准连接程序文件，包含进来作为可执行程序的一部分。&lt;/p&gt;
+&lt;p&gt;如果使用 -B 命令行选项，会重写该设置。也见 COMPILER_PATH 。&lt;/p&gt;
+&lt;h2 id=&#34;lang&#34;&gt;LANG&lt;/h2&gt;
+&lt;p&gt;该环境变量用于指出编译程序使用的字符集，可创建宽字符文字、串文字和注释。&lt;/p&gt;
+&lt;p&gt;定义 LANG 为 C-JIS ，指出预处理程序将多字节字符按照 JIS （日语工业标准）字符进行解释。 C-SJIS 可用来指出 Shift -JIS 字符而 C-EUCJP 指出日文 EUC 。&lt;/p&gt;
+&lt;p&gt;如果没有定义 LANG ，或定义为不可识别，函数 mblen() 被用来确定字符宽度，而 mbtowc() 用来将多字节序列转换为宽字符。&lt;/p&gt;
+&lt;h2 id=&#34;lc_all&#34;&gt;LC_ALL&lt;/h2&gt;
+&lt;p&gt;如果设置，该环境变量的值重写 LC_MESSAGES 和 LC_CTYPE 的所有设置。&lt;/p&gt;
+&lt;h2 id=&#34;lc_ctype&#34;&gt;LC_CTYPE&lt;/h2&gt;
+&lt;p&gt;该 环境变量指出引用串中定义的多字节字符的字符分类。主要用于确定字符串的字符边界，字符编码需要用引号或转义符，可被错误地解释为字符串的结尾或特殊字符 串。对 Australian English ，可将它设置为 en_AU ； 对 Mexican Spanish ，可将它设置为 es_MX 。如果没有设置该变量，默认为 LANG 变量的值，或如果没有设置 LANG ，那就使用 C 英语行为。也见 LC_ALL 。&lt;/p&gt;
+&lt;h2 id=&#34;lc_messages&#34;&gt;LC_MESSAGES&lt;/h2&gt;
+&lt;p&gt;该 环境变量指出编译程序使用何种语言发出诊断消息。对 Australian English ，可设置为 en_AU ； 对 Mexican Spanish ，可设置为 es_MX 。如果变量没有设置，使用 LANG 变量的默认值，或如果没有设置 LANG ，那就使用 C 英语行为。也见 LC_ALL 。&lt;/p&gt;
+&lt;h2 id=&#34;ld_library_path&#34;&gt;LD_LIBRARY_PATH&lt;/h2&gt;
+&lt;p&gt;该环境变量不会影响编译程序，但程序运行的时候会有影响。变量指定一个目录列表，程序会查找该列表定位共享库。只有当未在编译程序的目录中找到共享库的时候，执行程序必须设置该变量。&lt;/p&gt;
+&lt;h2 id=&#34;ld_run_path&#34;&gt;LD_RUN_PATH&lt;/h2&gt;
+&lt;p&gt;该环境变量不会影响编译程序，但程序运行的时候会有影响。该变量在运行时指出文件的名字，运行的程序可由此得到它的符号名字和地址。地址不会重新载入，因而可能符号引用其他文件中的绝对地址。这和 ld 工具使用 -R 选项完全一样。&lt;/p&gt;
+&lt;h2 id=&#34;library_path&#34;&gt;LIBRARY_PATH&lt;/h2&gt;
+&lt;p&gt;该环境变量可设置为一个或多个目录名字列表，连接程序会搜寻该目录，以查找特殊连接程序文件，和由 -l （字母 l ）命令行选项指定名字的库。&lt;/p&gt;
+&lt;p&gt;由 -L 命令行选项指定的目录在环境变量的前面，首先被查找。也见 COMPILER_PATH 。&lt;/p&gt;
+&lt;h2 id=&#34;objc_include_path&#34;&gt;OBJC_INCLUDE_PATH&lt;/h2&gt;
+&lt;p&gt;在编译 Objective-C 程序的时候使用该环境变量。一个或多个目录名的列表由环境变量指定，用来查找头文件，就好像在命令行中指定 -isystem 选项一样。所有由 -isystem 选项指定的目录会首先被查找。&lt;/p&gt;
+&lt;p&gt;也见 CPATH 、 CPLUS_INCLUDE_PATH 和 C_INCLUDE_PATH 。&lt;/p&gt;
+&lt;p&gt;SUNPRO_OUTPUT
+为文件名设置该环境变量会令预处理程序将基于依赖关系的 makefile 规则写入文件。会包含系统头文件名。&lt;/p&gt;
+&lt;p&gt;如果环境变量被设置为单个名字，它将会被当作文件名，依赖关系规则中的名字将由源文件的名字中获得。如果定义中有两个名字，第二个名字就是依赖关系规则中的目标名。&lt;/p&gt;
+&lt;p&gt;设置该环境变量的结果与在命令行中使用参数 -M 、 -MF 和 -MT 的效果一样。参见 DEPENDENCIES_OUTPUT 。&lt;/p&gt;
+&lt;h2 id=&#34;tmpdir&#34;&gt;TMPDIR&lt;/h2&gt;
+&lt;p&gt;这个变量包含了供编译程序存放临时工作文件的目录的路径名。这些文件通常在编译过程结束时被删除。这种文件的一个例子就是由预处理程序输出并输入给编译程序的文件。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

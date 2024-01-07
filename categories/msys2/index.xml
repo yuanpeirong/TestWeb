@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>MSYS2 on 天远博客</title>
+        <link>https://www.yprnet.cc/categories/msys2/</link>
+        <description>Recent content in MSYS2 on 天远博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
+        <lastBuildDate>Fri, 24 Nov 2023 13:00:21 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/categories/msys2/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MSYS2</title>
+        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/msys2/</link>
+        <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/msys2/</guid>
+        <description>&lt;h2 id=&#34;官网&#34;&gt;官网&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.msys2.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.msys2.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;换源&#34;&gt;换源&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s2&#34;&gt;&amp;#34;s#https\?://mirror.msys2.org/#https://mirrors.tuna.tsinghua.edu.cn/msys2/#g&amp;#34;&lt;/span&gt; /etc/pacman.d/mirrorlist*
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;清华源帮助：https://mirror.tuna.tsinghua.edu.cn/help/msys2/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;msys2中mingw_package_prefix对应关系&#34;&gt;MSYS2中MINGW_PACKAGE_PREFIX对应关系&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;参考：https://www.msys2.org/docs/package-naming/&lt;/li&gt;
+&lt;li&gt;参考：https://www.msys2.org/docs/environments/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Name&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;MINGW_PACKAGE_PREFIX&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;MSYS&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;MINGW64&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;mingw-w64-x86_64-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;UCRT64&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;mingw-w64-ucrt-x86_64-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;CLANG64&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;mingw-w64-clang-x86_64-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;MINGW32&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;mingw-w64-i686-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;CLANG32&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;mingw-w64-clang-i686-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;CLANGARM64&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;mingw-w64-clang-aarch64-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;安装记录&#34;&gt;安装记录&lt;/h2&gt;
+&lt;h3 id=&#34;安装工具链&#34;&gt;安装工具链&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;pacman -S mingw-w64-x86_64-toolchain&lt;/li&gt;
+&lt;li&gt;pacman -S mingw-w64-ucrt-x86_64-toolchain&lt;/li&gt;
+&lt;li&gt;pacman -S mingw-w64-clang-x86_64-toolchain&lt;/li&gt;
+&lt;li&gt;pacman -S mingw-w64-i686-toolchain&lt;/li&gt;
+&lt;li&gt;pacman -S mingw-w64-clang-i686-toolchain&lt;/li&gt;
+&lt;li&gt;pacman -S mingw-w64-clang-aarch64-toolchain&lt;/li&gt;
+&lt;li&gt;pacman -S $MINGW_PACKAGE_PREFIX-toolchain&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安装qt5库&#34;&gt;安装Qt5库&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;pacman -S mingw-w64-x86_64-qt5-static&lt;/li&gt;
+&lt;li&gt;pacman -S mingw-w64-ucrt-x86_64-qt5-static&lt;/li&gt;
+&lt;li&gt;pacman -S mingw-w64-clang-x86_64-qt5-static&lt;/li&gt;
+&lt;li&gt;pacman -S mingw-w64-i686-qt5-static&lt;/li&gt;
+&lt;li&gt;pacman -S mingw-w64-clang-i686-qt5-static&lt;/li&gt;
+&lt;li&gt;pacman -S mingw-w64-clang-aarch64-qt5-stat&lt;/li&gt;
+&lt;li&gt;pacman -S $MINGW_PACKAGE_PREFIX-qt5-static&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安装qt6库&#34;&gt;安装Qt6库&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;pacman -S mingw-w64-ucrt-x86_64-qt6-static&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;仅安装编译工具&#34;&gt;仅安装编译工具&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;pacman -S mingw-w64-ucrt-x86_64-gcc&lt;/li&gt;
+&lt;li&gt;pacman -S mingw-w64-x86_64-gcc&lt;/li&gt;
+&lt;li&gt;pacman -S mingw-w64-i686-gcc&lt;/li&gt;
+&lt;li&gt;pacman -S mingw-w64-clang-x86_64-gcc&lt;/li&gt;
+&lt;li&gt;pacman -S mingw-w64-clang-i686-gcc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安装make&#34;&gt;安装make&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;pacman -S mingw-w64-ucrt-x86_64-make&lt;/li&gt;
+&lt;li&gt;pacman -S mingw-w64-clang-x86_64-make&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安装gdb&#34;&gt;安装GDB&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;pacman -S mingw-w64-ucrt-x86_64-gdb&lt;/li&gt;
+&lt;li&gt;pacman -S mingw-w64-clang-x86_64-lldb&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;仅msys2环境下的工具安装&#34;&gt;仅MSYS2环境下的工具安装&lt;/h3&gt;
+&lt;p&gt;pacman -S binutils      //二进制工具集           &lt;br&gt;
+pacman -S gcc           //GNU编译器集合-C和C++前端&lt;br&gt;
+pacman -S gcc-libs      //GCC提供的运行时库
+pacman -S gdb           //GNU调试器              &lt;br&gt;
+pacman -S gettext       //GNU国际化库            &lt;br&gt;
+pacman -S gettext-devel //GNU国际化开发实用程序  &lt;br&gt;
+pacman -S make          //make工具&lt;/p&gt;
+&lt;h3 id=&#34;安装其他&#34;&gt;安装其他&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;pacman -S base        //Minimal package set to define a basic MSYS2 installation&lt;/li&gt;
+&lt;li&gt;pacman -S base-devel  //Minimal package set for building packages with makepkg&lt;/li&gt;
+&lt;li&gt;pacman -S vim&lt;/li&gt;
+&lt;li&gt;pacman -S yasm&lt;/li&gt;
+&lt;li&gt;pacman -S nasm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;备注&#34;&gt;备注&lt;/h3&gt;
+&lt;p&gt;MSYS2中有两种工具链：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一种是原生GCC，其编译的是UNIX代码，运行依赖msys2xxx.dll；&lt;/li&gt;
+&lt;li&gt;一种是mingw工具链，用于编译windows代码（能调用windows API，不能调用unix系统调用）的，
+生成exe，运行时只依赖windows系统的dll。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;更新和维护msys2&#34;&gt;更新和维护MSYS2&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;参考：https://www.msys2.org/docs/updating/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通过安装程序或其他方式安装 MSYS2 后，您需要继续使用内置工具对其进行更新。MSYS2 是一个滚动发布发行版，仅支持完整的系统升级，这意味着各种软件包经常进行次要和主要更新，并且您只能一次更新所有软件包。
+若要更新所有包，请运行以下命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ pacman -Suy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: Synchronizing package databases...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; mingw32 is up to date
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; mingw64 is up to date
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; ucrt64 is up to date
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; clang32 is up to date
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; clang64 is up to date
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; msys is up to date
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: Starting core system upgrade...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; there is nothing to &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: Starting full system upgrade...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; there is nothing to &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在某些情况下，某些核心软件包会被更新，pacman 会提示你关闭所有终端：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:: To &lt;span class=&#34;nb&#34;&gt;complete&lt;/span&gt; this update all MSYS2 processes including this terminal will be closed.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Confirm to proceed &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Y/n&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;确认后，您需要启动一个新终端并再次运行更新，以更新剩余的非核心包。&lt;code&gt;pacman -Suy&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;其他命令参考&#34;&gt;其他命令参考&lt;/h2&gt;
+&lt;h3 id=&#34;1-安装软件&#34;&gt;1. 安装软件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;pacman -S 软件名: 安装软件。也可以同时安装多个包，只需以空格分隔包名即可。&lt;/li&gt;
+&lt;li&gt;pacman -S &amp;ndash;needed 软件名1 软件名2: 安装软件，但不重新安装已经是最新的软件。&lt;/li&gt;
+&lt;li&gt;pacman -Sy 软件名：安装软件前，先从远程仓库下载软件包数据库(数据库即所有软件列表)。&lt;/li&gt;
+&lt;li&gt;pacman -Sv 软件名：在显示一些操作信息后执行安装。&lt;/li&gt;
+&lt;li&gt;pacman -Sw 软件名: 只下载软件包，不安装。&lt;/li&gt;
+&lt;li&gt;pacman -U 软件名.pkg.tar.gz：安装本地软件包。&lt;/li&gt;
+&lt;li&gt;pacman -U &lt;a class=&#34;link&#34; href=&#34;http://www.example.com/repo/example.pkg.tar.xz&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.example.com/repo/example.pkg.tar.xz&lt;/a&gt; : 安装一个远程包（不在 pacman 配置的源里面）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-更新系统&#34;&gt;2. 更新系统&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;pacman -Sy: 从服务器下载新的软件包数据库（实际上就是下载远程仓库最新软件列表到本地）。&lt;/li&gt;
+&lt;li&gt;pacman -Su: 升级所有已安装的软件包。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-卸载软件&#34;&gt;3. 卸载软件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;pacman -R 软件名: 该命令将只删除包，保留其全部已经安装的依赖关系&lt;/li&gt;
+&lt;li&gt;pacman -Rv 软件名: 删除软件，并显示详细的信息&lt;/li&gt;
+&lt;li&gt;pacman -Rs 软件名: 删除软件，同时删除本机上只有该软件依赖的软件。&lt;/li&gt;
+&lt;li&gt;pacman -Rsc 软件名: 删除软件，并删除所有依赖这个软件的程序，慎用&lt;/li&gt;
+&lt;li&gt;pacman -Ru 软件名: 删除软件,同时删除不再被任何软件所需要的依赖&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-搜索软件&#34;&gt;4. 搜索软件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;pacman -Ss 关键字: 在仓库中搜索含关键字的软件包（本地已安装的会标记）&lt;/li&gt;
+&lt;li&gt;pacman -Sl &lt;repo&gt;:显示软件仓库中所有软件的列表。可以省略，通常这样用:&lt;code&gt;pacman -Sl | 关键字&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;pacman -Qs 关键字: 搜索已安装的软件包&lt;/li&gt;
+&lt;li&gt;pacman -Qu: 列出所有可升级的软件包&lt;/li&gt;
+&lt;li&gt;pacman -Qt: 列出不被任何软件要求的软件包&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;查看软件信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pacman -Q 软件名: 查看软件包是否已安装，已安装则显示软件包名称和版本&lt;/li&gt;
+&lt;li&gt;pacman -Qi 软件名: 查看某个软件包信息，显示较为详细的信息，包括描述、构架、依赖、大小等等&lt;/li&gt;
+&lt;li&gt;pacman -Ql 软件名: 列出软件包内所有文件，包括软件安装的每个文件、文件夹的名称和路径&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-软件包组&#34;&gt;5. 软件包组&lt;/h3&gt;
+&lt;p&gt;pacman -Sg: 列出软件仓库上所有的软件包组
+pacman -Qg: 列出本地已经安装的软件包组和子包
+pacman -Sg 软件包组: 查看某软件包组所包含的所有软件包
+pacman -Qg 软件包组: 和pacman -Sg 软件包组完全一样&lt;/p&gt;
+&lt;h3 id=&#34;6-清除缓存&#34;&gt;6. 清除缓存&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;pacman -Sc：清理未安装的包文件，包文件位于 /var/cache/pacman/pkg/ 目录。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pacman -Scc：清理所有的缓存文件。&lt;/p&gt;
+&lt;p&gt;pacman 安装包缓存位置及清理&lt;br&gt;
+如果进行系统更新时,磁盘不足,清理软件安装包缓存是一种可行的方案.&lt;br&gt;
+pacman 会将自己下载的软件压缩包保存在 /var/cache/pacman/pkg/目录下,&lt;br&gt;
+默认情况下并不会删除安装包,即便软件已经卸载.&lt;br&gt;
+下面提供几个清理程度不同的命令.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;paccache -r # 清理缓存,仅包含最近的三个版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;paccache -rk1 # 清理缓存,仅包含最近的1个版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pacman -Sc # 清理未安装软件包&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pacman -Scc # 清理缓存中所有内容&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>MSYS2中的GCC本地化</title>
+        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/msys2-gcc%E6%9C%AC%E5%9C%B0%E5%8C%96/</link>
+        <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/msys2-gcc%E6%9C%AC%E5%9C%B0%E5%8C%96/</guid>
+        <description>&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;GCC本地化-Linux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;注意&#34;&gt;注意&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;本文是指MSYS2主环境中的gcc，不是指mingw64、mingw64、mingw32子环境&lt;/li&gt;
+&lt;li&gt;缺点是：即便静态链接，生成的exe程序还是需要&lt;code&gt;msys-2.0.dll&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;msys2主环境&#34;&gt;MSYS2主环境&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;安装&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S gcc           //GNU编译器集合-C和C++前端  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S gcc-libs      //GCC提供的运行时库            我不确定是否必需
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S gettext       //GNU国际化库                 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S gettext-devel //GNU国际化开发实用程序        我不确定是否必需
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;D:\msys64\home\YuanPeirong.bashrc&amp;quot;加入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LANG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;zh_CN.UTF-8&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LANGUAGE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;zh_CN.UTF-8&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;gcc.mo&lt;br&gt;
+gcc版本为13&lt;br&gt;
+确保有&amp;quot;D:\msys64\usr\share\locale\zh_CN\LC_MESSAGES\gcc.mo&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;外部使用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;方法1：设置系统环境变量&lt;br&gt;
+&lt;code&gt;变量名：LANG       变量值：zh_CN.UTF-8&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;变量名：LANGUAGE   变量值：zh_CN.UTF-8&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方法2：在bat文件中写入以下变量，再启动其他外部工具&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set LANG=zh_CN.UTF-8
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set LANGUAGE=zh_CN.UTF-8
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方法3：写个exe文件设置变量，再调用真正要使用的外部工具（未测试）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方法4：写个run.ps1脚本（未测试）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方法5：设置临时变量，用分号执行多条命令，如：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;export LANG=&amp;quot;zh_CN.UTF-8&amp;quot;;export LANGUAGE=&amp;quot;zh_CN.UTF-8&amp;quot;;gcc -v&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;export LANG=&amp;quot;zh_CN.utf8&amp;quot;;export LANGUAGE=&amp;quot;zh_CN.utf8&amp;quot;;gcc -v&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;以上两条命令都有效。&lt;br&gt;
+&lt;code&gt;zh_CN.UTF-8&lt;/code&gt;和&lt;code&gt;zh_CN.utf8&lt;/code&gt;是等效的&lt;br&gt;
+但gcc源码的文档中是用&lt;code&gt;zh_CN.utf8&lt;/code&gt;描述的&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

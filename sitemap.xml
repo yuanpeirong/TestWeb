@@ -8,9 +8,6 @@
     <loc>https://www.yprnet.cc/tags/boost/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/categories/boost/</loc>
-    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
-  </url><url>
     <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-boost-%E7%BC%96%E8%AF%91/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
@@ -26,31 +23,28 @@
     <loc>https://www.yprnet.cc/tags/gcc/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/categories/gcc/</loc>
+    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc-%E6%9C%AC%E5%9C%B0%E5%8C%96-linux/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc-%E6%9C%AC%E5%9C%B0%E5%8C%96-linux/</loc>
+    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</loc>
+    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/tags/git/</loc>
+    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/categories/git/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/tags/kawaii-gcc/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/categories/kawaii-gcc/</loc>
-    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc-kawaii-gcc/</loc>
+    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-kawaii-gcc/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/tags/linux/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/categories/linux/</loc>
-    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
-  </url><url>
     <loc>https://www.yprnet.cc/tags/markdown/</loc>
-    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
-  </url><url>
-    <loc>https://www.yprnet.cc/categories/markdown/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/p/%E8%BD%AF%E4%BB%B6/%E7%AC%94%E8%AE%B0-markdown/</loc>
@@ -59,7 +53,22 @@
     <loc>https://www.yprnet.cc/post/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
+    <loc>https://www.yprnet.cc/tags/smartgit/</loc>
+    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/p/%E8%BD%AF%E4%BB%B6/git-smartgit/</loc>
+    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
+  </url><url>
     <loc>https://www.yprnet.cc/tags/</loc>
+    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/p/%E8%BD%AF%E4%BB%B6/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8-visualstudiocode/</loc>
+    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/tags/vscode/</loc>
+    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/p/%E8%BD%AF%E4%BB%B6/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8-vscodium/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/tags/%E7%AC%94%E8%AE%B0/</loc>
@@ -77,7 +86,7 @@
     <loc>https://www.yprnet.cc/tags/%E7%BC%96%E8%AF%91/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/categories/%E7%BC%96%E8%AF%91/</loc>
+    <loc>https://www.yprnet.cc/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/tags/%E8%BD%AF%E4%BB%B6/</loc>
@@ -86,11 +95,68 @@
     <loc>https://www.yprnet.cc/categories/%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/test-chinese/</loc>
-    <lastmod>2024-01-06T14:00:21+08:00</lastmod>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/hello/</loc>
+    <loc>https://www.yprnet.cc/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/categories/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
+    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/tags/msys2/</loc>
+    <lastmod>2023-11-28T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/categories/msys2/</loc>
+    <lastmod>2023-11-28T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/msys2/</loc>
+    <lastmod>2023-11-28T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/msys2-gcc%E6%9C%AC%E5%9C%B0%E5%8C%96/</loc>
+    <lastmod>2023-11-28T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/tags/qt/</loc>
+    <lastmod>2023-11-28T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-mingw-w64/</loc>
+    <lastmod>2023-11-28T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-msvc/</loc>
+    <lastmod>2023-11-28T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-mingw-w64/</loc>
+    <lastmod>2023-11-28T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-msvc/</loc>
+    <lastmod>2023-11-28T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-%E6%B5%8B%E8%AF%95qt%E9%9D%99%E6%80%81%E5%BA%93/</loc>
+    <lastmod>2023-11-28T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/tags/%E9%9D%99%E6%80%81%E5%BA%93/</loc>
+    <lastmod>2023-11-28T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/categories/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/tags/%E4%BD%93%E7%B3%BB/</loc>
+    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/p/tyblog/</loc>
+    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/tags/%E7%BD%91%E7%AB%99/</loc>
+    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/categories/%E7%BD%91%E7%AB%99/</loc>
+    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/p/%E8%BD%AF%E4%BB%B6/%E7%AC%94%E8%AE%B0-markdown-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2020-02-25T13:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/p/%E8%BD%AF%E4%BB%B6/%E7%AC%94%E8%AE%B0-markdown-%E8%AF%AD%E6%B3%95%E8%AF%B4%E6%98%8E/</loc>
+    <lastmod>2020-02-25T13:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/page/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
@@ -98,43 +164,11 @@
     <loc>https://www.yprnet.cc/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
+    <loc>https://www.yprnet.cc/p/test-chinese/</loc>
+    <lastmod>2024-01-06T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/</loc>
+    <loc>https://www.yprnet.cc/p/hello/</loc>
+    <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/categories/test/</loc>
   </url><url>

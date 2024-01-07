@@ -116,7 +116,7 @@ X:\boost_X_XX_X\vc10,如果使用了install参数，那么还将生成头文件�
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;库命名规则可参考库命名举例xlsx&#34;&gt;库命名规则：可参考：库命名举例.xlsx&lt;/h2&gt;
+&lt;h2 id=&#34;库命名规则&#34;&gt;库命名规则&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;.a                  静态链接库link=static&lt;/p&gt;
@@ -285,11 +285,77 @@ X:\boost_X_XX_X\vc10,如果使用了install参数，那么还将生成头文件�
 </description>
         </item>
         <item>
-        <title>Kawaii-gcc 让GCC变得可爱</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc-kawaii-gcc/</link>
+        <title>GCC环境变量</title>
+        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc-kawaii-gcc/</guid>
+        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</guid>
+        <description>&lt;h1 id=&#34;本文还未整理完&#34;&gt;本文还未整理完&lt;/h1&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/zblue78/article/details/1499717&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GCC 环境变量&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/zengkefu/p/5618034.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GCC相关的环境变量 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/panfeng412/archive/2011/10/20/library_path-and-ld_library_path.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LIBRARY_PATH和LD_LIBRARY_PATH环境变量的区别&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有大量的环境变量可供设置以影响 GCC 编译程序的方式。利用这些变量的控制也可使用合适的命令行选项。&lt;/p&gt;
+&lt;p&gt;一些环境变量设置在目录名列表中。这些名字和 PATH 环境变量使用的格式相同。特殊字符 PATH_SEPARATOR （安装编译程序的时候定义）用在目录名之间。在 UNIX 系统中，分隔符是冒号，而 Windows 系统中为分号。&lt;/p&gt;
+&lt;h2 id=&#34;c_include_path&#34;&gt;C_INCLUDE_PATH&lt;/h2&gt;
+&lt;p&gt;编译 C 程序时使用该环境变量。该环境变量指定一个或多个目录名列表，查找头文件，就好像在命令行中指定 -isystem 选项一样。会首先查找 -isystem 指定的所有目录。&lt;/p&gt;
+&lt;p&gt;也见 CPATH 、 CPLUS_INCLUDE_PATH 和 OBJC_INCLUDE_PATH 。&lt;/p&gt;
+&lt;h2 id=&#34;compiler_path&#34;&gt;COMPILER_PATH&lt;/h2&gt;
+&lt;p&gt;该环境变量指定一个或多个目录名列表，如果没有指定 GCC_EXEC_PREFIX 定位子程序，编译程序会在此查找它的子程序。&lt;/p&gt;
+&lt;p&gt;也见 LIBRARY_PATH 、 GCC_EXEC_PREFIX 和 -B 命令行选项。&lt;/p&gt;
+&lt;h2 id=&#34;cpath&#34;&gt;CPATH&lt;/h2&gt;
+&lt;p&gt;编译 C 、 C++ 和 Objective-C 程序时使用该环境变量。该环境变量指定一个或多个目录名列表，查找头文件，就好像在命令行中指定 -l 选项一样。会首先查找 -l 指定的所有目录。&lt;/p&gt;
+&lt;p&gt;也见 C_INCLUDE_PATH 、 CPLUS_INCLUDE_PATH 和 OBJC_INCLUDE_PATH 。&lt;/p&gt;
+&lt;h2 id=&#34;cplus_include_path&#34;&gt;CPLUS_INCLUDE_PATH&lt;/h2&gt;
+&lt;p&gt;编译 C++ 程序时使用该环境变量。该环境变量指定一个或多个目录名列表，查找头文件，就好像在命令行中指定 -isystem 选项一样。会首先查找 -isystem 指定的所有目录。&lt;/p&gt;
+&lt;p&gt;也见 CPATH 、 C_INCLUDE_PATH 和 OBJC_INCLUDE_PATH 。&lt;/p&gt;
+&lt;h2 id=&#34;dependencies_output&#34;&gt;DEPENDENCIES_OUTPUT&lt;/h2&gt;
+&lt;p&gt;为文件名设置该环境变量会让预处理程序将基于依赖关系的 makefile 规则写入文件。不会包括系统头文件名字。&lt;/p&gt;
+&lt;p&gt;如果环境变量设置为单名，被看作是文件名字，而依赖关系规则的名字来自源文件名字。如果定义中有两个名字，则第二个名字是用作依赖关系规则的目标名。&lt;/p&gt;
+&lt;p&gt;设置该环境变量的结果和使用命令行选项 -MM 、 -MF 和 -MT 的组合是一样的。也见 SUNPRO_DEPENDENCIES 。&lt;/p&gt;
+&lt;h2 id=&#34;gcc_exec_prefix&#34;&gt;GCC_EXEC_PREFIX&lt;/h2&gt;
+&lt;p&gt;如 果定义了该环境变量，它会作为编译程序执行的所有子程序名字的前缀。例如，如果将变量设置为 testver 而不是查找 as ，汇编器首先会在名字 testveras 下查找。如果在此没有找到，编译程序会继续根据它的普通名进行查找。可在前缀名中使用斜线指出路径名。&lt;/p&gt;
+&lt;p&gt;GCC_EXEC_PREFIX 的默认设置为 prefix /lib/gcc-lib/ ，这里的 prefix 是安装编译程序时 configure 脚本指定的名字。该前缀也用于定位标准连接程序文件，包含进来作为可执行程序的一部分。&lt;/p&gt;
+&lt;p&gt;如果使用 -B 命令行选项，会重写该设置。也见 COMPILER_PATH 。&lt;/p&gt;
+&lt;h2 id=&#34;lang&#34;&gt;LANG&lt;/h2&gt;
+&lt;p&gt;该环境变量用于指出编译程序使用的字符集，可创建宽字符文字、串文字和注释。&lt;/p&gt;
+&lt;p&gt;定义 LANG 为 C-JIS ，指出预处理程序将多字节字符按照 JIS （日语工业标准）字符进行解释。 C-SJIS 可用来指出 Shift -JIS 字符而 C-EUCJP 指出日文 EUC 。&lt;/p&gt;
+&lt;p&gt;如果没有定义 LANG ，或定义为不可识别，函数 mblen() 被用来确定字符宽度，而 mbtowc() 用来将多字节序列转换为宽字符。&lt;/p&gt;
+&lt;h2 id=&#34;lc_all&#34;&gt;LC_ALL&lt;/h2&gt;
+&lt;p&gt;如果设置，该环境变量的值重写 LC_MESSAGES 和 LC_CTYPE 的所有设置。&lt;/p&gt;
+&lt;h2 id=&#34;lc_ctype&#34;&gt;LC_CTYPE&lt;/h2&gt;
+&lt;p&gt;该 环境变量指出引用串中定义的多字节字符的字符分类。主要用于确定字符串的字符边界，字符编码需要用引号或转义符，可被错误地解释为字符串的结尾或特殊字符 串。对 Australian English ，可将它设置为 en_AU ； 对 Mexican Spanish ，可将它设置为 es_MX 。如果没有设置该变量，默认为 LANG 变量的值，或如果没有设置 LANG ，那就使用 C 英语行为。也见 LC_ALL 。&lt;/p&gt;
+&lt;h2 id=&#34;lc_messages&#34;&gt;LC_MESSAGES&lt;/h2&gt;
+&lt;p&gt;该 环境变量指出编译程序使用何种语言发出诊断消息。对 Australian English ，可设置为 en_AU ； 对 Mexican Spanish ，可设置为 es_MX 。如果变量没有设置，使用 LANG 变量的默认值，或如果没有设置 LANG ，那就使用 C 英语行为。也见 LC_ALL 。&lt;/p&gt;
+&lt;h2 id=&#34;ld_library_path&#34;&gt;LD_LIBRARY_PATH&lt;/h2&gt;
+&lt;p&gt;该环境变量不会影响编译程序，但程序运行的时候会有影响。变量指定一个目录列表，程序会查找该列表定位共享库。只有当未在编译程序的目录中找到共享库的时候，执行程序必须设置该变量。&lt;/p&gt;
+&lt;h2 id=&#34;ld_run_path&#34;&gt;LD_RUN_PATH&lt;/h2&gt;
+&lt;p&gt;该环境变量不会影响编译程序，但程序运行的时候会有影响。该变量在运行时指出文件的名字，运行的程序可由此得到它的符号名字和地址。地址不会重新载入，因而可能符号引用其他文件中的绝对地址。这和 ld 工具使用 -R 选项完全一样。&lt;/p&gt;
+&lt;h2 id=&#34;library_path&#34;&gt;LIBRARY_PATH&lt;/h2&gt;
+&lt;p&gt;该环境变量可设置为一个或多个目录名字列表，连接程序会搜寻该目录，以查找特殊连接程序文件，和由 -l （字母 l ）命令行选项指定名字的库。&lt;/p&gt;
+&lt;p&gt;由 -L 命令行选项指定的目录在环境变量的前面，首先被查找。也见 COMPILER_PATH 。&lt;/p&gt;
+&lt;h2 id=&#34;objc_include_path&#34;&gt;OBJC_INCLUDE_PATH&lt;/h2&gt;
+&lt;p&gt;在编译 Objective-C 程序的时候使用该环境变量。一个或多个目录名的列表由环境变量指定，用来查找头文件，就好像在命令行中指定 -isystem 选项一样。所有由 -isystem 选项指定的目录会首先被查找。&lt;/p&gt;
+&lt;p&gt;也见 CPATH 、 CPLUS_INCLUDE_PATH 和 C_INCLUDE_PATH 。&lt;/p&gt;
+&lt;p&gt;SUNPRO_OUTPUT
+为文件名设置该环境变量会令预处理程序将基于依赖关系的 makefile 规则写入文件。会包含系统头文件名。&lt;/p&gt;
+&lt;p&gt;如果环境变量被设置为单个名字，它将会被当作文件名，依赖关系规则中的名字将由源文件的名字中获得。如果定义中有两个名字，第二个名字就是依赖关系规则中的目标名。&lt;/p&gt;
+&lt;p&gt;设置该环境变量的结果与在命令行中使用参数 -M 、 -MF 和 -MT 的效果一样。参见 DEPENDENCIES_OUTPUT 。&lt;/p&gt;
+&lt;h2 id=&#34;tmpdir&#34;&gt;TMPDIR&lt;/h2&gt;
+&lt;p&gt;这个变量包含了供编译程序存放临时工作文件的目录的路径名。这些文件通常在编译过程结束时被删除。这种文件的一个例子就是由预处理程序输出并输入给编译程序的文件。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Kawaii-gcc 让GCC变得可爱</title>
+        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-kawaii-gcc/</link>
+        <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-kawaii-gcc/</guid>
         <description>&lt;p&gt;&lt;img src=&#34;https://img.shields.io/github/stars/Bill-Haku/kawaii-gcc&#34;
 	
 	
@@ -536,6 +602,1114 @@ X:\boost_X_XX_X\vc10,如果使用了install参数，那么还将生成头文件�
 &lt;h2 id=&#34;特别鸣谢&#34;&gt;特别鸣谢&lt;/h2&gt;
 &lt;p&gt;本项目的灵感来自&lt;a class=&#34;link&#34; href=&#34;https://github.com/Mosklia/gcc-hentai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;gcc-hentai&lt;/code&gt;&lt;/a&gt;项目。为了将其推广到日语区，我创建了本仓库、制作了日语版并修改完善了使用说明的诸多细节，最后制作了完全日语的宣传视频发布在YouTube，不料却在Bilibili获得了关注。十分感谢原作者的分享和开源精神。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Qt5编译(MinGW-w64)</title>
+        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-mingw-w64/</link>
+        <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-mingw-w64/</guid>
+        <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doc.qt.io/qt-5/windows-building.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc-snapshots.qt.io/qt5-5.15/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doc-snapshots.qt.io/qt5-5.15/windows-building.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-5/supported-platforms.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doc.qt.io/qt-5/supported-platforms.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-5/windows.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doc.qt.io/qt-5/windows.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-5/windows-requirements.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doc.qt.io/qt-5/windows-requirements.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-5/configure-options.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doc.qt.io/qt-5/configure-options.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://wiki.qt.io/Building_Qt_5_from_Git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://wiki.qt.io/Building_Qt_5_from_Git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://wiki.qt.io/MinGW-64-bit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://wiki.qt.io/MinGW-64-bit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/zxjohnson/article/details/106621457&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/zxjohnson/article/details/106621457&lt;/a&gt; (Qt 5.15.0编译指南)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/MrTsai_cpp/article/details/115175669&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/MrTsai_cpp/article/details/115175669&lt;/a&gt; (Qt 5.15的源码编译(Windows))&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/arxive/p/14412614.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.cnblogs.com/arxive/p/14412614.html&lt;/a&gt; (QT 5.15 及以后QT版本源码编译（静态库、动态库）)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.kucoding.com/article/149&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.kucoding.com/article/149&lt;/a&gt; (Qt6.5.3静态编译与使用-酷编程)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/weixin_50964512/article/details/124746458&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/weixin_50964512/article/details/124746458&lt;/a&gt; (Qt 静态编译与使用（6.2 详解版）)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/Comewood/article/details/125697120&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/Comewood/article/details/125697120&lt;/a&gt; （Windows10 Qt 遇到EGL/egl.h: No such file or directory 解决方法）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;下载源码包&#34;&gt;下载源码包&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://download.qt.io/archive/qt/5.15/5.15.11/single/qt-everywhere-opensource-src-5.15.11.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://download.qt.io/archive/qt/5.15/5.15.11/single/qt-everywhere-opensource-src-5.15.11.zip&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;安装build工具并配置相关环境变量&#34;&gt;安装build工具并配置相关环境变量&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;D:\Qt\Tools\mingw810_64\bin&lt;/li&gt;
+&lt;li&gt;These tools are not needed to run Qt 5 applications, but they are required for building Qt 5 from source.
+&lt;ul&gt;
+&lt;li&gt;Perl - Install a recent version of perl (for instance (&lt;a class=&#34;link&#34; href=&#34;https://strawberryperl.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://strawberryperl.com/&lt;/a&gt;) and add the installation location to your PATH.&lt;/li&gt;
+&lt;li&gt;Python - Install Python from the here and add the installation location to your PATH.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;验证build工具是否正确安装&#34;&gt;验证build工具是否正确安装&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;打开cmd(不要关闭)&lt;/li&gt;
+&lt;li&gt;输入
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;D:&lt;span class=&#34;se&#34;&gt;\Q&lt;/span&gt;t&lt;span class=&#34;se&#34;&gt;\T&lt;/span&gt;ools&lt;span class=&#34;se&#34;&gt;\m&lt;/span&gt;ingw810_64&lt;span class=&#34;se&#34;&gt;\b&lt;/span&gt;in&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;%PATH%
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; gcc -v
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; g++ -v
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; perl -V
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; python -V
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;设定文件夹&#34;&gt;设定文件夹&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;F:\Qt\5.15.11\src                                  源码目录qt-everywhere-opensource-src-5.15.11.zip解压，并改名为src，放置于F:\Qt\5.5.11\src&lt;/li&gt;
+&lt;li&gt;F:\Qt\5.15.11\build-mingw810_64    build目录&lt;/li&gt;
+&lt;li&gt;F:\Qt\5.15.11-static\mingw810_64    最后安装目录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;编译&#34;&gt;编译&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;建立F:\Qt\qt5mingw810_64.cmd文件，需设置好Qt源代码路径、mingw810_64路径(D:\Qt\Tools\mingw810_64\bin)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;建立cmd链接cmd-qt5mingw810_64，并运行&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;比较后，本步骤主要用途为
+&lt;ol&gt;
+&lt;li&gt;开启cmd.exe /E:ON /V:ON&lt;/li&gt;
+&lt;li&gt;替代下文手动将Qt源码相关路径加入PATH&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;/E:ON  启用命令扩展 详见[&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/mq0036/p/5244892.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cmd.exe启动参数说明&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;/V:ON  启用延迟的环境变量扩展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;F:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; Qt&lt;span class=&#34;se&#34;&gt;\5&lt;/span&gt;.15.11&lt;span class=&#34;se&#34;&gt;\b&lt;/span&gt;uild-mingw810_64
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;依上述定位到F:\Qt\5.15.11\build-mingw810_64
+依次执行命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;..&lt;span class=&#34;se&#34;&gt;\s&lt;/span&gt;rc&lt;span class=&#34;se&#34;&gt;\c&lt;/span&gt;onfigure.bat -static -prefix &lt;span class=&#34;s2&#34;&gt;&amp;#34;F:\Qt\5.15.11-static\mingw810_64&amp;#34;&lt;/span&gt; -debug-and-release -nomake examples -nomake tests -skip qtwebengine -opensource -opengl desktop -platform win32-g++
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mingw32-make -j16   &lt;span class=&#34;c1&#34;&gt;#开启十六线程编译，根据自己电脑实际核心数调整&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mingw32-make install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;编译此段内容为历史记录作废&#34;&gt;&lt;del&gt;编译(此段内容为历史记录，作废)&lt;/del&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在cmd中(上述不要关闭，否则要重新set PATH=D:\Qt\Tools\mingw810_64\bin;%PATH%)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;本步骤在2023-11-23编译时未使用，查看官网文档可将上一步替换优化如下&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;建立F:\Qt\qt5mingw810_64.cmd文件，需设置好Qt源代码路径、mingw810_64路径&lt;/li&gt;
+&lt;li&gt;建立cmd链接cmd-qt5mingw810_64，并运行&lt;/li&gt;
+&lt;li&gt;比较后，本步骤主要用途为
+&lt;ol&gt;
+&lt;li&gt;开启cmd.exe /E:ON /V:ON&lt;/li&gt;
+&lt;li&gt;替代下文手动将Qt源码相关路径加入PATH&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;/E:ON  启用命令扩展 详见[&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/mq0036/p/5244892.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cmd.exe启动参数说明&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;/V:ON  启用延迟的环境变量扩展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;F:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; Qt&lt;span class=&#34;se&#34;&gt;\5&lt;/span&gt;.15.11&lt;span class=&#34;se&#34;&gt;\b&lt;/span&gt;uild-mingw810_64
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;依上述定位到F:\Qt\5.15.11\build-mingw810_64
+依次执行命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#当使用上述qt5vars.cmd文件时，可省略此三行命令，因为已经在qt5vars.cmd文件中执行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SET &lt;span class=&#34;nv&#34;&gt;_ROOT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;F:&lt;span class=&#34;se&#34;&gt;\Q&lt;/span&gt;t&lt;span class=&#34;se&#34;&gt;\5&lt;/span&gt;.15.11&lt;span class=&#34;se&#34;&gt;\s&lt;/span&gt;rc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SET &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;%_ROOT%&lt;span class=&#34;se&#34;&gt;\q&lt;/span&gt;tbase&lt;span class=&#34;se&#34;&gt;\b&lt;/span&gt;in&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;%_ROOT%&lt;span class=&#34;se&#34;&gt;\g&lt;/span&gt;nuwin32&lt;span class=&#34;se&#34;&gt;\b&lt;/span&gt;in&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;%PATH%
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SET &lt;span class=&#34;nv&#34;&gt;_ROOT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;..&lt;span class=&#34;se&#34;&gt;\s&lt;/span&gt;rc&lt;span class=&#34;se&#34;&gt;\c&lt;/span&gt;onfigure.bat -static -prefix &lt;span class=&#34;s2&#34;&gt;&amp;#34;F:\Qt\5.15.11-static\mingw810_64&amp;#34;&lt;/span&gt; -debug-and-release -nomake examples -nomake tests -skip qtwebengine -opensource -opengl desktop -platform win32-g++
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mingw32-make   &lt;span class=&#34;c1&#34;&gt;#2023-11-23实测很慢，可改为&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               &lt;span class=&#34;c1&#34;&gt;#mingw32-make -j16    #开启十六线程编译，根据自己电脑实际核心数调整&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mingw32-make install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;说明1&#34;&gt;说明1&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;-static就是静态编译的意思，&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-debug-and-release，则表示将调试版、发行版都进行编译。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-prefix 指定安装将会部署的位置，根据自己情况修改&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-nomake examples 不需要编译示例&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-nomake tests 不需要编译测试工程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-skip qtwebengine 暂时先不编译webengine模块，因为太大了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-opensource 开源版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-confirm-license 是为了自动确认开源证书，免得到时暂停手动确认&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-qt-zlib -ssl -icu 指示检测这些库，并在需要时使用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-opengl desktop 明确指示使用你windows上安装的opengl驱动来编译程序，但这样编译出的程序在别的电脑上运行时需要目标电脑上安装的opengl驱动能兼容你的程序&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-platform win32-g++ 指明编译平台是windows，并使用mingw编译器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For Windows machines, either MinGW or Visual Studio toolchains can be used to compile Qt.
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;configure.bat -platform win32-g++
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;configure.bat -platform win32-msvc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-opengl desktop 切换到desktop版本的opengl，解决错误提示error：EGL/egl.h: No such file or directory&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;说明2&#34;&gt;说明2&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;等待配置完成后(其间要输入y同意协议)，再运行命令&lt;del&gt;mingw32-make&lt;/del&gt; mingw32-make -j16开始构建：&lt;/li&gt;
+&lt;li&gt;然后就是慢慢等编译了，这个过程比较漫长，如果电脑配置较低，估计需要几个小时：&lt;/li&gt;
+&lt;li&gt;编译完成后，继续运行命令mingw32-make install即可将编译好的静态库安装到前面我们所指定的目录中去：&lt;/li&gt;
+&lt;li&gt;此时你就可以删除前面的build文件夹，释放110多G的空间，它已经没用了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;2023-11-23编译已删除&#34;&gt;&lt;del&gt;2023-11-23编译(已删除)&lt;/del&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;del&gt;环境：YPR-Desktop、Windows 11 pro 23H2、D:\Qt\Tools\mingw810_64\bin、需数小时更多、7.65GB&lt;/del&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;del&gt;build文件约16.9GB，已删除&lt;/del&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;del&gt;未编译doc&lt;/del&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;2023-11-24编译&#34;&gt;2023-11-24编译&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;环境：YPR-Desktop、Windows 11 pro 23H2、D:\Qt\Tools\mingw810_64\bin、约44分钟、7.65GB&lt;/li&gt;
+&lt;li&gt;采用了qt5mingw810_64.cmd、采用了mingw32-make -j16&lt;/li&gt;
+&lt;li&gt;build文件约16.9GB，已删除&lt;/li&gt;
+&lt;li&gt;未编译doc&lt;/li&gt;
+&lt;li&gt;存档：7z(9-极限压缩）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;2023-11-28编译仅-release-ypr-desktop&#34;&gt;2023-11-28编译(仅-release YPR-Desktop)&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;环境：YPR-Desktop、Windows 11 pro 23H2、D:\Qt\Tools\mingw810_64\bin、约15分钟、932MB&lt;/li&gt;
+&lt;li&gt;采用了qt5mingw810_64.cmd、采用了mingw32-make -j16&lt;/li&gt;
+&lt;li&gt;build文件约2.52GB，已删除&lt;/li&gt;
+&lt;li&gt;未编译doc&lt;/li&gt;
+&lt;li&gt;存档：7z(9-极限压缩）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;2023-11-28编译仅-release-ypr-server&#34;&gt;2023-11-28编译(仅-release YPR-Server)&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;环境：YPR-Server、Windows 10 pro 22H2、D:\Qt\Tools\mingw810_64\bin、约1.5小时、932MB&lt;/li&gt;
+&lt;li&gt;采用了qt5mingw810_64.cmd、采用了mingw32-make -j24&lt;/li&gt;
+&lt;li&gt;build文件约2.52GB，已删除&lt;/li&gt;
+&lt;li&gt;未编译doc&lt;/li&gt;
+&lt;li&gt;存档：7z(9-极限压缩）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;备注&#34;&gt;备注&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;qt-everywhere-opensource-src-5.15.11.zip用D:\Qt\Tools\mingw1120_64\bin编译，实测报错&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Qt5编译(MSVC)</title>
+        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-msvc/</link>
+        <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-msvc/</guid>
+        <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doc.qt.io/qt-5/windows-building.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc-snapshots.qt.io/qt5-5.15/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doc-snapshots.qt.io/qt5-5.15/windows-building.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-5/supported-platforms.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doc.qt.io/qt-5/supported-platforms.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-5/windows.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doc.qt.io/qt-5/windows.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-5/windows-requirements.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doc.qt.io/qt-5/windows-requirements.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-5/configure-options.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doc.qt.io/qt-5/configure-options.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://wiki.qt.io/Building_Qt_5_from_Git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://wiki.qt.io/Building_Qt_5_from_Git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://wiki.qt.io/MinGW-64-bit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://wiki.qt.io/MinGW-64-bit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/zxjohnson/article/details/106621457&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/zxjohnson/article/details/106621457&lt;/a&gt; (Qt 5.15.0编译指南)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/MrTsai_cpp/article/details/115175669&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/MrTsai_cpp/article/details/115175669&lt;/a&gt; (Qt 5.15的源码编译(Windows))&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/arxive/p/14412614.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.cnblogs.com/arxive/p/14412614.html&lt;/a&gt; (QT 5.15 及以后QT版本源码编译（静态库、动态库）)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.kucoding.com/article/149&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.kucoding.com/article/149&lt;/a&gt; (Qt6.5.3静态编译与使用-酷编程)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/weixin_50964512/article/details/124746458&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/weixin_50964512/article/details/124746458&lt;/a&gt; (Qt 静态编译与使用（6.2 详解版）)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;下载源码包&#34;&gt;下载源码包&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://download.qt.io/archive/qt/5.15/5.15.11/single/qt-everywhere-opensource-src-5.15.11.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://download.qt.io/archive/qt/5.15/5.15.11/single/qt-everywhere-opensource-src-5.15.11.zip&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;安装build工具并配置相关环境变量&#34;&gt;安装build工具并配置相关环境变量&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Visual Studio 2019或2022&lt;/li&gt;
+&lt;li&gt;These tools are not needed to run Qt 5 applications, but they are required for building Qt 5 from source.
+&lt;ul&gt;
+&lt;li&gt;Perl - Install a recent version of perl (for instance (&lt;a class=&#34;link&#34; href=&#34;https://strawberryperl.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://strawberryperl.com/&lt;/a&gt;) and add the installation location to your PATH.&lt;/li&gt;
+&lt;li&gt;Python - Install Python from the here and add the installation location to your PATH.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;验证build工具是否正确安装&#34;&gt;验证build工具是否正确安装&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;打开&amp;quot;x64 Native Tools Command Prompt for VS 2022&amp;quot;&lt;/li&gt;
+&lt;li&gt;输入
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; Perl -V
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; python -V
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;设定文件夹&#34;&gt;设定文件夹&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;F:\Qt\5.5.11\src                                 源码目录qt-everywhere-opensource-src-5.15.11.zip解压，并改名为src，放置于F:\Qt\5.5.11\src&lt;/li&gt;
+&lt;li&gt;F:\Qt\5.5.11\build-msvc2019_64    build目录&lt;/li&gt;
+&lt;li&gt;F:\Qt\5.5.11-static\msvc2019_64   最后安装目录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;编译&#34;&gt;编译&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;建立F:\Qt\qt5vars.cmd文件，需设置好VS2022的bat路径(x64 Native Tools Command Prompt for VS 2022)、是否amd64、Qt源代码路径&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;建立cmd链接cmd-qt5vars，并运行&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本步骤主要用途为
+&lt;ol&gt;
+&lt;li&gt;开启cmd.exe /E:ON /V:ON&lt;/li&gt;
+&lt;li&gt;替代下文手动将Qt源码相关路径加入PATH&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;/E:ON  启用命令扩展 详见[&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/mq0036/p/5244892.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cmd.exe启动参数说明&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;/V:ON  启用延迟的环境变量扩展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;F:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; Qt&lt;span class=&#34;se&#34;&gt;\5&lt;/span&gt;.15.11&lt;span class=&#34;se&#34;&gt;\b&lt;/span&gt;uild-msvc2019_64
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;依上述定位到F:\Qt\5.15.11\build-msvc2019_64
+依次执行命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;..&lt;span class=&#34;se&#34;&gt;\s&lt;/span&gt;rc&lt;span class=&#34;se&#34;&gt;\c&lt;/span&gt;onfigure.bat -static -prefix &lt;span class=&#34;s2&#34;&gt;&amp;#34;F:\Qt\5.15.11-static\msvc2019_64&amp;#34;&lt;/span&gt; -debug-and-release -nomake examples -nomake tests -skip qtwebengine -opensource
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jom          &lt;span class=&#34;c1&#34;&gt;#按官方文档安装jom(是nmake的克隆，支持并行执行多个独立命令类似于GNU make的-j命令)               &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jom install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;编译此段内容为历史记录作废&#34;&gt;&lt;del&gt;编译(此段内容为历史记录，作废)&lt;/del&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;打开&amp;quot;x64 Native Tools Command Prompt for VS 2022&amp;quot;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;本步骤在2023-11-23编译时未使用，查看官网文档可将上一步替换优化如下&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;建立F:\Qt\qt5vars.cmd文件，需设置好VS2022的bat路径、是否amd64、Qt源代码路径&lt;/li&gt;
+&lt;li&gt;建立cmd链接cmd-qt5vars，并运行&lt;/li&gt;
+&lt;li&gt;比较后，本步骤主要用途为
+&lt;ol&gt;
+&lt;li&gt;开启cmd.exe /E:ON /V:ON&lt;/li&gt;
+&lt;li&gt;替代下文手动将Qt源码相关路径加入PATH&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;/E:ON  启用命令扩展 详见[&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/mq0036/p/5244892.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cmd.exe启动参数说明&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;/V:ON  启用延迟的环境变量扩展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;F:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; Qt&lt;span class=&#34;se&#34;&gt;\5&lt;/span&gt;.15.11&lt;span class=&#34;se&#34;&gt;\b&lt;/span&gt;uild-msvc2019_64
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;依上述定位到F:\Qt\5.15.11\build-msvc2019_64
+依次执行命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#当使用上述qt5vars.cmd文件时，可省略此三行命令，因为已经在qt5vars.cmd文件中执行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SET &lt;span class=&#34;nv&#34;&gt;_ROOT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;F:&lt;span class=&#34;se&#34;&gt;\Q&lt;/span&gt;t&lt;span class=&#34;se&#34;&gt;\5&lt;/span&gt;.15.11&lt;span class=&#34;se&#34;&gt;\s&lt;/span&gt;rc                                  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SET &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;%_ROOT%&lt;span class=&#34;se&#34;&gt;\q&lt;/span&gt;tbase&lt;span class=&#34;se&#34;&gt;\b&lt;/span&gt;in&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;%_ROOT%&lt;span class=&#34;se&#34;&gt;\g&lt;/span&gt;nuwin32&lt;span class=&#34;se&#34;&gt;\b&lt;/span&gt;in&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;%PATH%
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SET &lt;span class=&#34;nv&#34;&gt;_ROOT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;..&lt;span class=&#34;se&#34;&gt;\s&lt;/span&gt;rc&lt;span class=&#34;se&#34;&gt;\c&lt;/span&gt;onfigure.bat -static -prefix &lt;span class=&#34;s2&#34;&gt;&amp;#34;F:\Qt\5.15.11-static\msvc2019_64&amp;#34;&lt;/span&gt; -debug-and-release -nomake examples -nomake tests -skip qtwebengine -opensource
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nmake          &lt;span class=&#34;c1&#34;&gt;#2023-11-23实测较慢，可按官方文档安装jom(是nmake的克隆，支持并行执行多个独立命令类似于GNU make的-j命令)，此步改为&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               &lt;span class=&#34;c1&#34;&gt;#jom                 &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nmake install  &lt;span class=&#34;c1&#34;&gt;#如上一步执行jom，此步应对应执行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               &lt;span class=&#34;c1&#34;&gt;#jom install&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;说明1&#34;&gt;说明1&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;-static就是静态编译的意思，&lt;/li&gt;
+&lt;li&gt;-debug-and-release，则表示将调试版、发行版都进行编译。&lt;/li&gt;
+&lt;li&gt;-prefix 指定安装将会部署的位置，根据自己情况修改&lt;/li&gt;
+&lt;li&gt;-nomake examples 不需要编译示例&lt;/li&gt;
+&lt;li&gt;-nomake tests 不需要编译测试工程&lt;/li&gt;
+&lt;li&gt;-skip qtwebengine 暂时先不编译webengine模块，因为太大了&lt;/li&gt;
+&lt;li&gt;-opensource 开源版本&lt;/li&gt;
+&lt;li&gt;-confirm-license 是为了自动确认开源证书，免得到时暂停手动确认&lt;/li&gt;
+&lt;li&gt;-qt-zlib -ssl -icu 指示检测这些库，并在需要时使用&lt;/li&gt;
+&lt;li&gt;-opengl desktop 明确指示使用你windows上安装的opengl驱动来编译程序，但这样编译出的程序在别的电脑上运行时需要目标电脑上安装的opengl驱动能兼容你的程序&lt;/li&gt;
+&lt;li&gt;-platform win32-g++ 指明编译平台是windows，并使用mingw编译器
+&lt;ul&gt;
+&lt;li&gt;For Windows machines, either MinGW or Visual Studio toolchains can be used to compile Qt.
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;configure.bat -platform win32-g++
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;configure.bat -platform win32-msvc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;说明2&#34;&gt;说明2&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;等待配置完成后(其间要输入y同意协议)，再运行命令&lt;del&gt;nmake&lt;/del&gt; jom开始构建：&lt;/li&gt;
+&lt;li&gt;然后就是慢慢等编译了，这个过程比较漫长，如果电脑配置较低，估计需要几个小时：&lt;/li&gt;
+&lt;li&gt;编译完成后，继续运行命令&lt;del&gt;nmake install&lt;/del&gt; jom install即可将编译好的静态库安装到前面我们所指定的目录中去：&lt;/li&gt;
+&lt;li&gt;此时你就可以删除前面的build文件夹。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;2023-11-23编译&#34;&gt;&lt;del&gt;2023-11-23编译&lt;/del&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;环境：YPR-Desktop、Windows 11 pro 23H2、Visual Studio 2022、约1小时、1.58GB（有部分编译错误）&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;build文件约8.2GB，已删除&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;未编译doc&lt;/del&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;2023-11-24编译&#34;&gt;2023-11-24编译&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;环境：YPR-Desktop、Windows 11 pro 23H2、Visual Studio 2022、约15分钟、4.14GB&lt;/li&gt;
+&lt;li&gt;采用了qt5vars.cmd、采用了jom和jom install&lt;/li&gt;
+&lt;li&gt;build文件约24GB，已删除&lt;/li&gt;
+&lt;li&gt;未编译doc&lt;/li&gt;
+&lt;li&gt;存档：7z(9-极限压缩）&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Qt6编译(MinGW-w64)</title>
+        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-mingw-w64/</link>
+        <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-mingw-w64/</guid>
+        <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-6.5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doc.qt.io/qt-6.5/windows-building.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.kucoding.com/article/149&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.kucoding.com/article/149&lt;/a&gt; (Qt6.5.3静态编译与使用-酷编程)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/weixin_50964512/article/details/124746458&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/weixin_50964512/article/details/124746458&lt;/a&gt; (Qt 静态编译与使用（6.2 详解版）)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/630112083&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://zhuanlan.zhihu.com/p/630112083&lt;/a&gt; (QT6 opensource安装详解)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;下载源码包&#34;&gt;下载源码包&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://download.qt.io/archive/qt/6.5/6.5.3/single/qt-everywhere-src-6.5.3.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://download.qt.io/archive/qt/6.5/6.5.3/single/qt-everywhere-src-6.5.3.zip&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;安装build工具并配置相关环境变量&#34;&gt;安装build工具并配置相关环境变量&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;D:\Qt\Tools\mingw1120_64\bin&lt;/li&gt;
+&lt;li&gt;CMake	Version 3.16 and newer (3.17 and newer for builds 3.21 and newer for builds)&lt;/li&gt;
+&lt;li&gt;Ninja&lt;/li&gt;
+&lt;li&gt;Python	Version 3	Required build tool. Windows installers are available on python.org, or from the Microsoft Store.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;验证build工具是否正确安装&#34;&gt;验证build工具是否正确安装&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;打开cmd(不要关闭)&lt;/li&gt;
+&lt;li&gt;输入
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;D:&lt;span class=&#34;se&#34;&gt;\Q&lt;/span&gt;t&lt;span class=&#34;se&#34;&gt;\T&lt;/span&gt;ools&lt;span class=&#34;se&#34;&gt;\m&lt;/span&gt;ingw1120_64&lt;span class=&#34;se&#34;&gt;\b&lt;/span&gt;in&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;%PATH%
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; gcc -v
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; g++ -v
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; cmake --version
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; ninja --version
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; python -V
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;设定文件夹&#34;&gt;设定文件夹&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;F:\Qt\6.5.3\src                             源码目录qt-everywhere-src-6.5.3.zip解压，并改名为src，放置于F:\Qt\6.5.3\src&lt;/li&gt;
+&lt;li&gt;F:\Qt\6.5.3\build-mingw_64      build目录(Release版本)&lt;/li&gt;
+&lt;li&gt;F:\Qt\6.5.3\build-mingw_64      build目录(Debug版本)&lt;/li&gt;
+&lt;li&gt;F:\Qt\6.5.3-static\mingw_64     最后安装目录(Release版本)&lt;/li&gt;
+&lt;li&gt;F:\Qt\6.5.3-static\mingw_64d   最后安装目录(Debug版本)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;编译release版本&#34;&gt;编译Release版本&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;建立F:\Qt\qt6mingw_64.cmd文件，需设置好Qt源代码路径、mingw1120_64路径(D:\Qt\Tools\mingw1120_64\bin)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;建立cmd链接cmd-qt6mingw_64，并运行&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本步骤主要用途为
+&lt;ol&gt;
+&lt;li&gt;开启cmd.exe /E:ON /V:ON&lt;/li&gt;
+&lt;li&gt;将Qt源码相关路径加入PATH&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;/E:ON  启用命令扩展 详见[&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/mq0036/p/5244892.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cmd.exe启动参数说明&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;/V:ON  启用延迟的环境变量扩展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;F:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; Qt&lt;span class=&#34;se&#34;&gt;\6&lt;/span&gt;.5.3&lt;span class=&#34;se&#34;&gt;\b&lt;/span&gt;uild-mingw_64 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;依上述定位到F:\Qt\6.5.3\build-mingw_64&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;依次执行命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;..&lt;span class=&#34;se&#34;&gt;\s&lt;/span&gt;rc&lt;span class=&#34;se&#34;&gt;\c&lt;/span&gt;onfigure.bat -static -prefix &lt;span class=&#34;s2&#34;&gt;&amp;#34;F:\Qt\6.5.3-static\mingw_64&amp;#34;&lt;/span&gt; -release -DNDEBUG  &lt;span class=&#34;c1&#34;&gt;#-DNDEBUG见常见错误&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; cmake --build .    &lt;span class=&#34;c1&#34;&gt;#不要忘记点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; cmake --install .  &lt;span class=&#34;c1&#34;&gt;#不要忘记点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;编译debug版本&#34;&gt;编译Debug版本&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;关闭上述命令窗口，重新运行cmd链接cmd-qt6mingw_64&lt;/li&gt;
+&lt;li&gt;输入
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;F:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; Qt&lt;span class=&#34;se&#34;&gt;\6&lt;/span&gt;.5.3&lt;span class=&#34;se&#34;&gt;\b&lt;/span&gt;uild-mingw_64d   &lt;span class=&#34;c1&#34;&gt;#注意路径有d&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;依上述定位到F:\Qt\6.5.3\build-mingw_64d&lt;/li&gt;
+&lt;li&gt;依次执行命令
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;..&lt;span class=&#34;se&#34;&gt;\s&lt;/span&gt;rc&lt;span class=&#34;se&#34;&gt;\c&lt;/span&gt;onfigure.bat -static -prefix &lt;span class=&#34;s2&#34;&gt;&amp;#34;F:\Qt\6.5.3-static\mingw_64d&amp;#34;&lt;/span&gt; -debug -DNDEBUG  &lt;span class=&#34;c1&#34;&gt;#注意路径有d，编译选项为-debug，-DNDEBUG见常见错误&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; cmake --build .    &lt;span class=&#34;c1&#34;&gt;#不要忘记点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; cmake --install .  &lt;span class=&#34;c1&#34;&gt;#不要忘记点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;编译此段内容为历史记录作废&#34;&gt;&lt;del&gt;编译(此段内容为历史记录，作废)&lt;/del&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在cmd中(上述不要关闭，否则要重新set PATH=D:\Qt\Tools\mingw1120_64\bin;%PATH%)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;本步骤在2023-11-23编译时未使用，查看官网文档可将上一步替换优化如下&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;建立F:\Qt\qt6mingw_64.cmd文件，需设置好Qt源代码路径、mingw1120_64路径&lt;/li&gt;
+&lt;li&gt;建立cmd链接cmd-qt6mingw_64，并运行&lt;/li&gt;
+&lt;li&gt;比较后，本步骤主要用途为
+&lt;ol&gt;
+&lt;li&gt;开启cmd.exe /E:ON /V:ON&lt;/li&gt;
+&lt;li&gt;将Qt源码相关路径加入PATH&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;/E:ON  启用命令扩展 详见[&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/mq0036/p/5244892.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cmd.exe启动参数说明&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;/V:ON  启用延迟的环境变量扩展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;F:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; Qt&lt;span class=&#34;se&#34;&gt;\6&lt;/span&gt;.5.3&lt;span class=&#34;se&#34;&gt;\b&lt;/span&gt;uild-mingw_64 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;依上述定位到F:\Qt\6.5.3\build-mingw_64&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;依次执行命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;..&lt;span class=&#34;se&#34;&gt;\s&lt;/span&gt;rc&lt;span class=&#34;se&#34;&gt;\c&lt;/span&gt;onfigure.bat -static -prefix &lt;span class=&#34;s2&#34;&gt;&amp;#34;F:\Qt\6.5.3-static\mingw_64&amp;#34;&lt;/span&gt; -debug-and-release -DNDEBUG  &lt;span class=&#34;c1&#34;&gt;#见常见错误&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; cmake --build .    &lt;span class=&#34;c1&#34;&gt;#不要忘记点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; cmake --install .  &lt;span class=&#34;c1&#34;&gt;#不要忘记点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;说明&#34;&gt;说明&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;其中-static就是静态编译的意思，而后面的-debug-and-release，则表示将调试版、发行版都进行编译。&lt;/li&gt;
+&lt;li&gt;等待配置完成后，再运行命令cmake &amp;ndash;build .开始构建：&lt;/li&gt;
+&lt;li&gt;然后就是慢慢等编译了，这个过程比较漫长，如果电脑配置较低，估计需要几个小时：&lt;/li&gt;
+&lt;li&gt;编译完成后，继续运行命令cmake &amp;ndash;install .即可将编译好的静态库安装到前面我们所指定的目录中去：&lt;/li&gt;
+&lt;li&gt;此时你就可以删除前面的build文件夹，释放110多G的空间，它已经没用了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;常见错误&#34;&gt;常见错误&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;ERROR: Exactly one of NDEBUG and _DEBUG needs to be defined&lt;/li&gt;
+&lt;li&gt;在configure.bat这个命令中，增加-DNDEBUG
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;E:&lt;span class=&#34;se&#34;&gt;\q&lt;/span&gt;t-everywhere-src-6.5.0&lt;span class=&#34;se&#34;&gt;\q&lt;/span&gt;tbase&lt;span class=&#34;se&#34;&gt;\c&lt;/span&gt;onfigure.bat -top-level -release -no-pch -prefix &lt;span class=&#34;s2&#34;&gt;&amp;#34;E:\Qt\Qt6.5.0&amp;#34;&lt;/span&gt; -skip qtwebengine -nomake tools -nomake tests -nomake examples -DNDEBUG
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;2023-11-23编译已删除&#34;&gt;&lt;del&gt;2023-11-23编译(已删除)&lt;/del&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;环境：YPR-Desktop、Windows 11 pro 23H2、D:\Qt\Tools\mingw1120_64\bin、约20分钟、2.0GB&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;build文件夹约100多GB，已删除&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;测试时程序无法Debug：带d版本在build文件夹中已编译，但在camke &amp;ndash;install .时没有被复制过来，参考&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/eslzzyl/p/17270948.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VS2022编译安装Qt6.4&lt;/a&gt;&lt;/del&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;2023-11-25编译&#34;&gt;2023-11-25编译&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;环境：YPR-Desktop、Windows 11 pro 23H2、D:\Qt\Tools\mingw1120_64\bin、约15分钟(单独Release或Debug)、Release1.96GB+Debug37.9GB&lt;/li&gt;
+&lt;li&gt;采用了cmd-qt6mingw_64，分别编译Release和Debug版本&lt;/li&gt;
+&lt;li&gt;build文件夹：Release55.8GB+Debug120GB，已删除&lt;/li&gt;
+&lt;li&gt;存档：7z(9-极限压缩）&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Qt6编译(MSVC)</title>
+        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-msvc/</link>
+        <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-msvc/</guid>
+        <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-6.5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doc.qt.io/qt-6.5/windows-building.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.kucoding.com/article/149&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.kucoding.com/article/149&lt;/a&gt; (Qt6.5.3静态编译与使用-酷编程)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/weixin_50964512/article/details/124746458&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/weixin_50964512/article/details/124746458&lt;/a&gt; (Qt 静态编译与使用（6.2 详解版）)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;下载源码包&#34;&gt;下载源码包&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://download.qt.io/archive/qt/6.5/6.5.3/single/qt-everywhere-src-6.5.3.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://download.qt.io/archive/qt/6.5/6.5.3/single/qt-everywhere-src-6.5.3.zip&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;安装build工具并配置相关环境变量&#34;&gt;安装build工具并配置相关环境变量&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Visual Studio 2019或2022&lt;/li&gt;
+&lt;li&gt;CMake	Version 3.16 and newer (3.17 and newer for builds 3.21 and newer for builds)&lt;/li&gt;
+&lt;li&gt;Ninja&lt;/li&gt;
+&lt;li&gt;Python	Version 3	Required build tool. Windows installers are available on python.org, or from the Microsoft Store.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;验证build工具是否正确安装&#34;&gt;验证build工具是否正确安装&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;打开&amp;quot;x64 Native Tools Command Prompt for VS 2022&amp;quot;&lt;/li&gt;
+&lt;li&gt;输入
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; cmake --version
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; ninja --version
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; python -V
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;设定文件夹&#34;&gt;设定文件夹&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;F:\Qt\6.5.3\src                                  源码目录qt-everywhere-src-6.5.3.zip解压，并改名为src，放置于F:\Qt\6.5.3\src&lt;/li&gt;
+&lt;li&gt;F:\Qt\6.5.3\build-msvc2019_64     build目录(Release版本)&lt;/li&gt;
+&lt;li&gt;F:\Qt\6.5.3\build-msvc2019_64d   build目录(Debug版本)&lt;/li&gt;
+&lt;li&gt;F:\Qt\6.5.3-static\msvc2019_64     最后安装目录(Release版本)&lt;/li&gt;
+&lt;li&gt;F:\Qt\6.5.3-static\msvc2019_64d   最后安装目录(Debug版本)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;编译release版本&#34;&gt;编译Release版本&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;建立F:\Qt\qt6vars.cmd文件，需设置好VS2022的bat路径(x64 Native Tools Command Prompt for VS 2022)、是否amd64、Qt源代码路径&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;建立cmd链接cmd-qt6vars，并运行&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本步骤主要用途为
+&lt;ol&gt;
+&lt;li&gt;开启cmd.exe /E:ON /V:ON&lt;/li&gt;
+&lt;li&gt;将Qt源码相关路径加入PATH&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;/E:ON  启用命令扩展 详见[&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/mq0036/p/5244892.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cmd.exe启动参数说明&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;/V:ON  启用延迟的环境变量扩展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; F:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; Qt&lt;span class=&#34;se&#34;&gt;\6&lt;/span&gt;.5.3&lt;span class=&#34;se&#34;&gt;\b&lt;/span&gt;uild-msvc2019_64
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;依上述定位到F:\Qt\6.5.3\build-msvc2019_64
+依次执行命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; ..&lt;span class=&#34;se&#34;&gt;\s&lt;/span&gt;rc&lt;span class=&#34;se&#34;&gt;\c&lt;/span&gt;onfigure.bat -static -prefix &lt;span class=&#34;s2&#34;&gt;&amp;#34;F:\Qt\6.5.3-static\msvc2019_64&amp;#34;&lt;/span&gt; -release
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; cmake --build .    &lt;span class=&#34;c1&#34;&gt;#不要忘记点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; cmake --install .  &lt;span class=&#34;c1&#34;&gt;#不要忘记点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;编译debug版本&#34;&gt;编译Debug版本&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;关闭上述命令窗口，重新运行cmd链接cmd-qt6vars&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; F:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; Qt&lt;span class=&#34;se&#34;&gt;\6&lt;/span&gt;.5.3&lt;span class=&#34;se&#34;&gt;\b&lt;/span&gt;uild-msvc2019_64d   &lt;span class=&#34;c1&#34;&gt;#注意路径有d&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;依上述定位到F:\Qt\6.5.3\build-msvc2019_64d
+依次执行命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; ..&lt;span class=&#34;se&#34;&gt;\s&lt;/span&gt;rc&lt;span class=&#34;se&#34;&gt;\c&lt;/span&gt;onfigure.bat -static -prefix &lt;span class=&#34;s2&#34;&gt;&amp;#34;F:\Qt\6.5.3-static\msvc2019_64d&amp;#34;&lt;/span&gt; -debug  &lt;span class=&#34;c1&#34;&gt;#注意路径有d，编译选项为-debug&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; cmake --build .    &lt;span class=&#34;c1&#34;&gt;#不要忘记点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; cmake --install .  &lt;span class=&#34;c1&#34;&gt;#不要忘记点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;编译此段内容为历史记录作废&#34;&gt;&lt;del&gt;编译(此段内容为历史记录，作废)&lt;/del&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;打开&amp;quot;x64 Native Tools Command Prompt for VS 2022&amp;quot;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;本步骤在2023-11-23编译时未使用，查看官网文档可将上一步替换优化如下&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;建立F:\Qt\qt6vars.cmd文件，需设置好VS2022的bat路径、是否amd64、Qt源代码路径&lt;/li&gt;
+&lt;li&gt;建立cmd链接cmd-qt6vars，并运行&lt;/li&gt;
+&lt;li&gt;比较后，本步骤主要用途为
+&lt;ol&gt;
+&lt;li&gt;开启cmd.exe /E:ON /V:ON&lt;/li&gt;
+&lt;li&gt;将Qt源码相关路径加入PATH&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;/E:ON  启用命令扩展 详见[&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/mq0036/p/5244892.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cmd.exe启动参数说明&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;/V:ON  启用延迟的环境变量扩展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;输入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; F:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; Qt&lt;span class=&#34;se&#34;&gt;\6&lt;/span&gt;.5.3&lt;span class=&#34;se&#34;&gt;\b&lt;/span&gt;uild-msvc2019_64
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;依上述定位到F:\Qt\6.5.3\build-msvc2019_64
+依次执行命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;c1&#34;&gt;#2023-11-23编译、2023-11-24编译&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; ..&lt;span class=&#34;se&#34;&gt;\s&lt;/span&gt;rc&lt;span class=&#34;se&#34;&gt;\c&lt;/span&gt;onfigure.bat -static -prefix &lt;span class=&#34;s2&#34;&gt;&amp;#34;F:\Qt\6.5.3-static\msvc2019_64&amp;#34;&lt;/span&gt; -debug-and-release
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; cmake --build .    &lt;span class=&#34;c1&#34;&gt;#不要忘记点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; cmake --install .  &lt;span class=&#34;c1&#34;&gt;#不要忘记点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2023-11-24编译解决带d版本在camke &amp;ndash;install .时没有被复制过来&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;清空build目录，最后安装目录不动&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;依次执行命令&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#重新用-debug编译一次&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;..&lt;span class=&#34;se&#34;&gt;\s&lt;/span&gt;rc&lt;span class=&#34;se&#34;&gt;\c&lt;/span&gt;onfigure.bat -static -prefix &lt;span class=&#34;s2&#34;&gt;&amp;#34;F:\Qt\6.5.3-static\msvc2019_64&amp;#34;&lt;/span&gt; -debug
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; cmake --build .    &lt;span class=&#34;c1&#34;&gt;#不要忘记点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; cmake --install .  &lt;span class=&#34;c1&#34;&gt;#不要忘记点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;说明&#34;&gt;说明&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;其中-static就是静态编译的意思，而后面的-debug-and-release，则表示将调试版、发行版都进行编译。&lt;/li&gt;
+&lt;li&gt;等待配置完成后，再运行命令cmake &amp;ndash;build .开始构建：&lt;/li&gt;
+&lt;li&gt;然后就是慢慢等编译了，这个过程比较漫长，如果电脑配置较低，估计需要几个小时：&lt;/li&gt;
+&lt;li&gt;编译完成后，继续运行命令cmake &amp;ndash;install .即可将编译好的静态库安装到前面我们所指定的目录中去：&lt;/li&gt;
+&lt;li&gt;此时你就可以删除前面的build文件夹，释放110多G的空间，它已经没用了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;2023-11-23编译已删除&#34;&gt;&lt;del&gt;2023-11-23编译(已删除)&lt;/del&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;环境：YPR-Desktop、Windows 11 pro 23H2、Visual Studio 2022、约20分钟、1.41GB&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;build文件夹约100多GB，已删除&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;测试时程序无法Debug：带d版本在build文件夹中已编译，但在camke &amp;ndash;install .时没有被复制过来，参考&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/eslzzyl/p/17270948.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VS2022编译安装Qt6.4&lt;/a&gt;&lt;/del&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;2023-11-24编译&#34;&gt;2023-11-24编译&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;环境：YPR-Desktop、Windows 11 pro 23H2、Visual Studio 2022、约20分钟、Release1.41GB+Debug15.6GB&lt;/li&gt;
+&lt;li&gt;采用了qt6vars.cmd&lt;/li&gt;
+&lt;li&gt;build文件夹约111GB（单独Release为51.3GB，单独Debug为77.9GB），已删除&lt;/li&gt;
+&lt;li&gt;测试时程序无法Debug：带d版本在build文件夹中已编译，但在camke &amp;ndash;install .时没有被复制过来，参考&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/eslzzyl/p/17270948.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VS2022编译安装Qt6.4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;解决方案：用-debug选项再编译一次（build文件夹需清空，install文件夹需备份Release版本）&lt;/li&gt;
+&lt;li&gt;-debug和&amp;ndash;release选项有同名文件但大小不同，install文件夹不能合并&lt;/li&gt;
+&lt;li&gt;Debug版本QTDIR路径不是F:\Qt\6.5.3\build-msvc2019_64d而是F:\Qt\6.5.3\build-msvc2019_64，应用qt.conf修正&lt;/li&gt;
+&lt;li&gt;存档：7z(9-极限压缩）&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>测试Qt静态库</title>
+        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-%E6%B5%8B%E8%AF%95qt%E9%9D%99%E6%80%81%E5%BA%93/</link>
+        <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-%E6%B5%8B%E8%AF%95qt%E9%9D%99%E6%80%81%E5%BA%93/</guid>
+        <description>&lt;h2 id=&#34;qt6-静态库测试&#34;&gt;Qt6-静态库测试&lt;/h2&gt;
+&lt;h3 id=&#34;qt653-static-mingw1120_64-release天远编译2023-11-25&#34;&gt;Qt6.5.3-static-mingw1120_64-Release（天远编译2023-11-25）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Release：正常&lt;/li&gt;
+&lt;li&gt;Debug： 正常&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;qt653-static-mingw1120_64-debug天远编译2023-11-25&#34;&gt;Qt6.5.3-static-mingw1120_64-Debug（天远编译2023-11-25）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Release：正常&lt;/li&gt;
+&lt;li&gt;Debug： exe文件有713MB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;qt653-static-msvc2019_64-release天远编译2023-11-24&#34;&gt;Qt6.5.3-static-msvc2019_64-Release（天远编译2023-11-24）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Release：正常&lt;/li&gt;
+&lt;li&gt;Debug： error: dependent &amp;lsquo;F:\Qt\6.5.3-static\msvc2019_64\lib\Qt6Widgetsd.lib&amp;rsquo; does not exist.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;qt653-static-msvc2019_64-debug天远编译2023-11-24&#34;&gt;Qt6.5.3-static-msvc2019_64-Debug（天远编译2023-11-24）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Release：error: dependent &amp;lsquo;F:\Qt\6.5.3-static\msvc2019_64d\lib\Qt6Widgets.lib&amp;rsquo; does not exist.&lt;/li&gt;
+&lt;li&gt;Debug：正常&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;qt653-static-mingw1120_64天远编译2023-11-23&#34;&gt;&lt;del&gt;Qt6.5.3-static-mingw1120_64（天远编译2023-11-23）&lt;/del&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;Release：正常&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;Debug： error: No rule to make target &amp;lsquo;F:/Qt/6.5.3-static/mingw_64/lib/libQt6Widgetsd.a&amp;rsquo;, needed by &amp;lsquo;debug/samp2_2.exe&amp;rsquo;.  Stop.&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;原因为带d版本在build文件夹中已编译，但在camke &amp;ndash;install .时没有被复制过来，参考&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/eslzzyl/p/17270948.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VS2022编译安装Qt6.4&lt;/a&gt;&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;解决方案：用-debug选项再编译一次&lt;/del&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;qt653-static-msvc2019_64天远编译2023-11-23&#34;&gt;&lt;del&gt;Qt6.5.3-static-msvc2019_64（天远编译2023-11-23）&lt;/del&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;Release：正常&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;Debug：error: dependent &amp;lsquo;F:\Qt\6.5.3-static\msvc2019_64\lib\Qt6Widgetsd.lib&amp;rsquo; does not exist.&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;原因为带d版本在build文件夹中已编译，但在camke &amp;ndash;install .时没有被复制过来，参考&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/eslzzyl/p/17270948.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VS2022编译安装Qt6.4&lt;/a&gt;&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;解决方案：用-debug选项再编译一次&lt;/del&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;qt652-static-mingw1320_64msys2-ucrt64&#34;&gt;Qt6.5.2-static-mingw1320_64（MSYS2-UCRT64）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Release：
+&lt;ul&gt;
+&lt;li&gt;error: cannot find -lb2: No such file or directory&lt;/li&gt;
+&lt;li&gt;error: collect2.exe: error: ld returned 1 exit status&lt;/li&gt;
+&lt;li&gt;error: [Makefile.Release:74: release/Test.exe] Error 1            也报过77&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Debug：同上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;qt5-静态库测试&#34;&gt;Qt5-静态库测试&lt;/h2&gt;
+&lt;h3 id=&#34;qt51511-static-mingw810_64天远编译2023-11-24&#34;&gt;Qt5.15.11-static-mingw810_64（天远编译2023-11-24）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Release：正常&lt;/li&gt;
+&lt;li&gt;Debug：exe文件有691MB（是-debug-and-release的原因，如果只-release可解决问题）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;qt51511-static-mingw810_64-release天远编译2023-11-28-ypr-desktop&#34;&gt;Qt5.15.11-static-mingw810_64-Release（天远编译2023-11-28 YPR-Desktop）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Release：正常&lt;/li&gt;
+&lt;li&gt;Debug：正常&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;qt51511-static-mingw810_64-release天远编译2023-11-28-ypr-server&#34;&gt;Qt5.15.11-static-mingw810_64-Release（天远编译2023-11-28 YPR-Server）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Release：正常&lt;/li&gt;
+&lt;li&gt;Debug：正常&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;qt51511-static-msvc2019_64天远编译2023-11-24&#34;&gt;Qt5.15.11-static-msvc2019_64（天远编译2023-11-24）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Release：exe文件大小正常&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Debug：exe文件大小正常&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;两种模式都有以下问题&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;warning: C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失&lt;/li&gt;
+&lt;li&gt;error: C2001: 常量中有换行符&lt;/li&gt;
+&lt;li&gt;error: C2146: 语法错误: 缺少“)”(在标识符“ui”的前面)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解决方案在pro文件中加入QMAKE_CXXFLAGS += /utf-8，参考资料：&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/libaineu2004/article/details/19245205&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;彻底解决Qt中文乱码以及汉字编码的问题(UTF-8/GBK)&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;qt51510-static-mingw1320_64msys2-ucrt64&#34;&gt;Qt5.15.10-static-mingw1320_64（MSYS2-UCRT64）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Release：正常&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dbug：正常&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         

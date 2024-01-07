@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>博客 on 天远博客</title>
+        <link>https://www.yprnet.cc/categories/%E5%8D%9A%E5%AE%A2/</link>
+        <description>Recent content in 博客 on 天远博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
+        <lastBuildDate>Thu, 27 Feb 2020 13:00:21 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/categories/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>天远网站、博客体系</title>
+        <link>https://www.yprnet.cc/p/tyblog/</link>
+        <pubDate>Thu, 27 Feb 2020 13:00:21 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/p/tyblog/</guid>
+        <description>&lt;h2 id=&#34;天远网站体系-自建&#34;&gt;天远网站体系-自建&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;天远网站：&lt;a class=&#34;link&#34; href=&#34;http://www.yprnet.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.yprnet.com&lt;/a&gt; (自建HTML+CSS+Javascript体系)目前托管于 &lt;a class=&#34;link&#34; href=&#34;https://pages.github.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;天远网站：&lt;a class=&#34;link&#34; href=&#34;http://www.yuanpeirong.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.yuanpeirong.com&lt;/a&gt; (自建HTML+CSS+Javascript体系) 目前托管于 &lt;a class=&#34;link&#34; href=&#34;https://www.qiniu.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;七牛云存储&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;天远博客体系-自建网站子博客&#34;&gt;天远博客体系-自建网站子博客&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;天远博客：&lt;a class=&#34;link&#34; href=&#34;http://www.yprnet.com/blog&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.yprnet.com/blog&lt;/a&gt; (由 &lt;a class=&#34;link&#34; href=&#34;https://hexo.io/zh-cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hexo&lt;/a&gt; 编译)&amp;mdash;准备切换为 &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;天远博客：&lt;a class=&#34;link&#34; href=&#34;http://www.yuanpeirong.com/blog&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://www.yuanpeirong.com/blog&lt;/a&gt; (由 &lt;a class=&#34;link&#34; href=&#34;https://hexo.io/zh-cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hexo&lt;/a&gt; 编译)&amp;mdash;准备切换为 &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;天远博客体系-自建博客&#34;&gt;天远博客体系-自建博客&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;天远博客：&lt;a class=&#34;link&#34; href=&#34;https://blog.yprnet.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.yprnet.com&lt;/a&gt; (由 &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo&lt;/a&gt; 编译) 目前托管于 &lt;a class=&#34;link&#34; href=&#34;https://pages.github.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;天远博客：&lt;a class=&#34;link&#34; href=&#34;http://blog.yuanpeirong.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://blog.yuanpeirong.com&lt;/a&gt; (由 &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo&lt;/a&gt; 编译) 目前托管于 &lt;a class=&#34;link&#34; href=&#34;https://gitee.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Gitee Pages&lt;/a&gt;  (隐性转发)&lt;/li&gt;
+&lt;li&gt;天远博客：&lt;a class=&#34;link&#34; href=&#34;https://ypr.gitee.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://ypr.gitee.io&lt;/a&gt; (由 &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo&lt;/a&gt; 编译) 目前托管于 &lt;a class=&#34;link&#34; href=&#34;https://gitee.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Gitee Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;天远博客：&lt;a class=&#34;link&#34; href=&#34;https://www.yprnet.cc&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.yprnet.cc&lt;/a&gt; (由 &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo&lt;/a&gt; 编译) 目前托管于 &lt;a class=&#34;link&#34; href=&#34;https://pages.github.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github Pages&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;天远博客体系-公共博客&#34;&gt;天远博客体系-公共博客&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;永远的荣-腾讯博客：暂不公开&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;永远的荣的博客：&lt;a class=&#34;link&#34; href=&#34;http://blog.sina.com.cn/yprymxhl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://blog.sina.com.cn/yprymxhl&lt;/a&gt; 搭建于 &lt;a class=&#34;link&#34; href=&#34;http://blog.sina.com.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;新浪博客&lt;/a&gt;&lt;/del&gt; (停止服务)&lt;/li&gt;
+&lt;li&gt;开源中国(技术)：&lt;a class=&#34;link&#34; href=&#34;http://my.oschina.net/u/186539/blog&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://my.oschina.net/u/186539/blog&lt;/a&gt; 搭建于 &lt;a class=&#34;link&#34; href=&#34;https://www.oschina.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;开源中国&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;博客园(技术)：&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/yuanpeirong/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.cnblogs.com/yuanpeirong/&lt;/a&gt; 搭建于 &lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;博客园&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;CSDN(技术)：&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/yuanpeirong&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/yuanpeirong&lt;/a&gt; 搭建于 &lt;a class=&#34;link&#34; href=&#34;https://www.csdn.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CSDN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lofter(技术)：&lt;a class=&#34;link&#34; href=&#34;http://tysoft.lofter.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://tysoft.lofter.com/&lt;/a&gt; 搭建于 &lt;a class=&#34;link&#34; href=&#34;https://www.lofter.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;网易Lofter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;腾讯云社区(在建中)&lt;/li&gt;
+&lt;li&gt;云栖社区(在建中)：&lt;a class=&#34;link&#34; href=&#34;https://yq.aliyun.com/u/yuanpeirong&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://yq.aliyun.com/u/yuanpeirong&lt;/a&gt; 搭建于 &lt;a class=&#34;link&#34; href=&#34;https://yq.aliyun.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;云栖社区&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;简书(在建中)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;更新记录&#34;&gt;更新记录&lt;/h2&gt;
+&lt;p&gt;2024-01-07：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;blog.yprnet.com托管由Gitee改为Github，启用https&lt;/li&gt;
+&lt;li&gt;新增www.yprnet.cc的说明&lt;/li&gt;
+&lt;li&gt;删除托管于CODING的blog3.yuanpeirong.com&lt;/li&gt;
+&lt;li&gt;blog.sina.com.cn/yprymxhl因新浪停止服务，做删除标识&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;2020-03-18：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;blog.yuanpeirong.com改为托管于码云&lt;/li&gt;
+&lt;li&gt;原托管于CODING的天远博客更改域名为：blog3.yuanpeirong.com&lt;/li&gt;
+&lt;li&gt;建立blog.yprnet.com，托管于码云&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;2020-02-27：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;建立文章《天远网站、博客体系》&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

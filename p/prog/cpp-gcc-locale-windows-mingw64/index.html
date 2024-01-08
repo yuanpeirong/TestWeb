@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='让编译器用中文输出'>
+<title>MinGW-w64 GCC本地化-Windows</title>
+
+<link rel='canonical' href='https://www.yprnet.cc/p/prog/cpp-gcc-locale-windows-mingw64/'>
+
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='MinGW-w64 GCC本地化-Windows'>
+<meta property='og:description' content='让编译器用中文输出'>
+<meta property='og:url' content='https://www.yprnet.cc/p/prog/cpp-gcc-locale-windows-mingw64/'>
+<meta property='og:site_name' content='天远博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='编程' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='gcc' /><meta property='article:tag' content='MinGW-w64' /><meta property='article:published_time' content='2024-01-08T23:00:21&#43;08:00'/><meta property='article:modified_time' content='2024-01-08T23:00:21&#43;08:00'/>
+<meta name="twitter:title" content="MinGW-w64 GCC本地化-Windows">
+<meta name="twitter:description" content="让编译器用中文输出">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/TianYuan_hu00d35ae089bda3bce539f572b00404d0_57842_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">天远博客</a></h1>
+            <h2 class="site-description">专注于技术沉淀！！！</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/yuanpeirong'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='http://www.yprnet.com'
+                        target="_blank"
+                        title="天远网站"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#参考资料1">参考资料1</a></li>
+    <li><a href="#常规mingw-w64编译步骤以gcc1320为例">常规MinGw-w64编译步骤(以GCC13.2.0为例)</a></li>
+    <li><a href="#本地化需要修改内容以gcc1320为例">本地化需要修改内容(以GCC13.2.0为例)</a></li>
+    <li><a href="#结果说明">结果说明</a></li>
+    <li><a href="#用github-action自动编译">用Github Action自动编译</a></li>
+    <li><a href="#参考资料2">参考资料2</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%BC%96%E7%A8%8B/" >
+                编程
+            </a>
+        
+            <a href="/categories/c&#43;&#43;/" >
+                C&#43;&#43;
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/prog/cpp-gcc-locale-windows-mingw64/">MinGW-w64 GCC本地化-Windows</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            让编译器用中文输出
+        </h3>
+        
+    </div>
+
+    
+        <footer class="article-time">
+            
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published">2024-01-08</time>
+                </div>
+            
+
+            
+            
+                        最后更新:
+                        <time class="article-time--updated" datetime="2024-01-08 23:00:21 &#43;0800 CST" title="2024-01-08 23:00:21 &#43;0800 CST">
+                            2024-01-08
+                        </time>
+
+            
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        阅读时长: 5 分钟
+                    </time>
+                </div>
+            
+        </footer>
+    
+
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="参考资料1">参考资料1</h2>
+<ul>
+<li><a class="link" href="https://github.com/niXman/mingw-builds"  target="_blank" rel="noopener"
+    >https://github.com/niXman/mingw-builds</a></li>
+<li><a class="link" href="https://gcc.gnu.org/install/configure.html"  target="_blank" rel="noopener"
+    >https://gcc.gnu.org/install/configure.html</a></li>
+<li><a class="link" href="https://github.com/niXman/mingw-builds/issues/666"  target="_blank" rel="noopener"
+    >https://github.com/niXman/mingw-builds/issues/666</a></li>
+</ul>
+<h2 id="常规mingw-w64编译步骤以gcc1320为例">常规MinGw-w64编译步骤(以GCC13.2.0为例)</h2>
+<ol>
+<li>
+<p>环境：Windows-64bit or Linux + Wine-64bit</p>
+</li>
+<li>
+<p>安装MSYS2：Install MSYS2 from:
+<code>http://sourceforge.net/projects/msys2/</code>
+(MSYS2 wiki: <a class="link" href="https://www.msys2.org/wiki/MSYS2-installation/"  target="_blank" rel="noopener"
+    >https://www.msys2.org/wiki/MSYS2-installation/</a>)</p>
+</li>
+<li>
+<p>把来自niXman的编译脚本放到以下目录
+Get the scripts into <code>&lt;msys root&gt;/home/&lt;user&gt;/mingw-builds</code>:
+<code>cd &amp;&amp; git clone &lt;paste correct url&gt;</code></p>
+<p><code>git clone https://github.com/niXman/mingw-builds.git</code></p>
+</li>
+<li>
+<p>在MSYS2环境中删除以下文件夹或重命名
+In the MSYS2 file structure delete or rename the <code>/mingw32</code> and <code>/mingw64</code> directory.</p>
+</li>
+<li>
+<p>从环境变量中删除指向任何预安装的 MinGW 的路径
+Delete the paths pointing to any preinstalled MinGW from the <code>PATH</code>
+environment variable.</p>
+</li>
+<li>
+<p>进入以下目录
+Go into the MinGW-builds root directory:
+<code>cd &amp;&amp; cd mingw-builds</code></p>
+</li>
+<li>
+<p>编译选项Options</p>
+</li>
+<li>
+<p>运行Run:  <font color=red>（注意：编译运行前需做本地化修改，详见下文）</font></p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd mingw-builds
+</span></span><span class="line"><span class="cl">./build --mode=gcc-13.2.0 --buildroot=/c/buildroot --jobs=4 --rev=0 --with-default-msvcrt=ucrt --rt-version=v11 --threads=posix --exceptions=seh --arch=x86_64 --bin-compress --enable-languages=c,c++,fortran
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="9">
+<li>编译得到的编译器为：<br>
+<code>c:\buildroot\archives\x86_64-13.2.0-release-posix-seh-ucrt-rt_v11-rev0.7z</code><br>
+其中<code>c:\buildroot</code>为上一步由<code>--buildroot=/c/buildroot</code>指定</li>
+</ol>
+<h2 id="本地化需要修改内容以gcc1320为例">本地化需要修改内容(以GCC13.2.0为例)</h2>
+<ol>
+<li>编译前修改编译参数:
+<ul>
+<li><code>脚本文件：scripts/gcc-13.2.0.sh</code> 将<code>--disable-nls</code>修改为<code>--enable-nls</code></li>
+<li>(可选)将仓库中所有文件的<code>--disable-nls</code>修改为<code>--enable-nls</code></li>
+</ul>
+</li>
+<li>修改gcc源码中gcc\intl.cc文件进行修改，详见下文：参考资料2。<br>
+这里要重点说明的是，gcc的源码是编译脚本自动下载的，正常见情况下无法修改。<br>
+这里提供两个方法：
+<ul>
+<li>方法1：编译完成后去 <code>c:\buildroot\src</code>目录找到<code>gcc-13.2.0\gcc\intl.cc</code>修改，然后重新编译。</li>
+<li>方法2：<code>脚本文件：scripts/gcc-13.2.0.sh</code>中有gcc的源码的下载地址，下载下来修改代码后再传到网上(我用了我自己的云服务器)，并将这个下载地址修改为你的地址。</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 脚本文件：scripts/gcc-13.2.0.sh
+</span></span><span class="line"><span class="cl">PKG_VERSION=13.2.0
+</span></span><span class="line"><span class="cl">PKG_NAME=gcc-${PKG_VERSION}
+</span></span><span class="line"><span class="cl">PKG_DIR_NAME=gcc-${PKG_VERSION}  
+</span></span><span class="line"><span class="cl">PKG_TYPE=.tar.xz  
+</span></span><span class="line"><span class="cl">PKG_URLS=(
+</span></span><span class="line"><span class="cl">  &#34;https://ftpmirror.gnu.org/gnu/gcc/gcc-${PKG_VERSION}/gcc-${PKG_VERSION}${PKG_TYPE}&#34;  
+</span></span><span class="line"><span class="cl">)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>上述网址即<code>https://ftpmirror.gnu.org/gnu/gcc/gcc-13.2.0/gcc-13.2.0.tar.xz</code><br>
+我这里改为了<code>http://www.yuanpeirong.com/gcc-13.2.0.tar.xz</code><br>
+因资金有限，编译后，现在我已经在我的服务器上删除了，你不用找了</p>
+<ol start="3">
+<li>编译完成后解压编译器：<code>x86_64-13.2.0-release-posix-seh-ucrt-rt_v11-rev0.7z</code><br>
+在<code>mingw64</code>目录下，将<code>share\locale\zh_CN\LC_MESSAGES\*.*</code>拷贝一份至<br>
+<code>libexec\gcc\x86_64-w64-mingw32\</code>下，最后形成的路径为<br>
+<code>libexec\gcc\x86_64-w64-mingw32\share\locale\zh_CN\LC_MESSAGES\*.*</code></li>
+</ol>
+<h2 id="结果说明">结果说明</h2>
+<ul>
+<li>
+<p>情况1，只改第1条<br>
+需依赖<code>C:\msys64\mingw64\share\locale\zh_CN\LC_MESSAGES\gcc.mo</code>才能输出中文。<br>
+其中<code>C:\msys64\mingw64</code>是编译<code>MinGW64 GCC13.2.0</code>时用的编译器的路径。视编译情况需调整。<code>gcc.exe、g++.exe、cc1.exe、cc1plus.exe</code>都依赖这个路径。</p>
+</li>
+<li>
+<p>情况2，只改第1、2条<br>
+只有<code>gcc -v、gcc --version、gcc --help</code>能输出中文。</p>
+</li>
+<li>
+<p>情况3，全改第1、2、3条<br>
+Windows 7/8.1控制台正常。windows 10/11控制台正常输出错误提示时中文乱码。<br>
+但在小熊猫C++使用此编译器时，Windows 7/8.1/10/11全部正常。因为其使用管道。<br>
+网友猜测可能原因：<br>
+<code>GCC为了兼容Windows残废的VT序列用力过猛，结果遇到真支持VT序列的Windows就抓瞎了</code></p>
+</li>
+</ul>
+<h2 id="用github-action自动编译">用Github Action自动编译</h2>
+<p>可快速编译各个版本，此处不另外展开</p>
+<h2 id="参考资料2">参考资料2</h2>
+<p>《MinGW/GCC 编译器修改 gettext 初始化路径使之能在任意位置输出中文消息》<br>
+来源：https://blog.csdn.net/hackpascal/article/details/15222083<br>
+原文摘抄如下：</p>
+<p>GCC 编译器支持 gettext 的本地化，MinGW 也一样，只是可惜他们在内部实现时使用了绝对路径。这个绝对路径的前缀(prefix) 由编译时传递给 configure 的 &ndash;prefix 设定，这样就导致了 MinGW 只有在指定的位置上才能实现编译消息本地化。</p>
+<p>我所做的就是让 GCC 在初始化 gettext 时使用相对路径，这样就能使 MinGW 在任何地方都能使用本地化的字符串了。包含文件搜索路径也同理。</p>
+<p>通过查找 bindtextdomain 函数可以知道 gcc 对 gettext 的初始化在 gcc\intl.cc 中完成。包含文件搜索路径定义在 incpath.c 中。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span>
+</span></span><span class="line"><span class="cl"><span class="nf">gcc_init_libintl</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#ifdef HAVE_LC_MESSAGES
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="n">setlocale</span> <span class="p">(</span><span class="n">LC_CTYPE</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">setlocale</span> <span class="p">(</span><span class="n">LC_MESSAGES</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#else
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="n">setlocale</span> <span class="p">(</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span> 
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">bindtextdomain</span> <span class="p">(</span><span class="s">&#34;gcc&#34;</span><span class="p">,</span> <span class="n">LOCALEDIR</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">textdomain</span> <span class="p">(</span><span class="s">&#34;gcc&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">  <span class="cm">/* Opening quotation mark.  */</span>
+</span></span><span class="line"><span class="cl">  <span class="n">open_quote</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s">&#34;`&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">  <span class="cm">/* Closing quotation mark.  */</span>
+</span></span><span class="line"><span class="cl">  <span class="n">close_quote</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s">&#34;&#39;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="cp">#if defined HAVE_LANGINFO_CODESET
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>  <span class="n">locale_encoding</span> <span class="o">=</span> <span class="n">nl_langinfo</span> <span class="p">(</span><span class="n">CODESET</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">locale_encoding</span> <span class="o">!=</span> <span class="nb">NULL</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="o">!</span><span class="n">strcasecmp</span> <span class="p">(</span><span class="n">locale_encoding</span><span class="p">,</span> <span class="s">&#34;utf-8&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	  <span class="o">||</span> <span class="o">!</span><span class="n">strcasecmp</span> <span class="p">(</span><span class="n">locale_encoding</span><span class="p">,</span> <span class="s">&#34;utf8&#34;</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">locale_utf8</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span> 
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">strcmp</span> <span class="p">(</span><span class="n">open_quote</span><span class="p">,</span> <span class="s">&#34;`&#34;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">strcmp</span> <span class="p">(</span><span class="n">close_quote</span><span class="p">,</span> <span class="s">&#34;&#39;&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="cm">/* Untranslated quotes that it may be possible to replace with
+</span></span></span><span class="line"><span class="cl"><span class="cm">	 U+2018 and U+2019; but otherwise use &#34;&#39;&#34; instead of &#34;`&#34; as
+</span></span></span><span class="line"><span class="cl"><span class="cm">	 opening quote.  */</span>
+</span></span><span class="line"><span class="cl">      <span class="n">open_quote</span> <span class="o">=</span> <span class="s">&#34;&#39;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#if defined HAVE_LANGINFO_CODESET
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>      <span class="k">if</span> <span class="p">(</span><span class="n">locale_utf8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">	  <span class="n">open_quote</span> <span class="o">=</span> <span class="s">&#34;</span><span class="se">\xe2\x80\x98</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	  <span class="n">close_quote</span> <span class="o">=</span> <span class="s">&#34;</span><span class="se">\xe2\x80\x99</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>由于我所做的是针对 Windows 下的修改，因此所有改动都要加上 #ifdef WIN32 &hellip; #endif<br>
+首先在开头加上：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#ifdef WIN32
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;windows.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span> 
+</span></span><span class="line"><span class="cl"><span class="n">BOOL</span> <span class="nf">DirectoryExists</span><span class="p">(</span><span class="n">LPSTR</span> <span class="n">lpszPath</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">WIN32_FIND_DATA</span> <span class="n">wfd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">BOOL</span> <span class="n">bResult</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">HANDLE</span> <span class="n">hFind</span> <span class="o">=</span> <span class="n">FindFirstFile</span><span class="p">(</span><span class="n">lpszPath</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">wfd</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">((</span><span class="n">hFind</span> <span class="o">!=</span> <span class="n">INVALID_HANDLE_VALUE</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">wfd</span><span class="p">.</span><span class="n">dwFileAttributes</span> <span class="o">&amp;</span> <span class="n">FILE_ATTRIBUTE_DIRECTORY</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">bResult</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">FindClose</span><span class="p">(</span><span class="n">hFind</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">bResult</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>其中 DirectoryExists 是用来判断路径是否存在的。</p>
+<p>然后修改 (void) bindtextdomain (&ldquo;gcc&rdquo;, LOCALEDIR);  为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#ifndef WIN32
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>    <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">bindtextdomain</span> <span class="p">(</span><span class="s">&#34;gcc&#34;</span><span class="p">,</span> <span class="n">LOCALEDIR</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#else
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>    <span class="n">DWORD</span> <span class="n">dwSize</span> <span class="o">=</span> <span class="n">MAX_PATH</span> <span class="o">+</span> <span class="mi">20</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">LPSTR</span> <span class="n">lpszName</span> <span class="o">=</span> <span class="p">(</span><span class="n">LPSTR</span><span class="p">)</span> <span class="n">xmalloc</span><span class="p">(</span><span class="n">dwSize</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">DWORD</span> <span class="n">dwRealSize</span> <span class="o">=</span> <span class="n">GetModuleFileNameA</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">lpszName</span><span class="p">,</span> <span class="n">dwSize</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">dwRealSize</span> <span class="o">&gt;</span> <span class="n">dwSize</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">lpszName</span> <span class="o">=</span> <span class="p">(</span><span class="n">LPSTR</span><span class="p">)</span> <span class="n">xrealloc</span><span class="p">(</span><span class="n">lpszName</span><span class="p">,</span> <span class="n">dwSize</span> <span class="o">+</span> <span class="mi">20</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	  <span class="n">GetModuleFileNameA</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">lpszName</span><span class="p">,</span> <span class="n">dwRealSize</span> <span class="o">+</span> <span class="mi">20</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">	<span class="cm">/* 去掉文件名 */</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">l</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">lpszName</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="p">(</span><span class="n">l</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="n">lpszName</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;\\&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		  <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	  <span class="n">l</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">lpszName</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">	<span class="cm">/* 去掉一层文件夹 */</span>
+</span></span><span class="line"><span class="cl">	<span class="n">l</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">lpszName</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="p">(</span><span class="n">l</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="n">lpszName</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;\\&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		  <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	  <span class="n">l</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">	<span class="cm">/* 判断是否到根路径 */</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">lpszName</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;\\&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">bindtextdomain</span> <span class="p">(</span><span class="s">&#34;gcc&#34;</span><span class="p">,</span> <span class="n">LOCALEDIR</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 连接上 share\locale
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">lpszName</span><span class="p">[</span><span class="n">l</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">strcat</span><span class="p">(</span><span class="n">lpszName</span><span class="p">,</span> <span class="s">&#34;share</span><span class="se">\\</span><span class="s">locale&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">DirectoryExists</span><span class="p">(</span><span class="n">lpszName</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">		  <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">bindtextdomain</span> <span class="p">(</span><span class="s">&#34;gcc&#34;</span><span class="p">,</span> <span class="n">lpszName</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">else</span>
+</span></span><span class="line"><span class="cl">		  <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">bindtextdomain</span> <span class="p">(</span><span class="s">&#34;gcc&#34;</span><span class="p">,</span> <span class="n">LOCALEDIR</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">	<span class="n">free</span><span class="p">(</span><span class="n">lpszName</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>这样重新编译后，无论 MinGW 位置在哪，它都能显示翻译后的消息了。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>
+        
+            <a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>
+        
+            <a href="/tags/gcc/">gcc</a>
+        
+            <a href="/tags/mingw-w64/">MinGW-w64</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/prog/cpp-gcc-locale-linux/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">GCC本地化-Linux</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/prog/cpp-gcc-env-var/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">GCC环境变量</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/prog/cpp-kawaii-gcc/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Kawaii-gcc 让GCC变得可爱</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/prog/cpp-boost-compile/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">boost库编译</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/prog/cpp-qt5compile-msvc/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Qt5编译(MSVC)</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    
+	<section class="copyright">
+	    技术交流： <a href="mailto:ypr@yprnet.com" target="_blank" rel="noopener">ypr@yprnet.com</a>、
+		<a href="mailto:ypr@yuanpeirong.com" target="_blank" rel="noopener">ypr@yuanpeirong.com</a>
+		<br />版权所有 © 2010-2024 <a title="访问天远网站" href="http://www.yprnet.com/" target="_blank" rel="noopener">YuanPeirong TianYuan</a> All Rights Reserved. Powered By <a title="访问天远网站" href="http://www.yprnet.com/" target="_blank" rel="noopener">天远</a>
+    </section>
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计 | <a href="http://www.yprnet.com/" target="_blank" rel="noopener">天远</a> 优化修改
+    </section>
+    <section class="powerby">
+        <a target="_blank" href="https://beian.miit.gov.cn">浙ICP备15010776号-2</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -9,10 +9,10 @@
         <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
         <lastBuildDate>Fri, 24 Nov 2023 13:00:21 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/tags/qt/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Qt5编译(MinGW-w64)</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-mingw-w64/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-qt5compile-mingw-w64/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-mingw-w64/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-qt5compile-mingw-w64/</guid>
         <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -304,10 +304,10 @@
         </item>
         <item>
         <title>Qt5编译(MSVC)</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-msvc/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-qt5compile-msvc/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-msvc/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-qt5compile-msvc/</guid>
         <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -543,10 +543,10 @@
         </item>
         <item>
         <title>Qt6编译(MinGW-w64)</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-mingw-w64/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-qt6compile-mingw-w64/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-mingw-w64/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-qt6compile-mingw-w64/</guid>
         <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-6.5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -777,10 +777,10 @@
         </item>
         <item>
         <title>Qt6编译(MSVC)</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-msvc/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-qt6compile-msvc/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-msvc/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-qt6compile-msvc/</guid>
         <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-6.5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1015,10 +1015,10 @@
         </item>
         <item>
         <title>测试Qt静态库</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-%E6%B5%8B%E8%AF%95qt%E9%9D%99%E6%80%81%E5%BA%93/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-qt-test-static/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-%E6%B5%8B%E8%AF%95qt%E9%9D%99%E6%80%81%E5%BA%93/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-qt-test-static/</guid>
         <description>&lt;h2 id=&#34;qt6-静态库测试&#34;&gt;Qt6-静态库测试&lt;/h2&gt;
 &lt;h3 id=&#34;qt653-static-mingw1120_64-release天远编译2023-11-25&#34;&gt;Qt6.5.3-static-mingw1120_64-Release（天远编译2023-11-25）&lt;/h3&gt;
 &lt;ul&gt;

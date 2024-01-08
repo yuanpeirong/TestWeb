@@ -9,10 +9,10 @@
         <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
         <lastBuildDate>Sun, 07 Jan 2024 13:00:21 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>boost库编译</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-boost-%E7%BC%96%E8%AF%91/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-boost-compile/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-boost-%E7%BC%96%E8%AF%91/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-boost-compile/</guid>
         <description>&lt;h2 id=&#34;编译-gcc1320-x64-2023-12-29&#34;&gt;编译-GCC13.2.0-x64-2023-12-29&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -153,10 +153,10 @@ X:\boost_X_XX_X\vc10,如果使用了install参数，那么还将生成头文件�
         </item>
         <item>
         <title>GCC本地化-Linux</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc-%E6%9C%AC%E5%9C%B0%E5%8C%96-linux/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-gcc-locale-linux/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc-%E6%9C%AC%E5%9C%B0%E5%8C%96-linux/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-gcc-locale-linux/</guid>
         <description>&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;../Kawaii-gcc/README-zh.md&#34; &gt;Kawaii-gcc本地&lt;/a&gt;&lt;/li&gt;
@@ -286,10 +286,10 @@ X:\boost_X_XX_X\vc10,如果使用了install参数，那么还将生成头文件�
         </item>
         <item>
         <title>GCC环境变量</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-gcc-env-var/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-gcc-env-var/</guid>
         <description>&lt;h1 id=&#34;本文还未整理完&#34;&gt;本文还未整理完&lt;/h1&gt;
 &lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
 &lt;ul&gt;
@@ -352,10 +352,10 @@ X:\boost_X_XX_X\vc10,如果使用了install参数，那么还将生成头文件�
         </item>
         <item>
         <title>Kawaii-gcc 让GCC变得可爱</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-kawaii-gcc/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-kawaii-gcc/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-kawaii-gcc/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-kawaii-gcc/</guid>
         <description>&lt;p&gt;&lt;img src=&#34;https://img.shields.io/github/stars/Bill-Haku/kawaii-gcc&#34;
 	
 	
@@ -606,10 +606,10 @@ X:\boost_X_XX_X\vc10,如果使用了install参数，那么还将生成头文件�
         </item>
         <item>
         <title>MSYS2</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/msys2/</link>
+        <link>https://www.yprnet.cc/p/prog/msys2/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/msys2/</guid>
+        <guid>https://www.yprnet.cc/p/prog/msys2/</guid>
         <description>&lt;h2 id=&#34;官网&#34;&gt;官网&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.msys2.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -858,10 +858,10 @@ pacman 会将自己下载的软件压缩包保存在 /var/cache/pacman/pkg/目�
         </item>
         <item>
         <title>MSYS2中的GCC本地化</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/msys2-gcc%E6%9C%AC%E5%9C%B0%E5%8C%96/</link>
+        <link>https://www.yprnet.cc/p/prog/msys2-gcc-locale/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/msys2-gcc%E6%9C%AC%E5%9C%B0%E5%8C%96/</guid>
+        <guid>https://www.yprnet.cc/p/prog/msys2-gcc-locale/</guid>
         <description>&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;GCC本地化-Linux&lt;/li&gt;
@@ -950,10 +950,10 @@ gcc版本为13&lt;br&gt;
         </item>
         <item>
         <title>Qt5编译(MinGW-w64)</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-mingw-w64/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-qt5compile-mingw-w64/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-mingw-w64/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-qt5compile-mingw-w64/</guid>
         <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1245,10 +1245,10 @@ gcc版本为13&lt;br&gt;
         </item>
         <item>
         <title>Qt5编译(MSVC)</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-msvc/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-qt5compile-msvc/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-msvc/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-qt5compile-msvc/</guid>
         <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1484,10 +1484,10 @@ gcc版本为13&lt;br&gt;
         </item>
         <item>
         <title>Qt6编译(MinGW-w64)</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-mingw-w64/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-qt6compile-mingw-w64/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-mingw-w64/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-qt6compile-mingw-w64/</guid>
         <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-6.5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1718,10 +1718,10 @@ gcc版本为13&lt;br&gt;
         </item>
         <item>
         <title>Qt6编译(MSVC)</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-msvc/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-qt6compile-msvc/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-msvc/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-qt6compile-msvc/</guid>
         <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-6.5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1956,10 +1956,10 @@ gcc版本为13&lt;br&gt;
         </item>
         <item>
         <title>测试Qt静态库</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-%E6%B5%8B%E8%AF%95qt%E9%9D%99%E6%80%81%E5%BA%93/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-qt-test-static/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-%E6%B5%8B%E8%AF%95qt%E9%9D%99%E6%80%81%E5%BA%93/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-qt-test-static/</guid>
         <description>&lt;h2 id=&#34;qt6-静态库测试&#34;&gt;Qt6-静态库测试&lt;/h2&gt;
 &lt;h3 id=&#34;qt653-static-mingw1120_64-release天远编译2023-11-25&#34;&gt;Qt6.5.3-static-mingw1120_64-Release（天远编译2023-11-25）&lt;/h3&gt;
 &lt;ul&gt;

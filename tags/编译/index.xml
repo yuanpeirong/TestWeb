@@ -9,10 +9,10 @@
         <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
         <lastBuildDate>Sun, 07 Jan 2024 13:00:21 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/tags/%E7%BC%96%E8%AF%91/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>boost库编译</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-boost-%E7%BC%96%E8%AF%91/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-boost-compile/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-boost-%E7%BC%96%E8%AF%91/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-boost-compile/</guid>
         <description>&lt;h2 id=&#34;编译-gcc1320-x64-2023-12-29&#34;&gt;编译-GCC13.2.0-x64-2023-12-29&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -153,10 +153,10 @@ X:\boost_X_XX_X\vc10,如果使用了install参数，那么还将生成头文件�
         </item>
         <item>
         <title>Kawaii-gcc 让GCC变得可爱</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-kawaii-gcc/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-kawaii-gcc/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-kawaii-gcc/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-kawaii-gcc/</guid>
         <description>&lt;p&gt;&lt;img src=&#34;https://img.shields.io/github/stars/Bill-Haku/kawaii-gcc&#34;
 	
 	
@@ -407,10 +407,10 @@ X:\boost_X_XX_X\vc10,如果使用了install参数，那么还将生成头文件�
         </item>
         <item>
         <title>Qt5编译(MinGW-w64)</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-mingw-w64/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-qt5compile-mingw-w64/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-mingw-w64/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-qt5compile-mingw-w64/</guid>
         <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -702,10 +702,10 @@ X:\boost_X_XX_X\vc10,如果使用了install参数，那么还将生成头文件�
         </item>
         <item>
         <title>Qt5编译(MSVC)</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-msvc/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-qt5compile-msvc/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-msvc/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-qt5compile-msvc/</guid>
         <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -941,10 +941,10 @@ X:\boost_X_XX_X\vc10,如果使用了install参数，那么还将生成头文件�
         </item>
         <item>
         <title>Qt6编译(MinGW-w64)</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-mingw-w64/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-qt6compile-mingw-w64/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-mingw-w64/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-qt6compile-mingw-w64/</guid>
         <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-6.5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1175,10 +1175,10 @@ X:\boost_X_XX_X\vc10,如果使用了install参数，那么还将生成头文件�
         </item>
         <item>
         <title>Qt6编译(MSVC)</title>
-        <link>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-msvc/</link>
+        <link>https://www.yprnet.cc/p/prog/cpp-qt6compile-msvc/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-msvc/</guid>
+        <guid>https://www.yprnet.cc/p/prog/cpp-qt6compile-msvc/</guid>
         <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-6.5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

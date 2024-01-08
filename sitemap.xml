@@ -8,7 +8,7 @@
     <loc>https://www.yprnet.cc/tags/boost/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-boost-%E7%BC%96%E8%AF%91/</loc>
+    <loc>https://www.yprnet.cc/p/prog/cpp-boost-compile/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/tags/c&#43;&#43;/</loc>
@@ -23,10 +23,10 @@
     <loc>https://www.yprnet.cc/tags/gcc/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc-%E6%9C%AC%E5%9C%B0%E5%8C%96-linux/</loc>
+    <loc>https://www.yprnet.cc/p/prog/cpp-gcc-locale-linux/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-gcc%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</loc>
+    <loc>https://www.yprnet.cc/p/prog/cpp-gcc-env-var/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/tags/git/</loc>
@@ -38,7 +38,7 @@
     <loc>https://www.yprnet.cc/tags/kawaii-gcc/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-kawaii-gcc/</loc>
+    <loc>https://www.yprnet.cc/p/prog/cpp-kawaii-gcc/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/tags/linux/</loc>
@@ -47,7 +47,7 @@
     <loc>https://www.yprnet.cc/tags/markdown/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/%E8%BD%AF%E4%BB%B6/%E7%AC%94%E8%AE%B0-markdown/</loc>
+    <loc>https://www.yprnet.cc/p/soft/notes-markdown/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/post/</loc>
@@ -56,19 +56,19 @@
     <loc>https://www.yprnet.cc/tags/smartgit/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/%E8%BD%AF%E4%BB%B6/git-smartgit/</loc>
+    <loc>https://www.yprnet.cc/p/soft/git-smartgit/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/tags/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/%E8%BD%AF%E4%BB%B6/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8-visualstudiocode/</loc>
+    <loc>https://www.yprnet.cc/p/soft/text-visualstudiocode/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/tags/vscode/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/%E8%BD%AF%E4%BB%B6/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8-vscodium/</loc>
+    <loc>https://www.yprnet.cc/p/soft/text-vscodium/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/tags/%E7%AC%94%E8%AE%B0/</loc>
@@ -107,28 +107,28 @@
     <loc>https://www.yprnet.cc/categories/msys2/</loc>
     <lastmod>2023-11-28T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/msys2/</loc>
+    <loc>https://www.yprnet.cc/p/prog/msys2/</loc>
     <lastmod>2023-11-28T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/msys2-gcc%E6%9C%AC%E5%9C%B0%E5%8C%96/</loc>
+    <loc>https://www.yprnet.cc/p/prog/msys2-gcc-locale/</loc>
     <lastmod>2023-11-28T14:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/tags/qt/</loc>
     <lastmod>2023-11-28T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-mingw-w64/</loc>
+    <loc>https://www.yprnet.cc/p/prog/cpp-qt5compile-mingw-w64/</loc>
     <lastmod>2023-11-28T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt5%E7%BC%96%E8%AF%91-msvc/</loc>
+    <loc>https://www.yprnet.cc/p/prog/cpp-qt5compile-msvc/</loc>
     <lastmod>2023-11-28T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-mingw-w64/</loc>
+    <loc>https://www.yprnet.cc/p/prog/cpp-qt6compile-mingw-w64/</loc>
     <lastmod>2023-11-28T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-qt6%E7%BC%96%E8%AF%91-msvc/</loc>
+    <loc>https://www.yprnet.cc/p/prog/cpp-qt6compile-msvc/</loc>
     <lastmod>2023-11-28T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/%E7%BC%96%E7%A8%8B/cpp-%E6%B5%8B%E8%AF%95qt%E9%9D%99%E6%80%81%E5%BA%93/</loc>
+    <loc>https://www.yprnet.cc/p/prog/cpp-qt-test-static/</loc>
     <lastmod>2023-11-28T14:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/tags/%E9%9D%99%E6%80%81%E5%BA%93/</loc>
@@ -152,10 +152,10 @@
     <loc>https://www.yprnet.cc/categories/%E7%BD%91%E7%AB%99/</loc>
     <lastmod>2024-01-07T14:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/%E8%BD%AF%E4%BB%B6/%E7%AC%94%E8%AE%B0-markdown-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</loc>
+    <loc>https://www.yprnet.cc/p/soft/notes-markdown-basics/</loc>
     <lastmod>2020-02-25T13:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/p/%E8%BD%AF%E4%BB%B6/%E7%AC%94%E8%AE%B0-markdown-%E8%AF%AD%E6%B3%95%E8%AF%B4%E6%98%8E/</loc>
+    <loc>https://www.yprnet.cc/p/soft/notes-markdown-syntax/</loc>
     <lastmod>2020-02-25T13:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/page/</loc>
@@ -172,9 +172,9 @@
   </url><url>
     <loc>https://www.yprnet.cc/categories/test/</loc>
   </url><url>
-    <loc>https://www.yprnet.cc/%E5%85%B3%E4%BA%8E/</loc>
+    <loc>https://www.yprnet.cc/about/</loc>
   </url><url>
-    <loc>https://www.yprnet.cc/%E9%93%BE%E6%8E%A5/</loc>
+    <loc>https://www.yprnet.cc/links/</loc>
   </url><url>
     <loc>https://www.yprnet.cc/search/</loc>
   </url>

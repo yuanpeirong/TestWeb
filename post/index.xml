@@ -735,7 +735,11 @@ X:\boost_X_XX_X\vc10,如果使用了install参数，那么还将生成头文件�
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
         <guid>https://www.yprnet.cc/p/prog/cpp-kawaii-gcc/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;https://img.shields.io/github/stars/Bill-Haku/kawaii-gcc&#34;
+        <description>&lt;ul&gt;
+&lt;li&gt;转自：&lt;a class=&#34;link&#34; href=&#34;https://github.com/Bill-Haku/kawaii-gcc/blob/main/README-zh.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Bill-Haku/kawaii-gcc/blob/main/README-zh.md&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.shields.io/github/stars/Bill-Haku/kawaii-gcc&#34;
 	
 	
 	
@@ -990,43 +994,67 @@ X:\boost_X_XX_X\vc10,如果使用了install参数，那么还将生成头文件�
         
         <guid>https://www.yprnet.cc/p/soft/notes-markdown/</guid>
         <description>&lt;h1 id=&#34;教程&#34;&gt;教程&lt;/h1&gt;
-&lt;p&gt;菜鸟教程：https://www.runoob.com/markdown/md-tutorial.html&lt;/p&gt;
+&lt;p&gt;菜鸟教程：&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/markdown/md-tutorial.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.runoob.com/markdown/md-tutorial.html&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;软件&#34;&gt;软件&lt;/h1&gt;
 &lt;h2 id=&#34;visual-studio-code&#34;&gt;Visual Studio Code&lt;/h2&gt;
 &lt;p&gt;Visual Studio Code 是众所周知的神器，是微软推出一款轻量级的文本编辑工具，类似于 Sublime，它已经默认集成 Markdown 文档编辑插件，原生就支持高亮 Markdown 的语法，但想要实时预览还需要选择 Markdown: Open Preview to the Side 命令实现，相关教程请点击此处&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/shawWey/p/8931697.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://www.cnblogs.com/shawWey/p/8931697.html&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;typora&#34;&gt;Typora&lt;/h2&gt;
-&lt;p&gt;官网：https://typora.io/&lt;/p&gt;
-&lt;p&gt;中文官网：https://typoraio.cn/&lt;/p&gt;
-&lt;p&gt;果核剥壳：https://www.ghxi.com/typora.html&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://typora.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://typora.io/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;中文官网：&lt;a class=&#34;link&#34; href=&#34;https://typoraio.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://typoraio.cn/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;果核剥壳：&lt;a class=&#34;link&#34; href=&#34;https://www.ghxi.com/typora.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.ghxi.com/typora.html&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;marktext&#34;&gt;MarkText&lt;/h2&gt;
-&lt;p&gt;官网：https://marktext.app/&lt;/p&gt;
-&lt;p&gt;GitHub：https://github.com/marktext/marktext&lt;/p&gt;
-&lt;p&gt;GitHub中文包：https://github.com/chinayangxiaowei/marktext-chinese-language-pack&lt;/p&gt;
-&lt;p&gt;中文说明书：https://zhuanlan.zhihu.com/p/438852089&lt;/p&gt;
+&lt;p&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://marktext.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://marktext.app/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;GitHub：&lt;a class=&#34;link&#34; href=&#34;https://github.com/marktext/marktext&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/marktext/marktext&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;GitHub中文包：&lt;a class=&#34;link&#34; href=&#34;https://github.com/chinayangxiaowei/marktext-chinese-language-pack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/chinayangxiaowei/marktext-chinese-language-pack&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;中文说明书：&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/438852089&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://zhuanlan.zhihu.com/p/438852089&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;相关介绍：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/348367255&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://zhuanlan.zhihu.com/p/348367255&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;notable&#34;&gt;notable&lt;/h2&gt;
-&lt;p&gt;GitHub：https://github.com/notable/notable&lt;/p&gt;
+&lt;p&gt;GitHub：&lt;a class=&#34;link&#34; href=&#34;https://github.com/notable/notable&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/notable/notable&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;hbuilderx&#34;&gt;HBuilderX&lt;/h2&gt;
-&lt;p&gt;官网：https://dcloud.io/hbuilderx.html&lt;/p&gt;
+&lt;p&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://dcloud.io/hbuilderx.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://dcloud.io/hbuilderx.html&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;milkdown&#34;&gt;Milkdown&lt;/h2&gt;
-&lt;p&gt;官网：https://milkdown.dev/&lt;/p&gt;
-&lt;p&gt;GitHub：https://github.com/Milkdown/milkdown&lt;/p&gt;
-&lt;p&gt;果核剥壳：https://www.ghxi.com/wx20211206.html&lt;/p&gt;
-&lt;p&gt;VS Code 插件：https://marketplace.visualstudio.com/items?itemName=mirone.milkdown&lt;/p&gt;
-&lt;p&gt;在线体验：https://milkdown.dev/#/online-demo&lt;/p&gt;
+&lt;p&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://milkdown.dev/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://milkdown.dev/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;GitHub：&lt;a class=&#34;link&#34; href=&#34;https://github.com/Milkdown/milkdown&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Milkdown/milkdown&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;果核剥壳：&lt;a class=&#34;link&#34; href=&#34;https://www.ghxi.com/wx20211206.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.ghxi.com/wx20211206.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;VS Code 插件：&lt;a class=&#34;link&#34; href=&#34;https://marketplace.visualstudio.com/items?itemName=mirone.milkdown&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://marketplace.visualstudio.com/items?itemName=mirone.milkdown&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在线体验：&lt;a class=&#34;link&#34; href=&#34;https://milkdown.dev/#/online-demo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://milkdown.dev/#/online-demo&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;相关介绍：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://juejin.cn/post/7131641368283185182&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://juejin.cn/post/7131641368283185182&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;stackedit网页版&#34;&gt;StackEdit(网页版)&lt;/h2&gt;
-&lt;p&gt;官网：https://stackedit.cn/app&lt;/p&gt;
+&lt;p&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://stackedit.cn/app&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://stackedit.cn/app&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -1054,10 +1082,17 @@ X:\boost_X_XX_X\vc10,如果使用了install参数，那么还将生成头文件�
         
         <guid>https://www.yprnet.cc/p/soft/text-visualstudiocode/</guid>
         <description>&lt;h2 id=&#34;相关网址&#34;&gt;相关网址&lt;/h2&gt;
-&lt;p&gt;官网：https://code.visualstudio.com/&lt;br&gt;
-文档：https://code.visualstudio.com/docs&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://code.visualstudio.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://code.visualstudio.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;文档：&lt;a class=&#34;link&#34; href=&#34;https://code.visualstudio.com/docs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://code.visualstudio.com/docs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;变量参考&#34;&gt;变量参考&lt;/h2&gt;
-&lt;p&gt;来源：https://code.visualstudio.com/docs/editor/variables-reference&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;来源：&lt;a class=&#34;link&#34; href=&#34;https://code.visualstudio.com/docs/editor/variables-reference&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://code.visualstudio.com/docs/editor/variables-reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;预定义变量&#34;&gt;预定义变量&lt;/h3&gt;
 &lt;p&gt;支持以下预定义变量：&lt;/p&gt;
 &lt;ul&gt;
@@ -1130,9 +1165,11 @@ X:\boost_X_XX_X\vc10,如果使用了install参数，那么还将生成头文件�
         
         <guid>https://www.yprnet.cc/p/soft/text-vscodium/</guid>
         <description>&lt;h2 id=&#34;相关网址&#34;&gt;相关网址&lt;/h2&gt;
-&lt;p&gt;官网：https://github.com/VSCodium/vscodium&lt;/p&gt;
+&lt;p&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://github.com/VSCodium/vscodium&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/VSCodium/vscodium&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;设置vscodium采用微软官方扩展源&#34;&gt;设置VSCodium采用微软官方扩展源&lt;/h2&gt;
-&lt;p&gt;参考：https://zhuanlan.zhihu.com/p/276000982
+&lt;p&gt;参考：&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/276000982&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://zhuanlan.zhihu.com/p/276000982&lt;/a&gt;
 vscodium默认使用的扩展源是open-vsx.org，部分扩展没有加入此扩展源，需要使用微软官方扩展源才能直接安装和自动更新。&lt;/p&gt;
 &lt;p&gt;修改安装根目录/resources/app/product.json文件中的extensionsGallery键对应的值如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1173,12 +1210,15 @@ vscodium默认使用的扩展源是open-vsx.org，部分扩展没有加入此扩
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;清华源帮助：https://mirror.tuna.tsinghua.edu.cn/help/msys2/&lt;/li&gt;
+&lt;li&gt;清华源帮助：&lt;a class=&#34;link&#34; href=&#34;https://mirror.tuna.tsinghua.edu.cn/help/msys2/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://mirror.tuna.tsinghua.edu.cn/help/msys2/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;msys2中mingw_package_prefix对应关系&#34;&gt;MSYS2中MINGW_PACKAGE_PREFIX对应关系&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;参考：https://www.msys2.org/docs/package-naming/&lt;/li&gt;
-&lt;li&gt;参考：https://www.msys2.org/docs/environments/&lt;/li&gt;
+&lt;li&gt;参考：&lt;a class=&#34;link&#34; href=&#34;https://www.msys2.org/docs/package-naming/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.msys2.org/docs/package-naming/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;参考：&lt;a class=&#34;link&#34; href=&#34;https://www.msys2.org/docs/environments/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.msys2.org/docs/environments/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1286,7 +1326,8 @@ pacman -S make          //make工具&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;更新和维护msys2&#34;&gt;更新和维护MSYS2&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;参考：https://www.msys2.org/docs/updating/&lt;/li&gt;
+&lt;li&gt;参考：&lt;a class=&#34;link&#34; href=&#34;https://www.msys2.org/docs/updating/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.msys2.org/docs/updating/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;通过安装程序或其他方式安装 MSYS2 后，您需要继续使用内置工具对其进行更新。MSYS2 是一个滚动发布发行版，仅支持完整的系统升级，这意味着各种软件包经常进行次要和主要更新，并且您只能一次更新所有软件包。
 若要更新所有包，请运行以下命令：&lt;/p&gt;

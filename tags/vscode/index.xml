@@ -14,10 +14,17 @@
         
         <guid>https://www.yprnet.cc/p/soft/text-visualstudiocode/</guid>
         <description>&lt;h2 id=&#34;相关网址&#34;&gt;相关网址&lt;/h2&gt;
-&lt;p&gt;官网：https://code.visualstudio.com/&lt;br&gt;
-文档：https://code.visualstudio.com/docs&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://code.visualstudio.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://code.visualstudio.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;文档：&lt;a class=&#34;link&#34; href=&#34;https://code.visualstudio.com/docs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://code.visualstudio.com/docs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;变量参考&#34;&gt;变量参考&lt;/h2&gt;
-&lt;p&gt;来源：https://code.visualstudio.com/docs/editor/variables-reference&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;来源：&lt;a class=&#34;link&#34; href=&#34;https://code.visualstudio.com/docs/editor/variables-reference&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://code.visualstudio.com/docs/editor/variables-reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;预定义变量&#34;&gt;预定义变量&lt;/h3&gt;
 &lt;p&gt;支持以下预定义变量：&lt;/p&gt;
 &lt;ul&gt;
@@ -90,9 +97,11 @@
         
         <guid>https://www.yprnet.cc/p/soft/text-vscodium/</guid>
         <description>&lt;h2 id=&#34;相关网址&#34;&gt;相关网址&lt;/h2&gt;
-&lt;p&gt;官网：https://github.com/VSCodium/vscodium&lt;/p&gt;
+&lt;p&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://github.com/VSCodium/vscodium&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/VSCodium/vscodium&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;设置vscodium采用微软官方扩展源&#34;&gt;设置VSCodium采用微软官方扩展源&lt;/h2&gt;
-&lt;p&gt;参考：https://zhuanlan.zhihu.com/p/276000982
+&lt;p&gt;参考：&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/276000982&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://zhuanlan.zhihu.com/p/276000982&lt;/a&gt;
 vscodium默认使用的扩展源是open-vsx.org，部分扩展没有加入此扩展源，需要使用微软官方扩展源才能直接安装和自动更新。&lt;/p&gt;
 &lt;p&gt;修改安装根目录/resources/app/product.json文件中的extensionsGallery键对应的值如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

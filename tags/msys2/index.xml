@@ -28,12 +28,15 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;清华源帮助：https://mirror.tuna.tsinghua.edu.cn/help/msys2/&lt;/li&gt;
+&lt;li&gt;清华源帮助：&lt;a class=&#34;link&#34; href=&#34;https://mirror.tuna.tsinghua.edu.cn/help/msys2/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://mirror.tuna.tsinghua.edu.cn/help/msys2/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;msys2中mingw_package_prefix对应关系&#34;&gt;MSYS2中MINGW_PACKAGE_PREFIX对应关系&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;参考：https://www.msys2.org/docs/package-naming/&lt;/li&gt;
-&lt;li&gt;参考：https://www.msys2.org/docs/environments/&lt;/li&gt;
+&lt;li&gt;参考：&lt;a class=&#34;link&#34; href=&#34;https://www.msys2.org/docs/package-naming/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.msys2.org/docs/package-naming/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;参考：&lt;a class=&#34;link&#34; href=&#34;https://www.msys2.org/docs/environments/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.msys2.org/docs/environments/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -141,7 +144,8 @@ pacman -S make          //make工具&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;更新和维护msys2&#34;&gt;更新和维护MSYS2&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;参考：https://www.msys2.org/docs/updating/&lt;/li&gt;
+&lt;li&gt;参考：&lt;a class=&#34;link&#34; href=&#34;https://www.msys2.org/docs/updating/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.msys2.org/docs/updating/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;通过安装程序或其他方式安装 MSYS2 后，您需要继续使用内置工具对其进行更新。MSYS2 是一个滚动发布发行版，仅支持完整的系统升级，这意味着各种软件包经常进行次要和主要更新，并且您只能一次更新所有软件包。
 若要更新所有包，请运行以下命令：&lt;/p&gt;

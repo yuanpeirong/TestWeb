@@ -7,10 +7,10 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
-        <lastBuildDate>Mon, 08 Jan 2024 23:00:21 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 18 Jan 2024 15:00:00 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>C&#43;&#43;</title>
         <link>https://www.yprnet.cc/tags/c&#43;&#43;/</link>
-        <pubDate>Mon, 08 Jan 2024 23:00:21 +0800</pubDate>
+        <pubDate>Thu, 18 Jan 2024 15:00:00 +0800</pubDate>
         
         <guid>https://www.yprnet.cc/tags/c&#43;&#43;/</guid>
         <description></description>
@@ -18,9 +18,33 @@
         <item>
         <title>gcc</title>
         <link>https://www.yprnet.cc/tags/gcc/</link>
-        <pubDate>Mon, 08 Jan 2024 23:00:21 +0800</pubDate>
+        <pubDate>Thu, 18 Jan 2024 15:00:00 +0800</pubDate>
         
         <guid>https://www.yprnet.cc/tags/gcc/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>编程</title>
+        <link>https://www.yprnet.cc/tags/%E7%BC%96%E7%A8%8B/</link>
+        <pubDate>Thu, 18 Jan 2024 15:00:00 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/tags/%E7%BC%96%E7%A8%8B/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>动态库</title>
+        <link>https://www.yprnet.cc/tags/%E5%8A%A8%E6%80%81%E5%BA%93/</link>
+        <pubDate>Thu, 18 Jan 2024 15:00:00 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/tags/%E5%8A%A8%E6%80%81%E5%BA%93/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>静态库</title>
+        <link>https://www.yprnet.cc/tags/%E9%9D%99%E6%80%81%E5%BA%93/</link>
+        <pubDate>Thu, 18 Jan 2024 15:00:00 +0800</pubDate>
+        
+        <guid>https://www.yprnet.cc/tags/%E9%9D%99%E6%80%81%E5%BA%93/</guid>
         <description></description>
         </item>
         <item>
@@ -29,14 +53,6 @@
         <pubDate>Mon, 08 Jan 2024 23:00:21 +0800</pubDate>
         
         <guid>https://www.yprnet.cc/tags/mingw-w64/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>编程</title>
-        <link>https://www.yprnet.cc/tags/%E7%BC%96%E7%A8%8B/</link>
-        <pubDate>Mon, 08 Jan 2024 23:00:21 +0800</pubDate>
-        
-        <guid>https://www.yprnet.cc/tags/%E7%BC%96%E7%A8%8B/</guid>
         <description></description>
         </item>
         <item>
@@ -149,14 +165,6 @@
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
         <guid>https://www.yprnet.cc/tags/qt/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>静态库</title>
-        <link>https://www.yprnet.cc/tags/%E9%9D%99%E6%80%81%E5%BA%93/</link>
-        <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
-        
-        <guid>https://www.yprnet.cc/tags/%E9%9D%99%E6%80%81%E5%BA%93/</guid>
         <description></description>
         </item>
         <item>

@@ -17,11 +17,8 @@
     <loc>https://www.yprnet.cc/tags/gcc/</loc>
     <lastmod>2024-01-08T23:00:21+08:00</lastmod>
   </url><url>
-    <loc>https://www.yprnet.cc/tags/mingw-w64/</loc>
-    <lastmod>2024-01-08T23:00:21+08:00</lastmod>
-  </url><url>
-    <loc>https://www.yprnet.cc/p/prog/cpp-gcc-locale-windows-mingw64/</loc>
-    <lastmod>2024-01-08T23:00:21+08:00</lastmod>
+    <loc>https://www.yprnet.cc/p/prog/cpp-gcc-sharedandstaticlib/</loc>
+    <lastmod>2024-01-08T15:05:00+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/post/</loc>
     <lastmod>2024-01-08T23:00:21+08:00</lastmod>
@@ -33,6 +30,18 @@
     <lastmod>2024-01-08T23:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/categories/%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2024-01-08T23:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/tags/%E5%8A%A8%E6%80%81%E5%BA%93/</loc>
+    <lastmod>2024-01-08T15:05:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/tags/%E9%9D%99%E6%80%81%E5%BA%93/</loc>
+    <lastmod>2024-01-08T15:05:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/tags/mingw-w64/</loc>
+    <lastmod>2024-01-08T23:00:21+08:00</lastmod>
+  </url><url>
+    <loc>https://www.yprnet.cc/p/prog/cpp-gcc-locale-windows-mingw64/</loc>
     <lastmod>2024-01-08T23:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/tags/boost/</loc>
@@ -135,9 +144,6 @@
     <lastmod>2023-11-28T14:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/p/prog/cpp-qt-test-static/</loc>
-    <lastmod>2023-11-28T14:00:21+08:00</lastmod>
-  </url><url>
-    <loc>https://www.yprnet.cc/tags/%E9%9D%99%E6%80%81%E5%BA%93/</loc>
     <lastmod>2023-11-28T14:00:21+08:00</lastmod>
   </url><url>
     <loc>https://www.yprnet.cc/tags/%E5%8D%9A%E5%AE%A2/</loc>

@@ -840,7 +840,7 @@ Windows 7/8.1控制台正常。windows 10/11控制台正常输出错误提示时
 &lt;/ul&gt;
 &lt;h2 id=&#34;注意&#34;&gt;注意&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;本文是指MSYS2主环境中的gcc，不是指mingw64、mingw64、mingw32子环境&lt;/li&gt;
+&lt;li&gt;本文是指MSYS2主环境中的gcc，不是指mingw64、ucrt64、mingw32子环境&lt;/li&gt;
 &lt;li&gt;缺点是：即便静态链接，生成的exe程序还是需要&lt;code&gt;msys-2.0.dll&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;msys2主环境&#34;&gt;MSYS2主环境&lt;/h2&gt;

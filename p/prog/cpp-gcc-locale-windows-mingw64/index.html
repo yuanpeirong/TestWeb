@@ -10,7 +10,7 @@
 <meta property='og:description' content='让编译器用中文输出'>
 <meta property='og:url' content='https://www.yprnet.cc/p/prog/cpp-gcc-locale-windows-mingw64/'>
 <meta property='og:site_name' content='天远博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='编程' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='gcc' /><meta property='article:tag' content='MinGW-w64' /><meta property='article:published_time' content='2024-01-08T23:00:21&#43;08:00'/><meta property='article:modified_time' content='2024-01-08T23:00:21&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='编程' /><meta property='article:tag' content='C&#43;&#43;' /><meta property='article:tag' content='gcc' /><meta property='article:tag' content='MinGW-w64' /><meta property='article:published_time' content='2024-01-08T23:00:21&#43;08:00'/><meta property='article:modified_time' content='2024-02-18T23:03:21&#43;08:00'/>
 <meta name="twitter:title" content="MinGW-w64 GCC本地化-Windows">
 <meta name="twitter:description" content="让编译器用中文输出">
     </head>
@@ -266,10 +266,13 @@
   <ol>
     <li><a href="#参考资料1">参考资料1</a></li>
     <li><a href="#常规mingw-w64编译步骤以gcc1320为例">常规MinGw-w64编译步骤(以GCC13.2.0为例)</a></li>
-    <li><a href="#本地化需要修改内容以gcc1320为例">本地化需要修改内容(以GCC13.2.0为例)</a></li>
-    <li><a href="#结果说明">结果说明</a></li>
+    <li><a href="#本地化需要修改内容以gcc1320为例-按参考资料2">本地化需要修改内容(以GCC13.2.0为例)-按参考资料2</a></li>
+    <li><a href="#结果说明-按参考资料2">结果说明-按参考资料2</a></li>
+    <li><a href="#本地化需要修改内容以gcc1320为例-按参考资料3">本地化需要修改内容(以GCC13.2.0为例)-按参考资料3</a></li>
+    <li><a href="#结果说明-按参考资料3">结果说明-按参考资料3</a></li>
     <li><a href="#用github-action自动编译">用Github Action自动编译</a></li>
-    <li><a href="#参考资料2">参考资料2</a></li>
+    <li><a href="#参考资料2网友cyanocn的nls补丁">参考资料2：网友<code>cyano.CN</code>的NLS补丁</a></li>
+    <li><a href="#参考资料3">参考资料3</a></li>
   </ol>
 </nav>
         </div>
@@ -331,8 +334,8 @@
             
             
                         最后更新:
-                        <time class="article-time--updated" datetime="2024-01-08 23:00:21 &#43;0800 CST" title="2024-01-08 23:00:21 &#43;0800 CST">
-                            2024-01-08
+                        <time class="article-time--updated" datetime="2024-02-18 23:03:21 &#43;0800 CST" title="2024-02-18 23:03:21 &#43;0800 CST">
+                            2024-02-18
                         </time>
 
             
@@ -346,7 +349,7 @@
 
 
                     <time class="article-time--reading">
-                        阅读时长: 5 分钟
+                        阅读时长: 7 分钟
                     </time>
                 </div>
             
@@ -424,7 +427,7 @@ Go into the MinGW-builds root directory:
 <code>c:\buildroot\archives\x86_64-13.2.0-release-posix-seh-ucrt-rt_v11-rev0.7z</code><br>
 其中<code>c:\buildroot</code>为上一步由<code>--buildroot=/c/buildroot</code>指定</li>
 </ol>
-<h2 id="本地化需要修改内容以gcc1320为例">本地化需要修改内容(以GCC13.2.0为例)</h2>
+<h2 id="本地化需要修改内容以gcc1320为例-按参考资料2">本地化需要修改内容(以GCC13.2.0为例)-按参考资料2</h2>
 <ol>
 <li>编译前修改编译参数:
 <ul>
@@ -432,12 +435,50 @@ Go into the MinGW-builds root directory:
 <li>(可选)将仓库中所有文件的<code>--disable-nls</code>修改为<code>--enable-nls</code></li>
 </ul>
 </li>
-<li>修改gcc源码中gcc\intl.cc文件进行修改，详见下文：参考资料2。<br>
-这里要重点说明的是，gcc的源码是编译脚本自动下载的，正常见情况下无法修改。<br>
-这里提供两个方法：
+<li>对GCC13.2.0源码打补丁
 <ul>
-<li>方法1：编译完成后去 <code>c:\buildroot\src</code>目录找到<code>gcc-13.2.0\gcc\intl.cc</code>修改，然后重新编译。</li>
-<li>方法2：<code>脚本文件：scripts/gcc-13.2.0.sh</code>中有gcc的源码的下载地址，下载下来修改代码后再传到网上(我用了我自己的云服务器)，并将这个下载地址修改为你的地址。</li>
+<li>按<code>参考资料2</code>制作补丁文件<code>patches\gcc\gcc13.2.0-fix-localedir.patch</code>(注意在Windows下要dos2unix)</li>
+<li>在<code>scripts\gcc-13.2.0.sh</code>加入上述补丁文件</li>
+</ul>
+</li>
+</ol>
+<h2 id="结果说明-按参考资料2">结果说明-按参考资料2</h2>
+<ul>
+<li>
+<p>情况1，只改第1条<br>
+需依赖<code>C:\msys64\mingw64\share\locale\zh_CN\LC_MESSAGES\gcc.mo</code>才能输出中文。<br>
+其中<code>C:\msys64\mingw64</code>是编译<code>MinGW64 GCC13.2.0</code>时用的编译器的路径。视编译情况需调整。<code>gcc.exe、g++.exe、cc1.exe、cc1plus.exe</code>都依赖这个路径。</p>
+</li>
+<li>
+<p>情况2，全改第1、2条<br>
+Windows 7/8.1控制台正常。windows 10/11控制台正常输出错误提示时中文乱码（如果换为GCC11.4.0也正常）。<br>
+但在小熊猫C++使用此编译器时，Windows 7/8.1/10/11全部正常。因为其使用管道。<br>
+网友猜测可能原因：<br>
+<code>GCC为了兼容Windows残废的VT序列用力过猛，结果遇到真支持VT序列的Windows就抓瞎了</code></p>
+</li>
+<li>
+<p><code>参考资料2</code>相比<code>参考资料3</code>的优点：</p>
+<ul>
+<li>不用再复制一份语言文件</li>
+<li>支持中文编译器路径、支持中文源文件路径、支持中文源文件名，均含调试</li>
+</ul>
+</li>
+</ul>
+<h2 id="本地化需要修改内容以gcc1320为例-按参考资料3">本地化需要修改内容(以GCC13.2.0为例)-按参考资料3</h2>
+<ol>
+<li>编译前修改编译参数:
+<ul>
+<li><code>脚本文件：scripts/gcc-13.2.0.sh</code> 将<code>--disable-nls</code>修改为<code>--enable-nls</code></li>
+<li>(可选)将仓库中所有文件的<code>--disable-nls</code>修改为<code>--enable-nls</code></li>
+</ul>
+</li>
+<li>修改gcc源码中gcc\intl.cc文件进行修改，详见下文：参考资料3。<br>
+这里要重点说明的是，gcc的源码是编译脚本自动下载的，正常见情况下无法修改。<br>
+这里提供几个方法：
+<ul>
+<li>方法1：参考上文添加补丁文件</li>
+<li>方法2：编译完成后去 <code>c:\buildroot\src</code>目录找到<code>gcc-13.2.0\gcc\intl.cc</code>修改，然后重新编译。</li>
+<li>方法3：<code>脚本文件：scripts/gcc-13.2.0.sh</code>中有gcc的源码的下载地址，下载下来修改代码后再传到网上(我用了我自己的云服务器)，并将这个下载地址修改为你的地址。</li>
 </ul>
 </li>
 </ol>
@@ -472,7 +513,7 @@ Go into the MinGW-builds root directory:
 <code>libexec\gcc\x86_64-w64-mingw32\</code>下，最后形成的路径为<br>
 <code>libexec\gcc\x86_64-w64-mingw32\share\locale\zh_CN\LC_MESSAGES\*.*</code></li>
 </ol>
-<h2 id="结果说明">结果说明</h2>
+<h2 id="结果说明-按参考资料3">结果说明-按参考资料3</h2>
 <ul>
 <li>
 <p>情况1，只改第1条<br>
@@ -493,7 +534,214 @@ Windows 7/8.1控制台正常。windows 10/11控制台正常输出错误提示时
 </ul>
 <h2 id="用github-action自动编译">用Github Action自动编译</h2>
 <p>可快速编译各个版本，此处不另外展开</p>
-<h2 id="参考资料2">参考资料2</h2>
+<h2 id="参考资料2网友cyanocn的nls补丁">参考资料2：网友<code>cyano.CN</code>的NLS补丁</h2>
+<ul>
+<li>来源：https://github.com/redpanda-cpp/mingw-lite/blob/nls/patch/gcc-fix-localedir.patch</li>
+<li>其修改了<code>gcc-13.2.0/gcc/intl.cc</code>和<code>gcc-13.2.0/libcpp/init.cc</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span><span class="lnt">90
+</span><span class="lnt">91
+</span><span class="lnt">92
+</span><span class="lnt">93
+</span><span class="lnt">94
+</span><span class="lnt">95
+</span><span class="lnt">96
+</span><span class="lnt">97
+</span><span class="lnt">98
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-patch" data-lang="patch"><span class="line"><span class="cl"><span class="gh">diff --unified --recursive --text gcc-13.2.0.orig/gcc/intl.cc gcc-13.2.0/gcc/intl.cc
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span><span class="gd">--- gcc-13.2.0.orig/gcc/intl.cc	2023-07-27 16:13:04.000000000 +0800
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+++ gcc-13.2.0/gcc/intl.cc	2024-02-14 13:43:07.483162078 +0800
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span><span class="gu">@@ -22,6 +22,12 @@
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span> #include &#34;coretypes.h&#34;
+</span></span><span class="line"><span class="cl"> #include &#34;intl.h&#34;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="gi">+#ifdef _WIN32
+</span></span></span><span class="line"><span class="cl"><span class="gi">+#include &lt;string&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+#define WIN32_LEAN_AND_MEAN
+</span></span></span><span class="line"><span class="cl"><span class="gi">+#include &lt;windows.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+#endif
+</span></span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span> #ifdef HAVE_LANGINFO_CODESET
+</span></span><span class="line"><span class="cl"> #include &lt;langinfo.h&gt;
+</span></span><span class="line"><span class="cl"> #endif
+</span></span><span class="line"><span class="cl"><span class="gu">@@ -55,7 +61,32 @@
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span>   setlocale (LC_ALL, &#34;&#34;);
+</span></span><span class="line"><span class="cl"> #endif
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="gi">+#ifdef _WIN32
+</span></span></span><span class="line"><span class="cl"><span class="gi">+  {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+    /* Find the locale directory.
+</span></span></span><span class="line"><span class="cl"><span class="gi">+       TODO: Use config instead of hard-coded dirs. */
+</span></span></span><span class="line"><span class="cl"><span class="gi">+    char buf[MAX_PATH] = {0};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+    GetModuleFileNameA(NULL, buf, MAX_PATH);
+</span></span></span><span class="line"><span class="cl"><span class="gi">+    std::string exe_path = buf;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi">+    /* \libexec\gcc\&lt;triplet&gt;\&lt;version&gt;\cc1.exe */
+</span></span></span><span class="line"><span class="cl"><span class="gi">+    size_t pos = exe_path.rfind(R&#34;(\libexec\gcc\)&#34;);
+</span></span></span><span class="line"><span class="cl"><span class="gi">+    if (pos == std::string::npos) {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+      /* \bin\gcc.exe */
+</span></span></span><span class="line"><span class="cl"><span class="gi">+      pos = exe_path.rfind(R&#34;(\bin\)&#34;);
+</span></span></span><span class="line"><span class="cl"><span class="gi">+    }
+</span></span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi">+    if (pos == std::string::npos) {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+      (void) bindtextdomain (&#34;gcc&#34;, LOCALEDIR);
+</span></span></span><span class="line"><span class="cl"><span class="gi">+    } else {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+      std::string real_prefix = exe_path.substr(0, pos);
+</span></span></span><span class="line"><span class="cl"><span class="gi">+      std::string win32_locale_dir = real_prefix + &#34;/share/locale&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+      (void) bindtextdomain (&#34;gcc&#34;, win32_locale_dir.c_str());
+</span></span></span><span class="line"><span class="cl"><span class="gi">+    }
+</span></span></span><span class="line"><span class="cl"><span class="gi">+  }
+</span></span></span><span class="line"><span class="cl"><span class="gi">+#else
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span>   (void) bindtextdomain (&#34;gcc&#34;, LOCALEDIR);
+</span></span><span class="line"><span class="cl"><span class="gi">+#endif
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span>   (void) textdomain (&#34;gcc&#34;);
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">   /* Opening quotation mark.  */
+</span></span><span class="line"><span class="cl"><span class="gh">diff --unified --recursive --text gcc-13.2.0.orig/libcpp/init.cc gcc-13.2.0/libcpp/init.cc
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span><span class="gd">--- gcc-13.2.0.orig/libcpp/init.cc	2023-07-27 16:13:07.000000000 +0800
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+++ gcc-13.2.0/libcpp/init.cc	2024-02-14 13:42:44.969838638 +0800
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span><span class="gu">@@ -26,6 +26,12 @@
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span> #include &#34;localedir.h&#34;
+</span></span><span class="line"><span class="cl"> #include &#34;filenames.h&#34;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="gi">+#ifdef _WIN32
+</span></span></span><span class="line"><span class="cl"><span class="gi">+#include &lt;string&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+#define WIN32_LEAN_AND_MEAN
+</span></span></span><span class="line"><span class="cl"><span class="gi">+#include &lt;windows.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+#endif
+</span></span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span> #ifndef ENABLE_CANONICAL_SYSTEM_HEADERS
+</span></span><span class="line"><span class="cl"> #ifdef HAVE_DOS_BASED_FILE_SYSTEM
+</span></span><span class="line"><span class="cl"> #define ENABLE_CANONICAL_SYSTEM_HEADERS 1
+</span></span><span class="line"><span class="cl"><span class="gu">@@ -181,8 +187,33 @@
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span>       init_trigraph_map ();
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> #ifdef ENABLE_NLS
+</span></span><span class="line"><span class="cl"><span class="gi">+#ifdef _WIN32
+</span></span></span><span class="line"><span class="cl"><span class="gi">+      {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+        /* Find the locale directory.
+</span></span></span><span class="line"><span class="cl"><span class="gi">+           TODO: Use config instead of hard-coded dirs. */
+</span></span></span><span class="line"><span class="cl"><span class="gi">+        char buf[MAX_PATH] = {0};
+</span></span></span><span class="line"><span class="cl"><span class="gi">+        GetModuleFileNameA(NULL, buf, MAX_PATH);
+</span></span></span><span class="line"><span class="cl"><span class="gi">+        std::string exe_path = buf;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi">+        /* \libexec\gcc\&lt;triplet&gt;\&lt;version&gt;\cc1.exe */
+</span></span></span><span class="line"><span class="cl"><span class="gi">+        size_t pos = exe_path.rfind(R&#34;(\libexec\gcc\)&#34;);
+</span></span></span><span class="line"><span class="cl"><span class="gi">+        if (pos == std::string::npos) {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+          /* \bin\gcc.exe */
+</span></span></span><span class="line"><span class="cl"><span class="gi">+          pos = exe_path.rfind(R&#34;(\bin\)&#34;);
+</span></span></span><span class="line"><span class="cl"><span class="gi">+        }
+</span></span></span><span class="line"><span class="cl"><span class="gi">+
+</span></span></span><span class="line"><span class="cl"><span class="gi">+        if (pos == std::string::npos) {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+          (void) bindtextdomain (PACKAGE, LOCALEDIR);
+</span></span></span><span class="line"><span class="cl"><span class="gi">+        } else {
+</span></span></span><span class="line"><span class="cl"><span class="gi">+          std::string real_prefix = exe_path.substr(0, pos);
+</span></span></span><span class="line"><span class="cl"><span class="gi">+          std::string win32_locale_dir = real_prefix + &#34;/share/locale&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+          (void) bindtextdomain (PACKAGE, win32_locale_dir.c_str());
+</span></span></span><span class="line"><span class="cl"><span class="gi">+        }
+</span></span></span><span class="line"><span class="cl"><span class="gi">+      }
+</span></span></span><span class="line"><span class="cl"><span class="gi">+#else
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span>        (void) bindtextdomain (PACKAGE, LOCALEDIR);
+</span></span><span class="line"><span class="cl"> #endif
+</span></span><span class="line"><span class="cl"><span class="gi">+#endif
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span>     }
+</span></span><span class="line"><span class="cl"> }
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="参考资料3">参考资料3</h2>
 <p>《MinGW/GCC 编译器修改 gettext 初始化路径使之能在任意位置输出中文消息》<br>
 来源：https://blog.csdn.net/hackpascal/article/details/15222083<br>
 原文摘抄如下：</p>
@@ -750,7 +998,19 @@ Windows 7/8.1控制台正常。windows 10/11控制台正常输出错误提示时
             <a href="/tags/mingw-w64/">MinGW-w64</a>
         
     </section>
-</footer>
+<section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2024-02-18 23:03 CST
+        </span>
+    </section></footer>
 <footer class="article-footer">
     
     <section class="article-copyright">

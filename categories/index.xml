@@ -2,90 +2,90 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on 天远博客</title>
-        <link>https://www.yprnet.cc/categories/</link>
+        <link>https://www.ypr.cc/categories/</link>
         <description>Recent content in Categories on 天远博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
-        <lastBuildDate>Thu, 18 Jan 2024 15:00:00 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 18 Jan 2024 15:00:00 +0800</lastBuildDate><atom:link href="https://www.ypr.cc/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>C&#43;&#43;</title>
-        <link>https://www.yprnet.cc/categories/c&#43;&#43;/</link>
+        <link>https://www.ypr.cc/categories/c&#43;&#43;/</link>
         <pubDate>Thu, 18 Jan 2024 15:00:00 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/categories/c&#43;&#43;/</guid>
+        <guid>https://www.ypr.cc/categories/c&#43;&#43;/</guid>
         <description></description>
         </item>
         <item>
         <title>编程</title>
-        <link>https://www.yprnet.cc/categories/%E7%BC%96%E7%A8%8B/</link>
+        <link>https://www.ypr.cc/categories/%E7%BC%96%E7%A8%8B/</link>
         <pubDate>Thu, 18 Jan 2024 15:00:00 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/categories/%E7%BC%96%E7%A8%8B/</guid>
+        <guid>https://www.ypr.cc/categories/%E7%BC%96%E7%A8%8B/</guid>
         <description></description>
         </item>
         <item>
         <title>Git</title>
-        <link>https://www.yprnet.cc/categories/git/</link>
+        <link>https://www.ypr.cc/categories/git/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/categories/git/</guid>
+        <guid>https://www.ypr.cc/categories/git/</guid>
         <description></description>
         </item>
         <item>
         <title>笔记</title>
-        <link>https://www.yprnet.cc/categories/%E7%AC%94%E8%AE%B0/</link>
+        <link>https://www.ypr.cc/categories/%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/categories/%E7%AC%94%E8%AE%B0/</guid>
+        <guid>https://www.ypr.cc/categories/%E7%AC%94%E8%AE%B0/</guid>
         <description></description>
         </item>
         <item>
         <title>软件</title>
-        <link>https://www.yprnet.cc/categories/%E8%BD%AF%E4%BB%B6/</link>
+        <link>https://www.ypr.cc/categories/%E8%BD%AF%E4%BB%B6/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/categories/%E8%BD%AF%E4%BB%B6/</guid>
+        <guid>https://www.ypr.cc/categories/%E8%BD%AF%E4%BB%B6/</guid>
         <description></description>
         </item>
         <item>
         <title>文本编辑器</title>
-        <link>https://www.yprnet.cc/categories/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/</link>
+        <link>https://www.ypr.cc/categories/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/categories/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
+        <guid>https://www.ypr.cc/categories/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
         <description></description>
         </item>
         <item>
         <title>MSYS2</title>
-        <link>https://www.yprnet.cc/categories/msys2/</link>
+        <link>https://www.ypr.cc/categories/msys2/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/categories/msys2/</guid>
+        <guid>https://www.ypr.cc/categories/msys2/</guid>
         <description></description>
         </item>
         <item>
         <title>博客</title>
-        <link>https://www.yprnet.cc/categories/%E5%8D%9A%E5%AE%A2/</link>
+        <link>https://www.ypr.cc/categories/%E5%8D%9A%E5%AE%A2/</link>
         <pubDate>Thu, 27 Feb 2020 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/categories/%E5%8D%9A%E5%AE%A2/</guid>
+        <guid>https://www.ypr.cc/categories/%E5%8D%9A%E5%AE%A2/</guid>
         <description></description>
         </item>
         <item>
         <title>网站</title>
-        <link>https://www.yprnet.cc/categories/%E7%BD%91%E7%AB%99/</link>
+        <link>https://www.ypr.cc/categories/%E7%BD%91%E7%AB%99/</link>
         <pubDate>Thu, 27 Feb 2020 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/categories/%E7%BD%91%E7%AB%99/</guid>
+        <guid>https://www.ypr.cc/categories/%E7%BD%91%E7%AB%99/</guid>
         <description></description>
         </item>
         <item>
         <title>Test</title>
-        <link>https://www.yprnet.cc/categories/test/</link>
+        <link>https://www.ypr.cc/categories/test/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://www.yprnet.cc/categories/test/</guid>
-        <description>&lt;img src="https://www.yprnet.cc/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
+        <guid>https://www.ypr.cc/categories/test/</guid>
+        <description>&lt;img src="https://www.ypr.cc/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
         </item>
         
     </channel>

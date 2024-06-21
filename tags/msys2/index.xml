@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>MSYS2 on 天远博客</title>
-        <link>https://www.yprnet.cc/tags/msys2/</link>
+        <link>https://www.ypr.cc/tags/msys2/</link>
         <description>Recent content in MSYS2 on 天远博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
-        <lastBuildDate>Fri, 24 Nov 2023 13:00:21 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/tags/msys2/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 24 Nov 2023 13:00:21 +0800</lastBuildDate><atom:link href="https://www.ypr.cc/tags/msys2/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>MSYS2</title>
-        <link>https://www.yprnet.cc/p/prog/msys2/</link>
+        <link>https://www.ypr.cc/p/prog/msys2/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/prog/msys2/</guid>
+        <guid>https://www.ypr.cc/p/prog/msys2/</guid>
         <description>&lt;h2 id=&#34;官网&#34;&gt;官网&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.msys2.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -265,10 +265,10 @@ pacman 会将自己下载的软件压缩包保存在 /var/cache/pacman/pkg/目�
         </item>
         <item>
         <title>MSYS2中的GCC本地化</title>
-        <link>https://www.yprnet.cc/p/prog/msys2-gcc-locale/</link>
+        <link>https://www.ypr.cc/p/prog/msys2-gcc-locale/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/prog/msys2-gcc-locale/</guid>
+        <guid>https://www.ypr.cc/p/prog/msys2-gcc-locale/</guid>
         <description>&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;GCC本地化-Linux&lt;/li&gt;

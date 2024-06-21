@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Kawaii-gcc on 天远博客</title>
-        <link>https://www.yprnet.cc/tags/kawaii-gcc/</link>
+        <link>https://www.ypr.cc/tags/kawaii-gcc/</link>
         <description>Recent content in Kawaii-gcc on 天远博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
-        <lastBuildDate>Sun, 07 Jan 2024 13:00:21 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/tags/kawaii-gcc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 07 Jan 2024 13:00:21 +0800</lastBuildDate><atom:link href="https://www.ypr.cc/tags/kawaii-gcc/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Kawaii-gcc 让GCC变得可爱</title>
-        <link>https://www.yprnet.cc/p/prog/cpp-kawaii-gcc/</link>
+        <link>https://www.ypr.cc/p/prog/cpp-kawaii-gcc/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/prog/cpp-kawaii-gcc/</guid>
+        <guid>https://www.ypr.cc/p/prog/cpp-kawaii-gcc/</guid>
         <description>&lt;ul&gt;
 &lt;li&gt;转自：&lt;a class=&#34;link&#34; href=&#34;https://github.com/Bill-Haku/kawaii-gcc/blob/main/README-zh.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/Bill-Haku/kawaii-gcc/blob/main/README-zh.md&lt;/a&gt;&lt;/li&gt;
@@ -198,7 +198,7 @@
 &lt;li&gt;下载并运行 &lt;a class=&#34;link&#34; href=&#34;https://www.cygwin.com/setup-x86_64.exe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;setup-x86_64.exe&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;在 &lt;code&gt;选择下载源&lt;/code&gt; (&lt;code&gt;Choose A Download Source&lt;/code&gt;) 步骤时选择 &lt;code&gt;从互联网安装&lt;/code&gt; (&lt;code&gt;Install from Internet&lt;/code&gt;)&lt;br&gt;
-&lt;img src=&#34;https://www.yprnet.cc/img/install_from_internet.png&#34;
+&lt;img src=&#34;https://www.ypr.cc/img/install_from_internet.png&#34;
 	
 	
 	
@@ -209,7 +209,7 @@
 	
 &gt;&lt;/li&gt;
 &lt;li&gt;在 &lt;code&gt;选择软件包&lt;/code&gt; (&lt;code&gt;Select Packages&lt;/code&gt;) 步骤时, 将&lt;code&gt;查看&lt;/code&gt; (&lt;code&gt;View&lt;/code&gt;) 设为 &lt;code&gt;类别&lt;/code&gt; (&lt;code&gt;Category&lt;/code&gt;) 并依次搜索 (Search) 并选择 ALL/Devel 下的 &lt;code&gt;gcc-core&lt;/code&gt;，&lt;code&gt;gcc-g++&lt;/code&gt; 和 &lt;code&gt;gettext&lt;/code&gt; 的版本
-&lt;img src=&#34;https://www.yprnet.cc/img/select_packages.png&#34;
+&lt;img src=&#34;https://www.ypr.cc/img/select_packages.png&#34;
 	
 	
 	
@@ -226,7 +226,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;将本仓库的 &lt;code&gt;prebuilt&lt;/code&gt; 目录下的 &lt;code&gt;gcc-zh.mo&lt;/code&gt; 放到 &lt;code&gt;&amp;lt;DIR&amp;gt;\usr\share\locale\zh_CN\LC_MESSAGES&lt;/code&gt; 目录下, 并将其重命名为 &lt;code&gt;gcc.mo&lt;/code&gt; (建议先将原来的gcc.mo备份)&lt;br&gt;
-&lt;img src=&#34;https://www.yprnet.cc/img/change_gcc_mo.png&#34;
+&lt;img src=&#34;https://www.ypr.cc/img/change_gcc_mo.png&#34;
 	
 	
 	

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Linux on 天远博客</title>
-        <link>https://www.yprnet.cc/tags/linux/</link>
+        <link>https://www.ypr.cc/tags/linux/</link>
         <description>Recent content in Linux on 天远博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
-        <lastBuildDate>Sun, 07 Jan 2024 13:00:21 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/tags/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 07 Jan 2024 13:00:21 +0800</lastBuildDate><atom:link href="https://www.ypr.cc/tags/linux/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>GCC本地化-Linux</title>
-        <link>https://www.yprnet.cc/p/prog/cpp-gcc-locale-linux/</link>
+        <link>https://www.ypr.cc/p/prog/cpp-gcc-locale-linux/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/prog/cpp-gcc-locale-linux/</guid>
+        <guid>https://www.ypr.cc/p/prog/cpp-gcc-locale-linux/</guid>
         <description>&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;../Kawaii-gcc/README-zh.md&#34; &gt;Kawaii-gcc本地&lt;/a&gt;&lt;/li&gt;

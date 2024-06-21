@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Git on 天远博客</title>
-        <link>https://www.yprnet.cc/tags/git/</link>
+        <link>https://www.ypr.cc/tags/git/</link>
         <description>Recent content in Git on 天远博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
-        <lastBuildDate>Sun, 07 Jan 2024 13:00:21 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/tags/git/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 07 Jan 2024 13:00:21 +0800</lastBuildDate><atom:link href="https://www.ypr.cc/tags/git/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>SmartGit</title>
-        <link>https://www.yprnet.cc/p/soft/git-smartgit/</link>
+        <link>https://www.ypr.cc/p/soft/git-smartgit/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/soft/git-smartgit/</guid>
+        <guid>https://www.ypr.cc/p/soft/git-smartgit/</guid>
         <description>&lt;h2 id=&#34;官网&#34;&gt;官网&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.syntevo.com/smartgit/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

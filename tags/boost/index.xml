@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>boost on 天远博客</title>
-        <link>https://www.yprnet.cc/tags/boost/</link>
+        <link>https://www.ypr.cc/tags/boost/</link>
         <description>Recent content in boost on 天远博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
-        <lastBuildDate>Sun, 07 Jan 2024 13:00:21 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/tags/boost/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 07 Jan 2024 13:00:21 +0800</lastBuildDate><atom:link href="https://www.ypr.cc/tags/boost/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>boost库编译</title>
-        <link>https://www.yprnet.cc/p/prog/cpp-boost-compile/</link>
+        <link>https://www.ypr.cc/p/prog/cpp-boost-compile/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/prog/cpp-boost-compile/</guid>
+        <guid>https://www.ypr.cc/p/prog/cpp-boost-compile/</guid>
         <description>&lt;h2 id=&#34;编译-gcc1320-x64-2023-12-29&#34;&gt;编译-GCC13.2.0-x64-2023-12-29&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;

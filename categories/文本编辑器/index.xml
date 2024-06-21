@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>文本编辑器 on 天远博客</title>
-        <link>https://www.yprnet.cc/categories/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/</link>
+        <link>https://www.ypr.cc/categories/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/</link>
         <description>Recent content in 文本编辑器 on 天远博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
-        <lastBuildDate>Sun, 07 Jan 2024 13:00:21 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/categories/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 07 Jan 2024 13:00:21 +0800</lastBuildDate><atom:link href="https://www.ypr.cc/categories/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>VisualStudioCode</title>
-        <link>https://www.yprnet.cc/p/soft/text-visualstudiocode/</link>
+        <link>https://www.ypr.cc/p/soft/text-visualstudiocode/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/soft/text-visualstudiocode/</guid>
+        <guid>https://www.ypr.cc/p/soft/text-visualstudiocode/</guid>
         <description>&lt;h2 id=&#34;相关网址&#34;&gt;相关网址&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://code.visualstudio.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -92,10 +92,10 @@
         </item>
         <item>
         <title>VSCodium</title>
-        <link>https://www.yprnet.cc/p/soft/text-vscodium/</link>
+        <link>https://www.ypr.cc/p/soft/text-vscodium/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/soft/text-vscodium/</guid>
+        <guid>https://www.ypr.cc/p/soft/text-vscodium/</guid>
         <description>&lt;h2 id=&#34;相关网址&#34;&gt;相关网址&lt;/h2&gt;
 &lt;p&gt;官网：&lt;a class=&#34;link&#34; href=&#34;https://github.com/VSCodium/vscodium&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/VSCodium/vscodium&lt;/a&gt;&lt;/p&gt;

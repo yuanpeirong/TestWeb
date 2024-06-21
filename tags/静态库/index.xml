@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>静态库 on 天远博客</title>
-        <link>https://www.yprnet.cc/tags/%E9%9D%99%E6%80%81%E5%BA%93/</link>
+        <link>https://www.ypr.cc/tags/%E9%9D%99%E6%80%81%E5%BA%93/</link>
         <description>Recent content in 静态库 on 天远博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
-        <lastBuildDate>Thu, 18 Jan 2024 15:00:00 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/tags/%E9%9D%99%E6%80%81%E5%BA%93/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 18 Jan 2024 15:00:00 +0800</lastBuildDate><atom:link href="https://www.ypr.cc/tags/%E9%9D%99%E6%80%81%E5%BA%93/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>GCC上的动态库与静态库</title>
-        <link>https://www.yprnet.cc/p/prog/cpp-gcc-sharedandstaticlib/</link>
+        <link>https://www.ypr.cc/p/prog/cpp-gcc-sharedandstaticlib/</link>
         <pubDate>Thu, 18 Jan 2024 15:00:00 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/prog/cpp-gcc-sharedandstaticlib/</guid>
+        <guid>https://www.ypr.cc/p/prog/cpp-gcc-sharedandstaticlib/</guid>
         <description>&lt;h2 id=&#34;文件名后缀名&#34;&gt;文件名、后缀名&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;静态链接库文件的后缀名：Linux通常用 &lt;code&gt;.a &lt;/code&gt; ,Windows通常用 &lt;code&gt;.lib&lt;/code&gt;&lt;/li&gt;
@@ -252,10 +252,10 @@
         </item>
         <item>
         <title>Qt5编译(MinGW-w64)</title>
-        <link>https://www.yprnet.cc/p/prog/cpp-qt5compile-mingw-w64/</link>
+        <link>https://www.ypr.cc/p/prog/cpp-qt5compile-mingw-w64/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/prog/cpp-qt5compile-mingw-w64/</guid>
+        <guid>https://www.ypr.cc/p/prog/cpp-qt5compile-mingw-w64/</guid>
         <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -547,10 +547,10 @@
         </item>
         <item>
         <title>Qt5编译(MSVC)</title>
-        <link>https://www.yprnet.cc/p/prog/cpp-qt5compile-msvc/</link>
+        <link>https://www.ypr.cc/p/prog/cpp-qt5compile-msvc/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/prog/cpp-qt5compile-msvc/</guid>
+        <guid>https://www.ypr.cc/p/prog/cpp-qt5compile-msvc/</guid>
         <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -786,10 +786,10 @@
         </item>
         <item>
         <title>Qt6编译(MinGW-w64)</title>
-        <link>https://www.yprnet.cc/p/prog/cpp-qt6compile-mingw-w64/</link>
+        <link>https://www.ypr.cc/p/prog/cpp-qt6compile-mingw-w64/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/prog/cpp-qt6compile-mingw-w64/</guid>
+        <guid>https://www.ypr.cc/p/prog/cpp-qt6compile-mingw-w64/</guid>
         <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-6.5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1020,10 +1020,10 @@
         </item>
         <item>
         <title>Qt6编译(MSVC)</title>
-        <link>https://www.yprnet.cc/p/prog/cpp-qt6compile-msvc/</link>
+        <link>https://www.ypr.cc/p/prog/cpp-qt6compile-msvc/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/prog/cpp-qt6compile-msvc/</guid>
+        <guid>https://www.ypr.cc/p/prog/cpp-qt6compile-msvc/</guid>
         <description>&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc.qt.io/qt-6.5/windows-building.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1258,10 +1258,10 @@
         </item>
         <item>
         <title>测试Qt静态库</title>
-        <link>https://www.yprnet.cc/p/prog/cpp-qt-test-static/</link>
+        <link>https://www.ypr.cc/p/prog/cpp-qt-test-static/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/prog/cpp-qt-test-static/</guid>
+        <guid>https://www.ypr.cc/p/prog/cpp-qt-test-static/</guid>
         <description>&lt;h2 id=&#34;qt6-静态库测试&#34;&gt;Qt6-静态库测试&lt;/h2&gt;
 &lt;h3 id=&#34;qt653-static-mingw1120_64-release天远编译2023-11-25&#34;&gt;Qt6.5.3-static-mingw1120_64-Release（天远编译2023-11-25）&lt;/h3&gt;
 &lt;ul&gt;

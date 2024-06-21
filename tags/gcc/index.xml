@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>gcc on 天远博客</title>
-        <link>https://www.yprnet.cc/tags/gcc/</link>
+        <link>https://www.ypr.cc/tags/gcc/</link>
         <description>Recent content in gcc on 天远博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>YuanPeirong TianYuan All Rights Reserved.</copyright>
-        <lastBuildDate>Thu, 18 Jan 2024 15:00:00 +0800</lastBuildDate><atom:link href="https://www.yprnet.cc/tags/gcc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 18 Jan 2024 15:00:00 +0800</lastBuildDate><atom:link href="https://www.ypr.cc/tags/gcc/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>GCC上的动态库与静态库</title>
-        <link>https://www.yprnet.cc/p/prog/cpp-gcc-sharedandstaticlib/</link>
+        <link>https://www.ypr.cc/p/prog/cpp-gcc-sharedandstaticlib/</link>
         <pubDate>Thu, 18 Jan 2024 15:00:00 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/prog/cpp-gcc-sharedandstaticlib/</guid>
+        <guid>https://www.ypr.cc/p/prog/cpp-gcc-sharedandstaticlib/</guid>
         <description>&lt;h2 id=&#34;文件名后缀名&#34;&gt;文件名、后缀名&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;静态链接库文件的后缀名：Linux通常用 &lt;code&gt;.a &lt;/code&gt; ,Windows通常用 &lt;code&gt;.lib&lt;/code&gt;&lt;/li&gt;
@@ -252,10 +252,10 @@
         </item>
         <item>
         <title>MinGW-w64 GCC本地化-Windows</title>
-        <link>https://www.yprnet.cc/p/prog/cpp-gcc-locale-windows-mingw64/</link>
+        <link>https://www.ypr.cc/p/prog/cpp-gcc-locale-windows-mingw64/</link>
         <pubDate>Mon, 08 Jan 2024 23:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/prog/cpp-gcc-locale-windows-mingw64/</guid>
+        <guid>https://www.ypr.cc/p/prog/cpp-gcc-locale-windows-mingw64/</guid>
         <description>&lt;h2 id=&#34;参考资料1&#34;&gt;参考资料1&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/niXman/mingw-builds&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -876,10 +876,10 @@ Windows 7/8.1控制台正常。windows 10/11控制台正常输出错误提示时
         </item>
         <item>
         <title>GCC本地化-Linux</title>
-        <link>https://www.yprnet.cc/p/prog/cpp-gcc-locale-linux/</link>
+        <link>https://www.ypr.cc/p/prog/cpp-gcc-locale-linux/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/prog/cpp-gcc-locale-linux/</guid>
+        <guid>https://www.ypr.cc/p/prog/cpp-gcc-locale-linux/</guid>
         <description>&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;../Kawaii-gcc/README-zh.md&#34; &gt;Kawaii-gcc本地&lt;/a&gt;&lt;/li&gt;
@@ -1009,10 +1009,10 @@ Windows 7/8.1控制台正常。windows 10/11控制台正常输出错误提示时
         </item>
         <item>
         <title>GCC环境变量</title>
-        <link>https://www.yprnet.cc/p/prog/cpp-gcc-env-var/</link>
+        <link>https://www.ypr.cc/p/prog/cpp-gcc-env-var/</link>
         <pubDate>Sun, 07 Jan 2024 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/prog/cpp-gcc-env-var/</guid>
+        <guid>https://www.ypr.cc/p/prog/cpp-gcc-env-var/</guid>
         <description>&lt;h1 id=&#34;本文还未整理完&#34;&gt;本文还未整理完&lt;/h1&gt;
 &lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
 &lt;ul&gt;
@@ -1075,10 +1075,10 @@ Windows 7/8.1控制台正常。windows 10/11控制台正常输出错误提示时
         </item>
         <item>
         <title>MSYS2中的GCC本地化</title>
-        <link>https://www.yprnet.cc/p/prog/msys2-gcc-locale/</link>
+        <link>https://www.ypr.cc/p/prog/msys2-gcc-locale/</link>
         <pubDate>Fri, 24 Nov 2023 13:00:21 +0800</pubDate>
         
-        <guid>https://www.yprnet.cc/p/prog/msys2-gcc-locale/</guid>
+        <guid>https://www.ypr.cc/p/prog/msys2-gcc-locale/</guid>
         <description>&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;GCC本地化-Linux&lt;/li&gt;
